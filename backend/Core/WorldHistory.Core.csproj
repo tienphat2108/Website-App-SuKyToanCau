@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>WorldHistory.Core</RootNamespace>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <RootNamespace>WorldHistory.Api</RootNamespace>
+    <AssemblyName>WorldHistory.Api</AssemblyName>
+    <UserSecretsId>8a2ae575-0e77-43e5-a640-004857a61da6</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application\WorldHistory.Application.csproj" />
+    <ProjectReference Include="..\Infrastructure\WorldHistory.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.22" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+  </ItemGroup>
+</Project>
