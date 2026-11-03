@@ -1,0 +1,17 @@
+# Không đưa các thư mục sinh tự động vào ngữ cảnh dựng ảnh.
+**/bin
+**/obj
+**/node_modules
+**/.next
+**/coverage
+**/TestResults
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/*.log
+**/.env
+**/keys
+frontend/tsconfig.tsbuildinfo
+.git
+.vs
+.idea
