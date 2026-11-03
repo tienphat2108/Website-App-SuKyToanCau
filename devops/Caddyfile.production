@@ -1,0 +1,34 @@
+# Cấu hình máy chủ đảo ngược cho môi trường triển khai thật.
+# Caddy tự xin và gia hạn chứng chỉ qua giao thức ACME khi tên miền trỏ đúng.
+# Đặt SITE_ADDRESS là tên miền thật, ví dụ https://lichsu.example.com.
+
+{
+	# Địa chỉ nhận thông báo hết hạn chứng chỉ.
+	email {$ACME_EMAIL:admin@example.com}
+	admin off
+}
+
+{$SITE_ADDRESS} {
+	encode zstd gzip
+
+	request_body {
+		max_size 256KB
+	}
+
+	header {
+		-Server
+		Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Cross-Origin-Opener-Policy "same-origin"
+	}
+
+	# Chỉ chuyển tiếp các đường dẫn giao diện lập trình, không mở toàn bộ máy chủ.
+	handle /api/* {
+		reverse_proxy api:8080
+	}
+
+	handle {
+		reverse_proxy web:3000
+	}
+}

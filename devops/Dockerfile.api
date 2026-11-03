@@ -1,0 +1,53 @@
+# Tệp dựng máy chủ dữ liệu.
+# Ngữ cảnh dựng là thư mục gốc của kho mã, không phải thư mục devops.
+# Lý do: tầng hạ tầng nhúng tệp shared/history-events.json lúc biên dịch.
+
+# ---------------------------------------------------------------------------
+# Giai đoạn 1: biên dịch và phát hành.
+# Dùng ảnh có bộ công cụ .NET 9 để khôi phục gói và biên dịch.
+# ---------------------------------------------------------------------------
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+WORKDIR /src
+
+# Sao chép mã nguồn và tệp dữ liệu dùng chung theo đúng cấu trúc thư mục.
+COPY backend/ ./backend/
+COPY shared/ ./shared/
+
+# Khôi phục gói chỉ cho dự án máy chủ dữ liệu để tận dụng bộ nhớ đệm của Docker.
+RUN dotnet restore backend/API/WorldHistory.API.csproj
+
+# Phát hành bản tối ưu, không cần tệp thực thi gốc vì chạy bằng lệnh dotnet.
+RUN dotnet publish backend/API/WorldHistory.API.csproj \
+    --configuration Release \
+    --output /app/publish \
+    --no-restore \
+    /p:UseAppHost=false
+
+# ---------------------------------------------------------------------------
+# Giai đoạn 2: ảnh chạy thật, chỉ chứa tệp đã phát hành.
+# ---------------------------------------------------------------------------
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS final
+WORKDIR /app
+
+# Cài curl để bước kiểm tra sức khỏe trong tệp điều phối gọi được.
+# Gói được xóa khỏi bộ nhớ đệm sau khi cài để giảm kích thước ảnh.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Cổng nội bộ của máy chủ dữ liệu; máy chủ đảo ngược sẽ chuyển tiếp vào cổng này.
+ENV ASPNETCORE_URLS=http://+:8080
+ENV ASPNETCORE_ENVIRONMENT=Production
+ENV DOTNET_EnableDiagnostics=0
+
+COPY --from=build /app/publish .
+
+# Thư mục lưu khóa bảo vệ dữ liệu. Tệp điều phối gắn ổ đĩa vào đây để khóa
+# không mất khi dựng lại ảnh, tránh giải mã thất bại sau khi triển khai mới.
+RUN mkdir -p /app/keys && chown -R app:app /app
+
+# Chạy bằng tài khoản không phải quản trị viên.
+USER app
+EXPOSE 8080
+
+ENTRYPOINT ["dotnet", "WorldHistory.Api.dll"]

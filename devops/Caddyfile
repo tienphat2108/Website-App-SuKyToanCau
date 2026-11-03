@@ -1,0 +1,41 @@
+# Cấu hình máy chủ đảo ngược cho môi trường chạy thử tại máy cục bộ.
+# Dùng chứng chỉ do Caddy tự ký nên trình duyệt sẽ cảnh báo lần đầu.
+# Khi triển khai thật, dùng tệp Caddyfile.production để lấy chứng chỉ tự động.
+
+{
+	# Tắt giao diện quản trị để không mở thêm cổng không cần thiết.
+	admin off
+}
+
+# Địa chỉ website lấy từ biến môi trường, mặc định là localhost qua giao thức bảo mật.
+{$SITE_ADDRESS:https://localhost} {
+	# Chứng chỉ nội bộ, phù hợp máy cá nhân và mạng nội bộ.
+	tls internal
+
+	# Nén nội dung văn bản để giảm băng thông.
+	encode zstd gzip
+
+	# Giới hạn kích thước thân yêu cầu, khớp với giới hạn của máy chủ dữ liệu.
+	request_body {
+		max_size 256KB
+	}
+
+	# Tiêu đề bảo mật bổ sung ở lớp ngoài cùng.
+	header {
+		-Server
+		Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Cross-Origin-Opener-Policy "same-origin"
+	}
+
+	# Mọi đường dẫn dưới /api chuyển tới máy chủ dữ liệu.
+	handle /api/* {
+		reverse_proxy api:8080
+	}
+
+	# Phần còn lại do giao diện Next.js xử lý.
+	handle {
+		reverse_proxy web:3000
+	}
+}

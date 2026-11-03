@@ -1,0 +1,58 @@
+# Tệp dựng giao diện Next.js.
+# Ngữ cảnh dựng là thư mục gốc vì giao diện đọc tệp shared/history-events.json
+# nằm ngoài thư mục frontend.
+
+# ---------------------------------------------------------------------------
+# Giai đoạn 1: cài phụ thuộc.
+# Tách riêng để Docker dùng lại lớp này khi chỉ mã nguồn thay đổi.
+# ---------------------------------------------------------------------------
+FROM node:22-alpine AS deps
+WORKDIR /app/frontend
+
+COPY frontend/package.json frontend/package-lock.json ./
+RUN npm ci
+
+# ---------------------------------------------------------------------------
+# Giai đoạn 2: dựng bản phát hành.
+# Biến NEXT_PUBLIC_* được nhúng vào mã lúc dựng nên phải truyền qua đối số dựng.
+# ---------------------------------------------------------------------------
+FROM node:22-alpine AS builder
+WORKDIR /app
+
+COPY --from=deps /app/frontend/node_modules ./frontend/node_modules
+COPY frontend/ ./frontend/
+COPY shared/ ./shared/
+
+ARG NEXT_PUBLIC_SITE_URL=http://localhost:3000
+ARG NEXT_PUBLIC_GA_ID=
+ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
+ENV NEXT_PUBLIC_GA_ID=$NEXT_PUBLIC_GA_ID
+ENV NEXT_TELEMETRY_DISABLED=1
+
+WORKDIR /app/frontend
+RUN npm run build
+
+# ---------------------------------------------------------------------------
+# Giai đoạn 3: ảnh chạy thật.
+# Next.js xuất thư mục standalone chứa máy chủ tối giản và các tệp cần thiết.
+# ---------------------------------------------------------------------------
+FROM node:22-alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
+
+# Tài khoản riêng, không chạy bằng quyền gốc.
+RUN addgroup --system --gid 1001 nodejs \
+    && adduser --system --uid 1001 nextjs
+
+COPY --from=builder --chown=nextjs:nodejs /app/frontend/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/frontend/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/frontend/public ./public
+
+USER nextjs
+EXPOSE 3000
+
+CMD ["node", "server.js"]

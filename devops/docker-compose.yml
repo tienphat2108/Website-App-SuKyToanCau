@@ -1,0 +1,138 @@
+# Tệp điều phối toàn bộ hệ thống cho môi trường chạy thử và triển khai nhỏ.
+#
+# Cách dùng:
+#   1. Sao chép devops/.env.example thành devops/.env và điền giá trị.
+#   2. Chạy: docker compose -f devops/docker-compose.yml --env-file devops/.env up -d --build
+#
+# Chỉ máy chủ đảo ngược mở cổng ra ngoài. Cơ sở dữ liệu và máy chủ dữ liệu
+# chỉ nằm trong mạng nội bộ nên không truy cập trực tiếp từ internet.
+
+name: world-history
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-worldhistory}
+      POSTGRES_USER: ${POSTGRES_USER:-worldhistory}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Thiếu POSTGRES_PASSWORD trong tệp .env}
+      # Bật kiểm tra tổng dữ liệu để phát hiện hỏng tệp lưu trữ.
+      POSTGRES_INITDB_ARGS: "--data-checksums"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    networks:
+      - data
+    # Không khai báo ports: cơ sở dữ liệu không lộ ra ngoài máy chủ.
+
+  api:
+    build:
+      # Ngữ cảnh là thư mục gốc để lấy được shared/history-events.json.
+      context: ..
+      dockerfile: devops/Dockerfile.api
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:8080
+      # Chuỗi kết nối dựng từ biến môi trường, không ghi cứng trong mã nguồn.
+      ConnectionStrings__Default: "Host=postgres;Port=5432;Database=${POSTGRES_DB:-worldhistory};Username=${POSTGRES_USER:-worldhistory};Password=${POSTGRES_PASSWORD:?}"
+      Database__Provider: Postgres
+      Database__ApplyRowLevelSecurity: "true"
+      Jwt__Key: ${JWT_KEY:?Thiếu JWT_KEY trong tệp .env}
+      Security__IpHashKey: ${IP_HASH_KEY:?Thiếu IP_HASH_KEY trong tệp .env}
+      Security__SeedAdminUsername: ${ADMIN_USERNAME:?Thiếu ADMIN_USERNAME trong tệp .env}
+      Security__SeedAdminPassword: ${ADMIN_PASSWORD:?Thiếu ADMIN_PASSWORD trong tệp .env}
+      Security__DataProtectionKeysPath: /app/keys
+      Security__AllowedOrigins__0: ${SITE_URL:-https://localhost}
+      # Giao thức bảo mật kết thúc ở máy chủ đảo ngược; máy chủ dữ liệu chỉ nhận
+      # lưu lượng nội bộ nên không tự chuyển hướng sang giao thức bảo mật.
+      Security__RequireHttps: "false"
+      # Tin tiêu đề chuyển tiếp để giới hạn tần suất dùng đúng địa chỉ người gọi.
+      Proxy__TrustForwardedHeaders: "true"
+      AllowedHosts: "${ALLOWED_HOSTS:-localhost;127.0.0.1;api}"
+      ExternalApi__Enabled: "${EXTERNAL_API_ENABLED:-true}"
+      ExternalApi__UserAgent: "${EXTERNAL_API_USER_AGENT:-WorldHistoryEncyclopedia/1.0 (+https://localhost)}"
+    volumes:
+      # Giữ khóa bảo vệ dữ liệu qua các lần dựng lại ảnh.
+      - dpkeys:/app/keys
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8080/api/health > /dev/null || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+    networks:
+      - data
+      - edge
+    security_opt:
+      - no-new-privileges:true
+
+  web:
+    build:
+      context: ..
+      dockerfile: devops/Dockerfile.web
+      args:
+        # Giá trị này được nhúng lúc dựng nên phải truyền bằng đối số dựng.
+        NEXT_PUBLIC_SITE_URL: ${SITE_URL:-https://localhost}
+        NEXT_PUBLIC_GA_ID: ${GA_ID:-}
+    restart: unless-stopped
+    environment:
+      # Giao diện gọi máy chủ dữ liệu qua tên dịch vụ trong mạng nội bộ.
+      API_BASE_URL: http://api:8080
+      NEXT_TELEMETRY_DISABLED: "1"
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:3000/ > /dev/null || exit 1"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - edge
+    security_opt:
+      - no-new-privileges:true
+
+  caddy:
+    image: caddy:2.8-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:-https://localhost}
+      ACME_EMAIL: ${ACME_EMAIL:-admin@example.com}
+    volumes:
+      # Đổi sang ./Caddyfile.production khi dùng tên miền thật.
+      - ${CADDYFILE:-./Caddyfile}:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      web:
+        condition: service_healthy
+    networks:
+      - edge
+
+volumes:
+  pgdata:
+  dpkeys:
+  caddy_data:
+  caddy_config:
+
+networks:
+  # Mạng công khai giả lập: chỉ máy chủ đảo ngược, giao diện và máy chủ dữ liệu.
+  edge:
+  # Mạng riêng cho dữ liệu: chỉ máy chủ dữ liệu và cơ sở dữ liệu.
+  data:
+    internal: true
