@@ -1,0 +1,602 @@
+{
+  "meta": {
+    "siteName": "World History Chronicle",
+    "defaultTitle": "World History Chronicle – An encyclopedia of Vietnamese and world history",
+    "titleTemplate": "%s | World History Chronicle",
+    "description": "Explore Vietnamese history within the flow of world history through timelines, an interactive map and carefully edited bilingual articles.",
+    "keywords": [
+      "Vietnamese history",
+      "world history",
+      "timeline",
+      "historical map",
+      "encyclopedia"
+    ],
+    "home": {
+      "title": "An encyclopedia of Vietnamese and world history",
+      "description": "From the Van Lang state to Doi Moi, from the French Revolution to the fall of the Berlin Wall: explore historical events through timelines, maps and bilingual articles."
+    },
+    "timeline": {
+      "title": "Historical timeline",
+      "description": "Browse nearly one hundred events from Vietnamese and world history by era, country and place on the map."
+    },
+    "about": {
+      "title": "About the team",
+      "description": "World History Chronicle is an open encyclopedia built by an editorial, design and engineering team for a more accessible way to learn history."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "description": "Answers about sources, verification, contributions and the use of external data."
+    },
+    "contribute": {
+      "title": "Contribute materials",
+      "description": "Send documents, images or corrections for the editorial team to review and add to the encyclopedia."
+    },
+    "stories": {
+      "title": "In-depth case studies",
+      "description": "Three history case studies examined through context, turning point and consequence, with verifiable sources."
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "description": "How World History Chronicle collects, uses, protects and retains reader data."
+    },
+    "thankYou": {
+      "title": "Thank you for your contribution",
+      "description": "Your contribution has been recorded and will be reviewed by the editorial team."
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you are looking for may have moved or no longer exists."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "timeline": "Timeline",
+    "stories": "Stories",
+    "about": "About",
+    "faq": "FAQ",
+    "contribute": "Contribute",
+    "privacy": "Privacy",
+    "ribbon": "Open history encyclopedia · Bilingual Vietnamese – English",
+    "search": "Search"
+  },
+  "stories": {
+    "eyebrow": "Deep dives",
+    "title": "Three stories worth reading",
+    "subtitle": "Each case study follows an event through context, turning point and consequence, with sources you can check yourself.",
+    "whyTitle": "Why it matters",
+    "readCase": "Read the full story",
+    "sourcesTitle": "Sources to verify",
+    "caseLabel": "Case",
+    "reasons": {
+      "cach-mang-thang-tam-1945": "A general uprising compressed into weeks, showing how timing and mass organisation can change a country's course.",
+      "chien-dich-dien-bien-phu": "Fifty-six days of fighting offer a lesson in logistics, endurance and knowing when to change tactics.",
+      "doi-moi-1986": "The Sixth Party Congress opened the door to economic renovation, helping Vietnam exit crisis and join the wider world."
+    }
+  },
+  "common": {
+    "readMore": "Read article",
+    "viewAll": "View all",
+    "home": "Home",
+    "menu": "Open menu",
+    "close": "Close",
+    "language": "Language",
+    "theme": "Theme",
+    "darkMode": "Dark theme",
+    "lightMode": "Light theme",
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "skipToContent": "Skip to main content",
+    "events": "events",
+    "years": "years",
+    "all": "All",
+    "back": "Back",
+    "share": "Share",
+    "copy": "Copy",
+    "copied": "Copied",
+    "featured": "Featured",
+    "learnMore": "Learn more",
+    "seeMore": "See more",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu",
+    "backToTop": "Back to top",
+    "search": "Search",
+    "filter": "Filter",
+    "viewMode": "View mode",
+    "mapCredit": "Coastlines and land borders: Natural Earth (public domain)",
+    "openGoogleMap": "Open Google Maps",
+    "mapCluster": "{count} events in this area. Select to zoom in."
+  },
+  "a11y": {
+    "breadcrumb": "Breadcrumb navigation",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "toggleTheme": "Toggle light and dark theme",
+    "changeLanguage": "Change language",
+    "favorite": "Save event",
+    "unfavorite": "Remove saved event",
+    "map": "Map of historical events",
+    "timeline": "Timeline of events",
+    "externalLink": "Opens in a new tab",
+    "logo": "World History Chronicle – go to homepage",
+    "skipLink": "Skip navigation",
+    "search": "Search historical events",
+    "zoomIn": "Zoom in the map",
+    "zoomOut": "Zoom out the map",
+    "closePopup": "Close event details",
+    "searchOnTimeline": "Open the search box on the Timeline page"
+  },
+  "preferences": {
+    "countryLabel": "Your country",
+    "countryPlaceholder": "Choose a country",
+    "countryHint": "History from your chosen country is shown first.",
+    "preferredNotice": "Prioritising the history of {country}",
+    "clear": "Clear preference",
+    "countrySectionTitle": "{country} in history",
+    "countrySectionSubtitle": "Defining moments from your chosen country, shown before you explore the rest of the world."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Open encyclopedia",
+      "title": "World history,",
+      "titleAccent": "seen from Vietnam.",
+      "description": "From the first states on the Red River to the great civilisations of five continents. Read, compare and question the past through an experience you can search, share and contribute to.",
+      "primaryCta": "Explore the timeline",
+      "secondaryCta": "Contribute materials",
+      "imageAlt": "Illustration of a Dong Son drum, a river and layers of historical time",
+      "note": "{suKien} events · {quocGia} countries and regions · 2 languages",
+      "searchHint": "Search events, people or places",
+      "searchCta": "Search"
+    },
+    "stats": {
+      "events": "Edited events",
+      "eras": "Historical eras",
+      "countries": "Countries and regions",
+      "languages": "Display languages"
+    },
+    "featured": {
+      "eyebrow": "Selected",
+      "title": "Landmark moments",
+      "subtitle": "Events with far-reaching influence, presented with context, consequences and links to related articles.",
+      "cta": "View the full timeline"
+    },
+    "eras": {
+      "eyebrow": "Four passages",
+      "title": "Travel across eras",
+      "subtitle": "Each era is a layer of society, thought and technology. Choose a passage to begin.",
+      "eventCount": "events"
+    },
+    "map": {
+      "eyebrow": "Historical space",
+      "title": "Places tell the story",
+      "subtitle": "The map places events in real space: from Phong Chau and Bach Dang to Paris and Berlin. Tap a marker to open an article.",
+      "cta": "Open the full map",
+      "hint": "Tap a marker to see its details.",
+      "markerLabel": "{count} places on the map"
+    },
+    "latest": {
+      "eyebrow": "Recently edited",
+      "title": "Latest articles",
+      "subtitle": "Events that have just received new sources, illustrations and cross-references.",
+      "cta": "View all articles"
+    },
+    "method": {
+      "eyebrow": "How we work",
+      "title": "An encyclopedia you can check",
+      "item1Title": "Clear sourcing",
+      "item1Text": "Each article prioritises historical sources, museums and open encyclopedias. Reference links sit inside the detail page.",
+      "item2Title": "Fact and legend kept apart",
+      "item2Text": "For ancient milestones we state clearly what is traditional record, what is archaeological evidence and what remains a hypothesis.",
+      "item3Title": "Open to contribution",
+      "item3Text": "Readers can send sources, report errors or suggest topics. The editorial team reviews everything before publication."
+    },
+    "cta": {
+      "title": "Historical stories need your voice too",
+      "text": "Do you have photographs, family documents or an interesting discovery? Send it to us and help enrich the encyclopedia.",
+      "button": "Send a contribution",
+      "secondary": "Read the FAQ"
+    }
+  },
+  "timeline": {
+    "eyebrow": "Reference",
+    "title": "Historical timeline",
+    "subtitle": "Filter by era, country or keyword. Switch between timeline and map to see history in both time and space.",
+    "searchLabel": "Search events",
+    "searchPlaceholder": "For example: Bach Dang, Dien Bien Phu…",
+    "eraLabel": "Era",
+    "countryLabel": "Country",
+    "allEras": "All eras",
+    "allCountries": "All countries",
+    "viewTimeline": "Timeline",
+    "viewMap": "Map",
+    "results": "{count} events",
+    "noResults": "No events match the current filters.",
+    "reset": "Clear filters",
+    "mapHint": "Tap a marker to see its name and open the article.",
+    "mapListSummary": "List of the {count} event locations shown",
+    "eraGroup": "{era} era",
+    "startExploring": "Start exploring",
+    "sortNote": "Ordered from earliest to latest",
+    "quickFilters": "Quick filters",
+    "activeFilters": "Active filters"
+  },
+  "event": {
+    "breadcrumbHome": "Home",
+    "breadcrumbTimeline": "Timeline",
+    "date": "Date",
+    "location": "Location",
+    "era": "Era",
+    "country": "Country",
+    "tags": "Keywords",
+    "share": "Share this article",
+    "copyLink": "Copy link",
+    "copied": "Link copied",
+    "facebook": "Share on Facebook",
+    "x": "Share on X",
+    "related": "Related events",
+    "relatedSubtitle": "Nearby moments in time to keep reading.",
+    "mapTitle": "Location on the map",
+    "mapHint": "The marker follows the approximate coordinates of the event.",
+    "directions": "Directions",
+    "externalTitle": "Wider perspective",
+    "externalNote": "This reference summary is retrieved automatically from an open encyclopedia and may differ from our editorial approach.",
+    "readOnWikipedia": "Read the full article on Wikipedia",
+    "previous": "Previous event",
+    "next": "Next event",
+    "backToTimeline": "Back to the timeline",
+    "updated": "Updated",
+    "contentNote": "Content is written for learning and reference. If you spot an error, you can send feedback.",
+    "feedback": "Give feedback on this article",
+    "minuteRead": "min read",
+    "sources": "Sources",
+    "sourcesNote": "This article was compiled and edited from the authoritative sources listed below. Open each source to verify the information.",
+    "sourceList": "Reference list",
+    "openSource": "Open source",
+    "sourceLanguageVi": "Vietnamese",
+    "sourceLanguageEn": "English",
+    "sourceWikipedia": "Open encyclopedia",
+    "sameYearEyebrow": "In the same year",
+    "sameYearTitle": "What else happened that year?",
+    "sameYearSubtitle": "Events in other countries that unfolded in the same year. Vietnamese and world history have always moved together.",
+    "sameYearToc": "Same year",
+    "sameYearChip": "Same year",
+    "sameYearBc": "BCE",
+    "toc": "On this page",
+    "keyFacts": "Key facts",
+    "overview": "Overview",
+    "imageCredit": "Photo",
+    "imageSource": "Wikimedia Commons",
+    "readingProgress": "Reading time",
+    "quizEyebrow": "Quick review",
+    "quizTitle": "Memory quiz",
+    "quizIntro": "Choose 5 or 10 questions taken straight from this article. The set changes at random each time the page opens; pick your answers, then check the score to see what stuck.",
+    "quizCountLegend": "Questions",
+    "quizCountOption": "{count} questions",
+    "quizToc": "Review quiz",
+    "quizQuestionYear": "In what year did “{title}” begin?",
+    "quizQuestionEra": "Which era does “{title}” belong to?",
+    "quizQuestionCountry": "Which country or region is “{title}” linked to?",
+    "quizQuestionLocation": "Where did “{title}” take place?",
+    "quizQuestionDate": "When did “{title}” take place?",
+    "quizQuestionFindYear": "Which event began in {year}?",
+    "quizQuestionFindEra": "Which event belongs to the {era} era?",
+    "quizQuestionFindCountry": "Which event is linked to {country}?",
+    "quizQuestionFindLocation": "Which event took place at {location}?",
+    "quizQuestionFindDate": "Which event took place on {date}?",
+    "quizQuestionEarliest": "Which event began earliest among the options below?",
+    "quizQuestionLatest": "Which event began latest among the options below?",
+    "quizSubmit": "Check answers",
+    "quizRetry": "Try again",
+    "quizScore": "You answered {score} of {total} correctly.",
+    "quizPerfect": "All {total} correct. You know the key facts in this article.",
+    "quizCorrect": "Correct.",
+    "quizIncorrect": "Not quite.",
+    "quizCorrectAnswer": "Correct answer: {answer}.",
+    "quizNeedAll": "Choose an answer for all {total} questions before checking.",
+    "quizExplainYear": "The article gives the date as: {date}.",
+    "quizExplainEra": "The article places this event in the {answer} era.",
+    "quizExplainCountry": "This event is linked to {answer}.",
+    "quizExplainLocation": "The article gives the location as: {answer}.",
+    "quizExplainDate": "The article gives the date as: {answer}.",
+    "quizExplainFindYear": "The article says “{title}” began in {date}.",
+    "quizExplainFindEra": "“{title}” belongs to the {era} era.",
+    "quizExplainFindCountry": "“{title}” is linked to {country}.",
+    "quizExplainFindLocation": "“{title}” took place at {location}.",
+    "quizExplainFindDate": "The article dates “{title}” to {date}.",
+    "quizExplainEarliest": "“{title}” began in {date}, the earliest of the options.",
+    "quizExplainLatest": "“{title}” began in {date}, the latest of the options."
+  },
+  "contribute": {
+    "eyebrow": "Write history with us",
+    "title": "Send your materials",
+    "subtitle": "Do you have documents, photographs, family stories or a discovery about an event? Share it so the editorial team can review and add it.",
+    "directEmailTitle": "Email us directly",
+    "directEmailText": "Prefer not to use the form? Send documents, photographs or feedback straight to the editorial team's inbox.",
+    "directEmailSubject": "Contribution to World History Archive",
+    "formContactTitle": "Contact details",
+    "formContactHint": "This section lets the editorial team follow up when verification is needed.",
+    "formContentTitle": "Contribution details",
+    "formContentHint": "Clear sources and dates make verification faster.",
+    "nameLabel": "Full name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "emailHint": "Used only to contact you about the contribution, never shown publicly.",
+    "messageLabel": "Contribution details",
+    "messagePlaceholder": "Describe the material, its origin, date and why it is useful…",
+    "suggestionLabel": "Related event or topic",
+    "suggestionPlaceholder": "For example: The Battle of Bach Dang, 938",
+    "submit": "Send contribution",
+    "submitting": "Sending…",
+    "privacy": "Email addresses are encrypted at rest. We use your name and email only to contact you about this contribution.",
+    "consentText": "I agree that this site may store my name and email address to contact me about this contribution.",
+    "consentLabel": "Data storage consent",
+    "consentLink": "Read the Privacy Policy",
+    "requiredLegend": "Items marked with * are required.",
+    "required": "Required",
+    "optional": "Optional",
+    "guidelinesTitle": "Before you send",
+    "guideline1": "State the source of the material where possible.",
+    "guideline2": "Do not send other people's personal information without consent.",
+    "guideline3": "Specific content with dates and places is most useful.",
+    "errorTitle": "We could not send your contribution",
+    "errorGeneric": "The contribution could not be sent right now. Please try again later.",
+    "errorRateLimit": "You have sent too many contributions. Please try again later.",
+    "errorValidation": "Please check the highlighted fields.",
+    "errorFieldsTitle": "Please fix these items:",
+    "fieldErrors": {
+      "fullName": "Please enter a name between 2 and 120 characters.",
+      "email": "The email address is not valid.",
+      "message": "The message must be between 20 and 5,000 characters.",
+      "eventSuggestion": "The related topic must not exceed 200 characters.",
+      "website": "The request is not valid.",
+      "consent": "Please tick the consent box before sending."
+    },
+    "honeypotLabel": "Website",
+    "success": "Thank you! Your contribution has been recorded.",
+    "responseTitle": "Response promise",
+    "responseText": "Every contribution is reviewed by the editorial team within three working days. Items that need cross-checking may take longer.",
+    "responseNote": "We will reply to the email address you provide."
+  },
+  "thankYou": {
+    "eyebrow": "Recorded",
+    "title": "Thank you for adding a piece of history",
+    "text": "The editorial team will read it, check the sources and contact you if more information is needed. Approved contributions will be added to the relevant article.",
+    "nextTitle": "While you wait",
+    "nextText": "Continue exploring the timeline or read more about how we verify sources.",
+    "timelineCta": "Explore the timeline",
+    "homeCta": "Back to home",
+    "faqCta": "Read the FAQ"
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "The team behind World History Chronicle",
+    "lead": "We believe history is more than dates. It is how people made decisions, collided and left traces. This project exists to make learning history more approachable, searchable and trustworthy.",
+    "missionTitle": "Mission",
+    "missionText": "To create an open historical encyclopedia that prioritises Vietnam while always placing it in regional and global context; written for general readers but respectful of scholarly standards.",
+    "storyTitle": "The project story",
+    "storyEyebrow": "Origins",
+    "storyParagraphs": [
+      "World History Chronicle began with a simple question: why do many people know the major events but struggle to picture where they happened, when, and how they connect?",
+      "We chose to combine timelines, maps and short sourced articles. Each event sits beside others from the same era so readers can sense the rhythm of history.",
+      "The project was bilingual from the start, ready for mobile applications and open to community contributions. We see it as a growing product, not a closed book."
+    ],
+    "valuesTitle": "Editorial principles",
+    "valuesEyebrow": "Principles",
+    "values": [
+      {
+        "title": "Accuracy first",
+        "text": "When the evidence is not yet firm, we state the limits instead of presenting a claim as absolute fact."
+      },
+      {
+        "title": "Context over lists",
+        "text": "Each article tries to answer why an event happened, who was affected and how long the consequences lasted."
+      },
+      {
+        "title": "Respect for readers",
+        "text": "Clear language, no sensationalism, and no turning history into cheap entertainment."
+      }
+    ],
+    "methodTitle": "Verification process",
+    "methodEyebrow": "Verification",
+    "methodParagraphs": [
+      "Every draft is checked against at least two independent sources where possible. Ancient milestones are clearly separated into legend, historical record and archaeological evidence.",
+      "Illustrations are currently produced by our design team; we do not use images with unclear copyright. When archival images are added, their source and licence are stated.",
+      "Reader contributions are reviewed before publication. Sending a contribution does not guarantee that it will be published."
+    ],
+    "teamTitle": "The people behind the content",
+    "teamEyebrow": "The team",
+    "teamSubtitle": "A small team working with transparent editorial principles and cross-checking.",
+    "team": [
+      {
+        "name": "Nguyen Minh Anh",
+        "role": "Editorial lead",
+        "bio": "Oversees content structure, source checking and a consistent voice across the encyclopedia.",
+        "image": "/images/team-1.svg",
+        "alt": "Illustrated portrait of Nguyen Minh Anh"
+      },
+      {
+        "name": "Tran Quoc Bao",
+        "role": "Vietnamese history editor",
+        "bio": "Covers the ancient to early modern periods, with a particular interest in local history and family archives.",
+        "image": "/images/team-2.svg",
+        "alt": "Illustrated portrait of Tran Quoc Bao"
+      },
+      {
+        "name": "Le Thu Ha",
+        "role": "World history editor",
+        "bio": "Connects global events with Vietnamese context and oversees comparisons and parallel timelines.",
+        "image": "/images/team-3.svg",
+        "alt": "Illustrated portrait of Le Thu Ha"
+      },
+      {
+        "name": "Pham Duc Long",
+        "role": "Design and engineering",
+        "bio": "Builds the reading experience, maps and secure infrastructure so the content can reach more people.",
+        "image": "/images/team-4.svg",
+        "alt": "Illustrated portrait of Pham Duc Long"
+      }
+    ],
+    "ctaTitle": "Help us complete the encyclopedia",
+    "ctaText": "If you care about history, design or technology, there are many ways to contribute.",
+    "ctaButton": "Send a contribution"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "subtitle": "Five questions about how we build content, verify sources and handle contributions.",
+    "items": [
+      {
+        "question": "What does this website offer?",
+        "answer": "World History Chronicle is a bilingual history encyclopedia that prioritises Vietnam and places events in a global context. Each event includes a summary, a multi-paragraph article, a map location, keywords and links to related events."
+    },
+      {
+        "question": "Is the content verified?",
+        "answer": "We compare historical sources, museums and open encyclopedias, preferring at least two independent sources where possible. For ancient milestones, articles clearly separate legend, record and archaeological evidence. Content may still contain errors and is always open to correction."
+    },
+    {
+      "question": "How can I contribute materials?",
+      "answer": "Use the Contribute page to send your name, email, details and a related topic. The editorial team will read it, check the sources and contact you if more information is needed. Submission does not guarantee publication."
+    },
+    {
+      "question": "Does the site use maps and external data?",
+      "answer": "The map draws its own coastlines, land borders and place names from the public Natural Earth dataset shipped with the site, so no third-party tile server is contacted while you browse. The Wider perspective section may retrieve a summary from Wikipedia and always states the source. If an external service is unavailable, the main article still displays normally."
+    },
+    {
+      "question": "Is there an English version and a mobile app?",
+      "answer": "The entire interface and all event content are available in Vietnamese and English. The application programming interface is designed separately so it can serve Android and iOS applications in the future, but no mobile app has been released yet."
+    }
+    ],
+    "moreTitle": "Still have a question?",
+    "moreText": "Send a question or topic suggestion to the editorial team. We read every message.",
+    "contactCta": "Send a question"
+  },
+  "privacy": {
+    "eyebrow": "Privacy",
+    "title": "Privacy policy",
+    "updated": "Last updated: 03 November 2026",
+    "ownerName": "World History Archive",
+    "intro": "This policy explains what we collect, why we collect it, how we protect it and what rights you have. We try to collect only what is genuinely necessary to run the encyclopedia.",
+    "sections": [
+      {
+        "anchor": "chu-quan",
+        "title": "Data controller and contact point",
+        "paragraphs": [
+          "{owner} operates this website and is the party that decides the purposes and means of processing the personal data described in this policy.",
+          "Requests about personal data and complaints go to sukytoancau@gmail.com, or through the Contribute page. Please state the name you used when contributing and what you would like us to do, so that we can verify the request."
+        ]
+      },
+      {
+        "anchor": "du-lieu",
+        "title": "Data we collect",
+        "paragraphs": [
+          "When you send a contribution we receive your name, email address, contribution details and chosen topic. Email addresses are encrypted before being stored in the database.",
+          "The server records a minimal amount of technical data such as request time and network address. The network address is hashed with a secret key to prevent spam; we do not store the original address for this purpose.",
+          "If you agree, Google Analytics is used to understand how people read articles. You can decline and the site remains fully functional."
+        ]
+      },
+      {
+        "anchor": "muc-dich",
+        "title": "How we use data",
+        "paragraphs": [
+          "We use contribution data to contact you, verify information and add content; we use technical data to detect abuse, protect the system and improve the reading experience.",
+          "We do not sell personal data and we do not use your email address for advertising."
+        ]
+      },
+      {
+        "anchor": "bao-mat",
+        "title": "How we protect data",
+        "paragraphs": [
+          "Email addresses in contributions are encrypted with an application key. Administrator passwords are stored only as hashes produced by a dedicated algorithm.",
+          "The Postgres database in deployed environments enables row-level security: the public may read events and submit contributions but may not read other people's contributions.",
+          "The website applies security headers, submission rate limits, input validation and the principle of least privilege for service accounts."
+        ]
+      },
+      {
+        "anchor": "luu-tru",
+        "title": "Retention",
+        "paragraphs": [
+          "Contributions are kept until processed and for no more than 24 months, unless a longer period is needed to resolve a dispute or required by law.",
+          "Analytics data is aggregated and retained according to the analytics provider's terms."
+        ]
+      },
+      {
+        "anchor": "ben-thu-ba",
+        "title": "Third-party services",
+        "paragraphs": [
+          "The map does not call any third-party tile server: coastlines, land borders and place names ship inside the page. Opening the map connects to no map service and does not expose your network address.",
+          "The Wider perspective section calls the Wikipedia API. We do not send your personal information in these requests.",
+          "Google Analytics loads only after you agree. We do not configure advertising data sharing."
+        ]
+      },
+      {
+        "anchor": "cookie",
+        "title": "Cookies and local storage",
+        "paragraphs": [
+          "Technical cookies remember your language and theme choices. Your analytics choice and saved events are kept in your browser's local storage.",
+          "You can clear cookies and local data at any time in your browser settings."
+        ]
+      },
+      {
+        "anchor": "quyen",
+        "title": "Your rights",
+        "paragraphs": [
+          "You may request access to, correction of or deletion of personal information you have sent, withdraw analytics consent and object to processing.",
+          "To do so, send a request through the Contribute page stating what you would like us to do. We may need to verify the request first."
+        ]
+      },
+      {
+        "anchor": "lien-he",
+        "title": "Contact and response deadlines",
+        "paragraphs": [
+          "Send questions about this policy to sukytoancau@gmail.com or use the Contribute page. We reply and guide you through the procedure within two working days of receiving a request.",
+          "Processing deadlines follow Article 5 of Decree 356/2025/ND-CP: access, correction or provision of data within 10 days, or 15 days when the processing party or a third party must be involved; withdrawal of consent, restriction of or objection to processing within 15 days, or 20 days when the processing party must be asked to stop processing; erasure within 20 days, or 30 days when the processing party or a third party must be involved.",
+          "We extend a deadline once at most and only when the request is genuinely complex: up to 10 extra days for access and correction, 15 for withdrawal and objection, 20 for erasure. When we extend, we tell you why.",
+          "The policy may be updated when our practices change. The revision date is always shown at the top."
+        ]
+      }
+    ],
+    "contactCta": "Send a privacy question"
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "This page has drifted out of the timeline",
+    "text": "The link may have changed, the article may have moved, or the address may be mistyped. Do not worry, history still has many entrances.",
+    "searchCta": "View the timeline",
+    "homeCta": "Back to home",
+    "suggestions": "You might be looking for"
+  },
+  "footer": {
+    "tagline": "An open history encyclopedia, prioritising Vietnam and connecting it to the world.",
+    "exploreTitle": "Explore",
+    "aboutTitle": "About the project",
+    "legalTitle": "Legal",
+    "contributeTitle": "Contribute",
+    "contributeText": "Have sources or spotted an error? We would love to hear from you.",
+    "contributeButton": "Send materials",
+    "license": "Content is edited for learning purposes. Archival photos are provided by Wikimedia Commons, with author and licence credited under each image.",
+    "copyright": "© 2026 World History Chronicle. An independent encyclopedia project.",
+    "owner": "Managed by {owner} · Personal data contact: sukytoancau@gmail.com",
+    "security": "Security and privacy",
+    "languageNote": "Vietnamese and English"
+  },
+  "consent": {
+    "title": "We respect your privacy",
+    "text": "Analytics only loads after you agree. You can decline and still read all content.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "privacy": "Read the policy"
+  },
+  "stickyCta": {
+    "title": "Have materials to add?",
+    "text": "Send them to the editorial team.",
+    "button": "Contribute",
+    "dismiss": "Dismiss message"
+  },
+  "errors": {
+    "network": "Could not connect to the data server.",
+    "data": "The received data was not in the expected format.",
+    "loadContent": "Content could not be loaded right now.",
+    "contribution": "The contribution could not be sent. Please try again."
+  }
+}

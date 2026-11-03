@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Sử Ký Toàn Cầu">
+  <rect width="64" height="64" rx="14" fill="#101b26"/>
+  <circle cx="32" cy="32" r="21" fill="none" stroke="#d9b05c" stroke-width="2"/>
+  <circle cx="32" cy="32" r="15" fill="none" stroke="#d9b05c" stroke-width="1" opacity="0.6"/>
+  <path d="M32 13 L37 26 L51 21 L42 32 L54 37 L40 39 L44 53 L32 43 L20 53 L24 39 L10 37 L22 32 L13 21 L27 26 Z" fill="#d9b05c"/>
+  <circle cx="32" cy="32" r="4" fill="#9d2f2f"/>
+</svg>

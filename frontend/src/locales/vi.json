@@ -1,0 +1,602 @@
+{
+  "meta": {
+    "siteName": "Sử Ký Toàn Cầu",
+    "defaultTitle": "Sử Ký Toàn Cầu – Bách khoa lịch sử Việt Nam và thế giới",
+    "titleTemplate": "%s | Sử Ký Toàn Cầu",
+    "description": "Khám phá lịch sử Việt Nam trong dòng chảy thế giới qua dòng thời gian, bản đồ tương tác và các bài viết song ngữ được biên tập cẩn thận.",
+    "keywords": [
+      "lịch sử Việt Nam",
+      "lịch sử thế giới",
+      "dòng thời gian",
+      "bản đồ lịch sử",
+      "bách khoa toàn thư"
+    ],
+    "home": {
+      "title": "Bách khoa lịch sử Việt Nam và thế giới",
+      "description": "Từ nhà nước Văn Lang đến Đổi mới, từ Cách mạng Pháp đến bức tường Berlin: tra cứu sự kiện lịch sử qua dòng thời gian, bản đồ và bài viết song ngữ."
+    },
+    "timeline": {
+      "title": "Dòng thời gian lịch sử",
+      "description": "Duyệt gần một trăm sự kiện lịch sử Việt Nam và thế giới theo thời kỳ, quốc gia và địa điểm trên bản đồ."
+    },
+    "about": {
+      "title": "Giới thiệu đội ngũ",
+      "description": "Sử Ký Toàn Cầu là dự án bách khoa mở do đội ngũ biên tập, thiết kế và kỹ thuật cùng xây dựng vì một cách học lịch sử dễ tiếp cận hơn."
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "description": "Giải đáp về nguồn tư liệu, cách kiểm chứng nội dung, đóng góp bài viết và việc sử dụng dữ liệu bên ngoài."
+    },
+    "contribute": {
+      "title": "Đóng góp tư liệu",
+      "description": "Gửi tư liệu, hình ảnh hoặc chỉnh sửa của bạn để đội ngũ biên tập xem xét và bổ sung vào bách khoa lịch sử."
+    },
+    "stories": {
+      "title": "Hồ sơ chuyên sâu",
+      "description": "Ba hồ sơ lịch sử được phân tích theo bối cảnh, bước ngoặt và hệ quả, kèm nguồn kiểm chứng."
+    },
+    "privacy": {
+      "title": "Chính sách riêng tư",
+      "description": "Cách Sử Ký Toàn Cầu thu thập, sử dụng, bảo vệ và lưu trữ dữ liệu của người đọc."
+    },
+    "thankYou": {
+      "title": "Cảm ơn bạn đã đóng góp",
+      "description": "Đóng góp của bạn đã được ghi nhận và sẽ được đội ngũ biên tập xem xét."
+    },
+    "notFound": {
+      "title": "Không tìm thấy trang",
+      "description": "Trang bạn tìm có thể đã được di chuyển hoặc không còn tồn tại."
+    }
+  },
+  "stories": {
+    "eyebrow": "Hồ sơ chuyên sâu",
+    "title": "Ba hồ sơ đáng đọc",
+    "subtitle": "Mỗi hồ sơ mở một sự kiện qua bối cảnh, bước ngoặt và hệ quả, kèm nguồn tham khảo để bạn tự kiểm chứng.",
+    "whyTitle": "Vì sao đáng đọc",
+    "readCase": "Đọc toàn bộ hồ sơ",
+    "sourcesTitle": "Nguồn kiểm chứng",
+    "caseLabel": "Hồ sơ",
+    "reasons": {
+      "cach-mang-thang-tam-1945": "Một cuộc tổng khởi nghĩa diễn ra trong khoảng thời gian ngắn, cho thấy nghệ thuật chớp thời cơ và sức mạnh của tổ chức quần chúng.",
+      "chien-dich-dien-bien-phu": "Chiến dịch kéo dài 56 ngày đêm là bài học về hậu cần, kiên trì và thay đổi phương châm tác chiến đúng lúc.",
+      "doi-moi-1986": "Đại hội VI mở đường cho đổi mới kinh tế, một bước ngoặt giúp Việt Nam thoát khỏi khủng hoảng và hội nhập."
+    }
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "timeline": "Dòng thời gian",
+    "stories": "Hồ sơ",
+    "about": "Giới thiệu",
+    "faq": "Hỏi đáp",
+    "contribute": "Đóng góp",
+    "privacy": "Riêng tư",
+    "ribbon": "Bách khoa lịch sử mở · Song ngữ Việt – Anh",
+    "search": "Tìm kiếm"
+  },
+  "common": {
+    "readMore": "Đọc bài",
+    "viewAll": "Xem tất cả",
+    "home": "Trang chủ",
+    "menu": "Mở menu",
+    "close": "Đóng",
+    "language": "Ngôn ngữ",
+    "theme": "Giao diện",
+    "darkMode": "Giao diện tối",
+    "lightMode": "Giao diện sáng",
+    "loading": "Đang tải…",
+    "error": "Đã có lỗi xảy ra",
+    "retry": "Thử lại",
+    "skipToContent": "Bỏ qua và tới nội dung chính",
+    "events": "sự kiện",
+    "years": "năm",
+    "all": "Tất cả",
+    "back": "Quay lại",
+    "share": "Chia sẻ",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép",
+    "featured": "Nổi bật",
+    "learnMore": "Tìm hiểu thêm",
+    "seeMore": "Xem thêm",
+    "closeMenu": "Đóng menu",
+    "openMenu": "Mở menu",
+    "backToTop": "Lên đầu trang",
+    "search": "Tìm kiếm",
+    "filter": "Bộ lọc",
+    "viewMode": "Chế độ xem",
+    "mapCredit": "Đường bờ biển và biên giới: Natural Earth (phạm vi công cộng)",
+    "openGoogleMap": "Mở Google Maps",
+    "mapCluster": "{count} sự kiện trong khu vực này. Bấm để phóng to."
+  },
+  "a11y": {
+    "breadcrumb": "Đường dẫn điều hướng",
+    "mainNav": "Điều hướng chính",
+    "mobileNav": "Điều hướng trên thiết bị di động",
+    "toggleTheme": "Đổi giao diện sáng tối",
+    "changeLanguage": "Đổi ngôn ngữ",
+    "favorite": "Lưu sự kiện",
+    "unfavorite": "Bỏ lưu sự kiện",
+    "map": "Bản đồ các sự kiện lịch sử",
+    "timeline": "Dòng thời gian các sự kiện",
+    "externalLink": "Mở trong tab mới",
+    "logo": "Sử Ký Toàn Cầu – về trang chủ",
+    "skipLink": "Bỏ qua điều hướng",
+    "search": "Tìm kiếm sự kiện lịch sử",
+    "zoomIn": "Phóng to bản đồ",
+    "zoomOut": "Thu nhỏ bản đồ",
+    "closePopup": "Đóng thông tin sự kiện",
+    "searchOnTimeline": "Mở ô tìm kiếm ở trang Dòng thời gian"
+  },
+  "preferences": {
+    "countryLabel": "Quốc gia của bạn",
+    "countryPlaceholder": "Chọn quốc gia",
+    "countryHint": "Lịch sử của quốc gia bạn chọn sẽ được ưu tiên hiển thị trước.",
+    "preferredNotice": "Đang ưu tiên lịch sử {country}",
+    "clear": "Bỏ ưu tiên",
+    "countrySectionTitle": "Lịch sử {country}",
+    "countrySectionSubtitle": "Những mốc son tiêu biểu của quốc gia bạn chọn, hiển thị trước khi bạn khám phá phần còn lại của thế giới."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Bách khoa toàn thư mở",
+      "title": "Lịch sử thế giới,",
+      "titleAccent": "từ Việt Nam nhìn ra.",
+      "description": "Từ những nhà nước đầu tiên bên sông Hồng tới các nền văn minh lớn khắp năm châu. Đọc, đối chiếu và đặt câu hỏi về quá khứ qua một trải nghiệm có thể tra cứu, chia sẻ và đóng góp.",
+      "primaryCta": "Khám phá dòng thời gian",
+      "secondaryCta": "Đóng góp tư liệu",
+      "imageAlt": "Minh họa trống đồng Đông Sơn, dòng sông và những tầng thời gian lịch sử",
+      "note": "{suKien} sự kiện · {quocGia} quốc gia và khu vực · 2 ngôn ngữ",
+      "searchHint": "Tra cứu nhanh sự kiện, nhân vật hoặc địa danh",
+      "searchCta": "Tìm"
+    },
+    "stats": {
+      "events": "Sự kiện đã biên soạn",
+      "eras": "Thời kỳ lịch sử",
+      "countries": "Quốc gia và khu vực",
+      "languages": "Ngôn ngữ hiển thị"
+    },
+    "featured": {
+      "eyebrow": "Tuyển chọn",
+      "title": "Những mốc son tiêu biểu",
+      "subtitle": "Các sự kiện có sức ảnh hưởng sâu rộng, được trình bày cùng bối cảnh, hệ quả và liên kết tới các bài viết liên quan.",
+      "cta": "Xem toàn bộ dòng thời gian"
+    },
+    "eras": {
+      "eyebrow": "Bốn chặng đường",
+      "title": "Đi xuyên các thời kỳ",
+      "subtitle": "Mỗi thời kỳ là một lớp trầm tích của xã hội, tư tưởng và kỹ thuật. Chọn một chặng để bắt đầu.",
+      "eventCount": "sự kiện"
+    },
+    "map": {
+      "eyebrow": "Không gian lịch sử",
+      "title": "Địa điểm kể câu chuyện",
+      "subtitle": "Bản đồ đặt sự kiện vào không gian thực: từ Phong Châu, Bạch Đằng đến Paris và Berlin. Chạm vào từng điểm để mở bài viết.",
+      "cta": "Mở bản đồ đầy đủ",
+      "hint": "Chạm vào điểm đánh dấu để xem thông tin.",
+      "markerLabel": "{count} địa điểm trên bản đồ"
+    },
+    "latest": {
+      "eyebrow": "Mới biên tập",
+      "title": "Bài viết gần đây",
+      "subtitle": "Những sự kiện vừa được bổ sung tư liệu, hình ảnh và liên kết đối chiếu.",
+      "cta": "Xem tất cả bài viết"
+    },
+    "method": {
+      "eyebrow": "Cách chúng tôi làm việc",
+      "title": "Một bách khoa có thể kiểm chứng",
+      "item1Title": "Dẫn nguồn rõ ràng",
+      "item1Text": "Mỗi bài viết ưu tiên tư liệu lịch sử, bảo tàng và bách khoa toàn thư mở. Liên kết tham khảo được đặt ngay trong trang chi tiết.",
+      "item2Title": "Phân biệt sự kiện và truyền thuyết",
+      "item2Text": "Với các mốc cổ đại, chúng tôi nói rõ đâu là ghi chép truyền thống, đâu là bằng chứng khảo cổ và đâu còn là giả thuyết.",
+      "item3Title": "Mở với đóng góp",
+      "item3Text": "Độc giả có thể gửi tư liệu, phát hiện lỗi hoặc đề xuất chủ đề. Đội ngũ biên tập sẽ kiểm tra trước khi xuất bản."
+    },
+    "cta": {
+      "title": "Câu chuyện lịch sử cần thêm tiếng nói của bạn",
+      "text": "Bạn có hình ảnh, tư liệu gia đình hoặc một phát hiện thú vị? Hãy gửi cho chúng tôi để cùng làm giàu bách khoa lịch sử.",
+      "button": "Gửi đóng góp",
+      "secondary": "Đọc câu hỏi thường gặp"
+    }
+  },
+  "timeline": {
+    "eyebrow": "Tra cứu",
+    "title": "Dòng thời gian lịch sử",
+    "subtitle": "Lọc theo thời kỳ, quốc gia hoặc từ khóa. Chuyển giữa dòng thời gian và bản đồ để nhìn lịch sử theo cả thời gian lẫn không gian.",
+    "searchLabel": "Tìm kiếm sự kiện",
+    "searchPlaceholder": "Ví dụ: Bạch Đằng, Điện Biên Phủ…",
+    "eraLabel": "Thời kỳ",
+    "countryLabel": "Quốc gia",
+    "allEras": "Tất cả thời kỳ",
+    "allCountries": "Tất cả quốc gia",
+    "viewTimeline": "Dòng thời gian",
+    "viewMap": "Bản đồ",
+    "results": "{count} sự kiện",
+    "noResults": "Không tìm thấy sự kiện phù hợp với bộ lọc.",
+    "reset": "Xóa bộ lọc",
+    "mapHint": "Chạm vào điểm đánh dấu để xem tên và mở bài viết.",
+    "mapListSummary": "Danh sách địa điểm của {count} sự kiện đang hiển thị",
+    "eraGroup": "Thời kỳ {era}",
+    "startExploring": "Bắt đầu khám phá",
+    "sortNote": "Sắp xếp từ cổ đến kim",
+    "quickFilters": "Lọc nhanh",
+    "activeFilters": "Bộ lọc đang áp dụng"
+  },
+  "event": {
+    "breadcrumbHome": "Trang chủ",
+    "breadcrumbTimeline": "Dòng thời gian",
+    "date": "Thời gian",
+    "location": "Địa điểm",
+    "era": "Thời kỳ",
+    "country": "Quốc gia",
+    "tags": "Từ khóa",
+    "share": "Chia sẻ bài viết",
+    "copyLink": "Sao chép liên kết",
+    "copied": "Đã sao chép liên kết",
+    "facebook": "Chia sẻ lên Facebook",
+    "x": "Chia sẻ lên X",
+    "related": "Sự kiện liên quan",
+    "relatedSubtitle": "Những mốc thời gian gần gũi để tiếp tục đọc.",
+    "mapTitle": "Vị trí trên bản đồ",
+    "mapHint": "Vị trí được đánh dấu theo tọa độ ước lệ của sự kiện.",
+    "directions": "Chỉ đường",
+    "externalTitle": "Góc nhìn mở rộng",
+    "externalNote": "Đoạn tóm tắt tham khảo được lấy tự động từ bách khoa toàn thư mở và có thể khác cách biên tập của chúng tôi.",
+    "readOnWikipedia": "Đọc toàn bộ trên Wikipedia",
+    "previous": "Sự kiện trước",
+    "next": "Sự kiện sau",
+    "backToTimeline": "Quay lại dòng thời gian",
+    "updated": "Cập nhật",
+    "contentNote": "Nội dung được biên soạn cho mục đích học tập và tra cứu. Nếu phát hiện sai sót, bạn có thể gửi phản hồi.",
+    "feedback": "Góp ý cho bài viết này",
+    "minuteRead": "phút đọc",
+    "sources": "Nguồn tham khảo",
+    "sourcesNote": "Bài viết được tổng hợp và biên soạn từ các nguồn chính thống dưới đây. Bạn có thể mở từng nguồn để kiểm chứng thông tin.",
+    "sourceList": "Tư liệu tham khảo",
+    "openSource": "Mở nguồn",
+    "sourceLanguageVi": "Tiếng Việt",
+    "sourceLanguageEn": "Tiếng Anh",
+    "sourceWikipedia": "Bách khoa toàn thư mở",
+    "sameYearEyebrow": "Trùng năm với thế giới",
+    "sameYearTitle": "Cùng năm, thế giới có gì?",
+    "sameYearSubtitle": "Những sự kiện ở quốc gia khác diễn ra cùng năm với sự kiện này. Lịch sử Việt Nam và thế giới luôn song hành trong cùng dòng chảy.",
+    "sameYearToc": "Cùng năm",
+    "sameYearChip": "Cùng năm",
+    "sameYearBc": "TCN",
+    "toc": "Trong bài này",
+    "keyFacts": "Thông tin nhanh",
+    "overview": "Tóm tắt",
+    "imageCredit": "Ảnh",
+    "imageSource": "Wikimedia Commons",
+    "readingProgress": "Thời gian đọc",
+    "quizEyebrow": "Ôn tập nhanh",
+    "quizTitle": "Trắc nghiệm ghi nhớ",
+    "quizIntro": "Chọn 5 hoặc 10 câu lấy trực tiếp từ bài viết này. Bộ câu hỏi đổi ngẫu nhiên mỗi lần mở trang; chọn đáp án rồi chấm điểm để biết mình đã nhớ được gì.",
+    "quizCountLegend": "Số câu hỏi",
+    "quizCountOption": "{count} câu",
+    "quizToc": "Trắc nghiệm",
+    "quizQuestionYear": "“{title}” bắt đầu năm nào?",
+    "quizQuestionEra": "“{title}” thuộc thời kỳ nào?",
+    "quizQuestionCountry": "“{title}” gắn với quốc gia hoặc khu vực nào?",
+    "quizQuestionLocation": "“{title}” diễn ra tại địa điểm nào?",
+    "quizQuestionDate": "“{title}” diễn ra vào thời điểm nào?",
+    "quizQuestionFindYear": "Sự kiện nào bắt đầu vào năm {year}?",
+    "quizQuestionFindEra": "Sự kiện nào thuộc thời kỳ {era}?",
+    "quizQuestionFindCountry": "Sự kiện nào gắn với {country}?",
+    "quizQuestionFindLocation": "Sự kiện nào diễn ra tại {location}?",
+    "quizQuestionFindDate": "Sự kiện nào diễn ra vào {date}?",
+    "quizQuestionEarliest": "Sự kiện nào bắt đầu sớm nhất trong các lựa chọn sau?",
+    "quizQuestionLatest": "Sự kiện nào bắt đầu muộn nhất trong các lựa chọn sau?",
+    "quizSubmit": "Chấm điểm",
+    "quizRetry": "Làm lại",
+    "quizScore": "Bạn trả lời đúng {score}/{total} câu.",
+    "quizPerfect": "Đúng cả {total} câu. Bạn đã nắm được các mốc chính của bài này.",
+    "quizCorrect": "Chính xác.",
+    "quizIncorrect": "Chưa đúng.",
+    "quizCorrectAnswer": "Đáp án đúng: {answer}.",
+    "quizNeedAll": "Hãy chọn đáp án cho cả {total} câu trước khi chấm.",
+    "quizExplainYear": "Bài viết ghi thời gian: {date}.",
+    "quizExplainEra": "Bài viết xếp sự kiện vào thời kỳ {answer}.",
+    "quizExplainCountry": "Sự kiện gắn với {answer}.",
+    "quizExplainLocation": "Bài viết ghi địa điểm: {answer}.",
+    "quizExplainDate": "Bài viết ghi thời điểm: {answer}.",
+    "quizExplainFindYear": "Bài viết cho biết “{title}” bắt đầu vào {date}.",
+    "quizExplainFindEra": "“{title}” thuộc thời kỳ {era}.",
+    "quizExplainFindCountry": "“{title}” gắn với {country}.",
+    "quizExplainFindLocation": "“{title}” diễn ra tại {location}.",
+    "quizExplainFindDate": "Bài viết ghi “{title}” vào {date}.",
+    "quizExplainEarliest": "“{title}” bắt đầu vào {date}, sớm nhất trong các lựa chọn.",
+    "quizExplainLatest": "“{title}” bắt đầu vào {date}, muộn nhất trong các lựa chọn."
+  },
+  "contribute": {
+    "eyebrow": "Cùng viết lịch sử",
+    "title": "Gửi tư liệu của bạn",
+    "subtitle": "Bạn có tài liệu, hình ảnh, câu chuyện gia đình hoặc phát hiện về một sự kiện? Hãy chia sẻ để đội ngũ biên tập kiểm tra và bổ sung.",
+    "directEmailTitle": "Gửi trực tiếp qua thư điện tử",
+    "directEmailText": "Không muốn dùng biểu mẫu? Bạn có thể gửi tài liệu, hình ảnh hoặc góp ý thẳng tới hộp thư của đội ngũ biên tập.",
+    "directEmailSubject": "Đóng góp cho Sử Ký Toàn Cầu",
+    "formContactTitle": "Thông tin liên hệ",
+    "formContactHint": "Phần này giúp đội ngũ biên tập phản hồi khi cần xác minh.",
+    "formContentTitle": "Nội dung đóng góp",
+    "formContentHint": "Càng rõ nguồn tư liệu và mốc thời gian, việc kiểm chứng càng nhanh.",
+    "nameLabel": "Họ và tên",
+    "namePlaceholder": "Nguyễn Văn A",
+    "emailLabel": "Thư điện tử",
+    "emailPlaceholder": "ban@example.com",
+    "emailHint": "Chỉ dùng để liên hệ về đóng góp, không hiển thị công khai.",
+    "messageLabel": "Nội dung đóng góp",
+    "messagePlaceholder": "Mô tả tư liệu, nguồn gốc, thời gian và vì sao thông tin này hữu ích…",
+    "suggestionLabel": "Sự kiện hoặc chủ đề liên quan",
+    "suggestionPlaceholder": "Ví dụ: Chiến thắng Bạch Đằng năm 938",
+    "submit": "Gửi đóng góp",
+    "submitting": "Đang gửi…",
+    "privacy": "Thư điện tử được mã hóa khi lưu. Chúng tôi chỉ dùng họ tên và thư điện tử để liên hệ về chính đóng góp này.",
+    "consentText": "Tôi đồng ý để trang lưu họ tên và thư điện tử của tôi nhằm liên hệ về đóng góp này.",
+    "consentLabel": "Ô đồng ý lưu dữ liệu",
+    "consentLink": "Đọc Chính sách riêng tư",
+    "requiredLegend": "Dấu * đánh dấu thông tin bắt buộc.",
+    "required": "Bắt buộc",
+    "optional": "Không bắt buộc",
+    "guidelinesTitle": "Trước khi gửi",
+    "guideline1": "Nêu rõ nguồn tài liệu nếu có thể.",
+    "guideline2": "Không gửi thông tin cá nhân của người khác khi chưa được đồng ý.",
+    "guideline3": "Ưu tiên nội dung cụ thể, có ngày tháng và địa điểm.",
+    "errorTitle": "Chưa thể gửi đóng góp",
+    "errorGeneric": "Không thể gửi đóng góp lúc này. Vui lòng thử lại sau.",
+    "errorRateLimit": "Bạn đã gửi quá nhiều đóng góp. Vui lòng thử lại sau.",
+    "errorValidation": "Vui lòng kiểm tra lại các trường được đánh dấu.",
+    "errorFieldsTitle": "Vui lòng sửa các mục sau:",
+    "fieldErrors": {
+      "fullName": "Vui lòng nhập họ tên từ 2 đến 120 ký tự.",
+      "email": "Địa chỉ thư điện tử chưa hợp lệ.",
+      "message": "Nội dung cần từ 20 đến 5.000 ký tự.",
+      "eventSuggestion": "Chủ đề gợi ý không được vượt quá 200 ký tự.",
+      "website": "Yêu cầu không hợp lệ.",
+      "consent": "Bạn cần tích ô đồng ý trước khi gửi."
+    },
+    "honeypotLabel": "Trang web",
+    "success": "Cảm ơn bạn! Đóng góp đã được ghi nhận.",
+    "responseTitle": "Cam kết phản hồi",
+    "responseText": "Mỗi đóng góp được đội ngũ biên tập xem xét trong vòng 3 ngày làm việc. Nội dung cần đối chiếu nhiều nguồn có thể mất thêm thời gian.",
+    "responseNote": "Bạn sẽ nhận phản hồi qua thư điện tử đã cung cấp."
+  },
+  "thankYou": {
+    "eyebrow": "Đã ghi nhận",
+    "title": "Cảm ơn bạn đã góp một phần lịch sử",
+    "text": "Đội ngũ biên tập sẽ đọc, đối chiếu nguồn và phản hồi nếu cần thêm thông tin. Những đóng góp được duyệt sẽ được bổ sung vào bài viết tương ứng.",
+    "nextTitle": "Trong lúc chờ",
+    "nextText": "Tiếp tục khám phá dòng thời gian hoặc đọc thêm về cách chúng tôi kiểm chứng tư liệu.",
+    "timelineCta": "Khám phá dòng thời gian",
+    "homeCta": "Về trang chủ",
+    "faqCta": "Đọc câu hỏi thường gặp"
+  },
+  "about": {
+    "eyebrow": "Về chúng tôi",
+    "title": "Đội ngũ phía sau Sử Ký Toàn Cầu",
+    "lead": "Chúng tôi tin rằng lịch sử không chỉ là những mốc ngày tháng. Đó là cách con người ra quyết định, va chạm và để lại dấu vết. Dự án này được xây dựng để việc học lịch sử trở nên gần gũi, có thể tra cứu và đáng tin cậy.",
+    "missionTitle": "Sứ mệnh",
+    "missionText": "Tạo một bách khoa lịch sử mở, ưu tiên Việt Nam nhưng luôn đặt trong bối cảnh khu vực và thế giới; viết cho người đọc phổ thông nhưng tôn trọng chuẩn mực học thuật.",
+    "storyTitle": "Câu chuyện dự án",
+    "storyEyebrow": "Khởi nguồn",
+    "storyParagraphs": [
+      "Sử Ký Toàn Cầu bắt đầu từ một câu hỏi đơn giản: vì sao nhiều người biết đến những sự kiện lớn nhưng lại khó hình dung chúng diễn ra ở đâu, vào lúc nào và liên quan thế nào đến nhau?",
+      "Chúng tôi chọn cách kể kết hợp dòng thời gian, bản đồ và bài viết ngắn có dẫn nguồn. Mỗi sự kiện được đặt cạnh các sự kiện cùng thời kỳ để người đọc thấy được nhịp chảy của lịch sử.",
+      "Dự án được thiết kế song ngữ ngay từ đầu, sẵn sàng cho ứng dụng di động và mở với đóng góp của cộng đồng. Chúng tôi xem đây là một sản phẩm đang lớn dần, không phải một cuốn sách đã đóng."
+    ],
+    "valuesTitle": "Nguyên tắc biên tập",
+    "valuesEyebrow": "Nguyên tắc",
+    "values": [
+      {
+        "title": "Chính xác trước tiên",
+        "text": "Khi tư liệu chưa đủ chắc chắn, chúng tôi nói rõ giới hạn thay vì trình bày như một sự thật tuyệt đối."
+      },
+      {
+        "title": "Bối cảnh thay vì danh sách",
+        "text": "Mỗi bài viết cố gắng trả lời vì sao sự kiện diễn ra, ai chịu ảnh hưởng và hệ quả kéo dài đến đâu."
+      },
+      {
+        "title": "Tôn trọng người đọc",
+        "text": "Ngôn ngữ rõ ràng, không giật gân, không biến lịch sử thành trò giải trí rẻ tiền."
+      }
+    ],
+    "methodTitle": "Quy trình kiểm chứng",
+    "methodEyebrow": "Kiểm chứng",
+    "methodParagraphs": [
+      "Mỗi bản thảo được đối chiếu ít nhất hai nguồn độc lập khi có thể. Các mốc cổ đại được phân biệt rõ giữa truyền thuyết, ghi chép lịch sử và bằng chứng khảo cổ.",
+      "Hình ảnh minh họa hiện là tranh do đội ngũ thiết kế, không sử dụng ảnh có bản quyền chưa rõ nguồn. Khi bổ sung ảnh tư liệu, chúng tôi ghi rõ nguồn và giấy phép.",
+      "Đóng góp của độc giả được kiểm tra trước khi xuất bản. Việc gửi đóng góp không bảo đảm nội dung sẽ được đăng."
+    ],
+    "teamTitle": "Những người làm nội dung",
+    "teamEyebrow": "Đội ngũ",
+    "teamSubtitle": "Một nhóm nhỏ, làm việc theo nguyên tắc biên tập công khai và kiểm tra chéo.",
+    "team": [
+      {
+        "name": "Nguyễn Minh Anh",
+        "role": "Trưởng nhóm biên tập",
+        "bio": "Phụ trách cấu trúc nội dung, đối chiếu nguồn và giữ giọng văn thống nhất cho toàn bộ bách khoa.",
+        "image": "/images/team-1.svg",
+        "alt": "Chân dung minh họa của Nguyễn Minh Anh"
+      },
+      {
+        "name": "Trần Quốc Bảo",
+        "role": "Biên tập viên lịch sử Việt Nam",
+        "bio": "Theo dõi các thời kỳ cổ đại đến cận đại, đặc biệt quan tâm đến lịch sử địa phương và tư liệu gia đình.",
+        "image": "/images/team-2.svg",
+        "alt": "Chân dung minh họa của Trần Quốc Bảo"
+      },
+      {
+        "name": "Lê Thu Hà",
+        "role": "Biên tập viên lịch sử thế giới",
+        "bio": "Kết nối các sự kiện toàn cầu với bối cảnh Việt Nam, phụ trách phần so sánh và dòng thời gian song song.",
+        "image": "/images/team-3.svg",
+        "alt": "Chân dung minh họa của Lê Thu Hà"
+      },
+      {
+        "name": "Phạm Đức Long",
+        "role": "Thiết kế và kỹ thuật",
+        "bio": "Xây dựng trải nghiệm đọc, bản đồ và hạ tầng bảo mật để nội dung đến được với nhiều người hơn.",
+        "image": "/images/team-4.svg",
+        "alt": "Chân dung minh họa của Phạm Đức Long"
+      }
+    ],
+    "ctaTitle": "Cùng chúng tôi hoàn thiện bách khoa",
+    "ctaText": "Nếu bạn quan tâm đến lịch sử, thiết kế hoặc công nghệ, có nhiều cách để đóng góp.",
+    "ctaButton": "Gửi đóng góp"
+  },
+  "faq": {
+    "eyebrow": "Hỏi đáp",
+    "title": "Những câu hỏi thường gặp",
+    "subtitle": "Năm câu hỏi về cách chúng tôi xây dựng nội dung, kiểm chứng tư liệu và xử lý đóng góp.",
+    "items": [
+      {
+        "question": "Trang web này cung cấp nội dung gì?",
+        "answer": "Sử Ký Toàn Cầu là bách khoa lịch sử song ngữ, ưu tiên lịch sử Việt Nam và đặt các sự kiện trong bối cảnh thế giới. Mỗi sự kiện gồm tóm tắt, bài viết nhiều đoạn, địa điểm trên bản đồ, từ khóa và liên kết tới các sự kiện liên quan."
+    },
+      {
+        "question": "Nội dung có được kiểm chứng không?",
+        "answer": "Chúng tôi đối chiếu tư liệu lịch sử, bảo tàng và bách khoa toàn thư mở, ưu tiên ít nhất hai nguồn độc lập khi có thể. Với các mốc cổ đại, bài viết phân biệt rõ truyền thuyết, ghi chép và bằng chứng khảo cổ. Nội dung vẫn có thể còn sai sót và luôn mở để tiếp nhận chỉnh sửa."
+    },
+    {
+      "question": "Tôi có thể đóng góp tư liệu bằng cách nào?",
+      "answer": "Bạn dùng trang Đóng góp để gửi họ tên, thư điện tử, nội dung và chủ đề liên quan. Đội ngũ biên tập sẽ đọc, đối chiếu nguồn và liên hệ nếu cần thêm thông tin. Việc gửi không bảo đảm nội dung sẽ được xuất bản."
+    },
+    {
+      "question": "Trang có sử dụng bản đồ và dữ liệu bên ngoài không?",
+      "answer": "Bản đồ tự vẽ đường bờ biển, biên giới và tên địa danh từ bộ dữ liệu Natural Earth công khai đi kèm trang, nên không có máy chủ ảnh bên thứ ba nào được gọi khi xem bản đồ. Phần Góc nhìn mở rộng có thể lấy đoạn tóm tắt từ Wikipedia và luôn ghi rõ nguồn. Nếu dịch vụ bên ngoài không phản hồi, bài viết chính vẫn hiển thị bình thường."
+    },
+    {
+      "question": "Website có phiên bản tiếng Anh và ứng dụng di động không?",
+      "answer": "Toàn bộ giao diện và nội dung sự kiện hiện có hai ngôn ngữ Việt và Anh. Kiến trúc giao diện lập trình ứng dụng được thiết kế tách biệt để có thể phục vụ ứng dụng Android và iOS trong tương lai, nhưng ứng dụng di động chưa được phát hành."
+    }
+    ],
+    "moreTitle": "Chưa tìm thấy câu trả lời?",
+    "moreText": "Gửi câu hỏi hoặc đề xuất chủ đề cho đội ngũ biên tập. Chúng tôi đọc mọi phản hồi.",
+    "contactCta": "Gửi câu hỏi"
+  },
+  "privacy": {
+    "eyebrow": "Quyền riêng tư",
+    "title": "Chính sách riêng tư",
+    "updated": "Cập nhật lần cuối: 03 tháng 11 năm 2026",
+    "ownerName": "Sử Ký Toàn Cầu",
+    "intro": "Chính sách này giải thích chúng tôi thu thập gì, vì sao thu thập, bảo vệ dữ liệu như thế nào và bạn có những quyền gì. Chúng tôi cố gắng chỉ thu thập những gì thật sự cần thiết để vận hành bách khoa.",
+    "sections": [
+      {
+        "anchor": "chu-quan",
+        "title": "Chủ quản và đầu mối dữ liệu",
+        "paragraphs": [
+          "{owner} là bên làm chủ quản website này, tức là bên quyết định mục đích và phương tiện xử lý dữ liệu cá nhân nêu trong chính sách.",
+          "Đầu mối tiếp nhận yêu cầu về dữ liệu cá nhân và khiếu nại là hộp thư sukytoancau@gmail.com; bạn cũng có thể gửi qua trang Đóng góp. Khi gửi, hãy ghi rõ họ tên đã dùng lúc đóng góp và nội dung cần xử lý để chúng tôi xác minh đúng người."
+        ]
+      },
+      {
+        "anchor": "du-lieu",
+        "title": "Dữ liệu chúng tôi thu thập",
+        "paragraphs": [
+          "Khi bạn gửi đóng góp, chúng tôi nhận họ tên, thư điện tử, nội dung đóng góp và chủ đề bạn chọn. Thư điện tử được mã hóa trước khi lưu trong cơ sở dữ liệu.",
+          "Máy chủ ghi nhận một số dữ liệu kỹ thuật tối thiểu như thời điểm yêu cầu và địa chỉ mạng. Địa chỉ mạng được băm bằng khóa bí mật để chống gửi rác; chúng tôi không lưu địa chỉ gốc cho mục đích này.",
+          "Nếu bạn đồng ý, Google Analytics được dùng để hiểu cách mọi người đọc bài. Bạn có thể từ chối và trang vẫn hoạt động đầy đủ."
+        ]
+      },
+      {
+        "anchor": "muc-dich",
+        "title": "Mục đích sử dụng",
+        "paragraphs": [
+          "Chúng tôi dùng dữ liệu đóng góp để liên hệ, kiểm chứng và bổ sung nội dung; dùng số liệu kỹ thuật để phát hiện lạm dụng, bảo vệ hệ thống và cải thiện trải nghiệm đọc.",
+          "Chúng tôi không bán dữ liệu cá nhân và không dùng thư điện tử của bạn cho quảng cáo."
+        ]
+      },
+      {
+        "anchor": "bao-mat",
+        "title": "Cách chúng tôi bảo vệ dữ liệu",
+        "paragraphs": [
+          "Thư điện tử trong đóng góp được mã hóa bằng khóa của ứng dụng. Mật khẩu quản trị chỉ được lưu dưới dạng băm bằng thuật toán chuyên dụng.",
+          "Cơ sở dữ liệu Postgres trong môi trường triển khai bật chính sách bảo mật cấp dòng: công khai chỉ được đọc sự kiện và gửi đóng góp, không được đọc đóng góp của người khác.",
+          "Website áp dụng các tiêu đề bảo mật, giới hạn tần suất gửi, kiểm tra dữ liệu đầu vào và nguyên tắc đặc quyền tối thiểu cho tài khoản dịch vụ."
+        ]
+      },
+      {
+        "anchor": "luu-tru",
+        "title": "Thời gian lưu trữ",
+        "paragraphs": [
+          "Đóng góp được lưu cho đến khi xử lý xong và tối đa 24 tháng, trừ khi cần giữ lâu hơn để giải quyết tranh chấp hoặc theo yêu cầu pháp lý.",
+          "Dữ liệu phân tích được tổng hợp và lưu theo thời hạn của nhà cung cấp dịch vụ phân tích."
+        ]
+      },
+      {
+        "anchor": "ben-thu-ba",
+        "title": "Chia sẻ với bên thứ ba",
+        "paragraphs": [
+          "Bản đồ không gọi máy chủ ảnh của bên thứ ba: đường bờ biển, biên giới và tên địa danh được tải ngay trong trang. Khi mở bản đồ, trình duyệt không kết nối tới dịch vụ bản đồ nào và không lộ địa chỉ mạng của bạn.",
+          "Phần Góc nhìn mở rộng gọi API của Wikipedia. Chúng tôi không gửi thông tin cá nhân của bạn trong các yêu cầu này.",
+          "Google Analytics chỉ tải sau khi bạn đồng ý. Chúng tôi không cấu hình chia sẻ dữ liệu quảng cáo."
+        ]
+      },
+      {
+        "anchor": "cookie",
+        "title": "Cookie và lưu trữ cục bộ",
+        "paragraphs": [
+          "Cookie kỹ thuật ghi nhớ ngôn ngữ và lựa chọn giao diện. Lựa chọn đồng ý phân tích và danh sách sự kiện đã lưu được giữ trong bộ nhớ cục bộ của trình duyệt.",
+          "Bạn có thể xóa cookie và dữ liệu cục bộ bất cứ lúc nào trong phần cài đặt trình duyệt."
+        ]
+      },
+      {
+        "anchor": "quyen",
+        "title": "Quyền của bạn",
+        "paragraphs": [
+          "Bạn có quyền yêu cầu xem, sửa hoặc xóa thông tin cá nhân đã gửi, rút lại sự đồng ý phân tích và phản đối việc xử lý dữ liệu.",
+          "Để thực hiện, hãy gửi yêu cầu qua trang Đóng góp và ghi rõ nội dung bạn muốn xử lý. Chúng tôi có thể cần xác minh yêu cầu trước khi thực hiện."
+        ]
+      },
+      {
+        "anchor": "lien-he",
+        "title": "Liên hệ và thời hạn phản hồi",
+        "paragraphs": [
+          "Câu hỏi về chính sách này gửi tới hộp thư sukytoancau@gmail.com hoặc qua trang Đóng góp. Chúng tôi phản hồi và hướng dẫn thủ tục trong vòng hai ngày làm việc kể từ khi nhận được yêu cầu.",
+          "Thời hạn xử lý theo Điều 5 Nghị định 356/2025/NĐ-CP: xem, chỉnh sửa hoặc cung cấp dữ liệu trong 10 ngày, 15 ngày nếu phải làm việc với bên xử lý dữ liệu hoặc bên thứ ba; rút đồng ý, hạn chế xử lý hoặc phản đối xử lý trong 15 ngày, 20 ngày nếu phải yêu cầu bên xử lý dữ liệu ngừng xử lý; xóa dữ liệu trong 20 ngày, 30 ngày nếu phải qua bên xử lý dữ liệu hoặc bên thứ ba.",
+          "Chúng tôi chỉ gia hạn một lần và chỉ khi yêu cầu thực sự phức tạp, tối đa 10 ngày cho nhóm xem và chỉnh sửa, 15 ngày cho nhóm rút đồng ý và phản đối, 20 ngày cho nhóm xóa. Khi gia hạn, chúng tôi báo rõ lý do cho bạn.",
+          "Chính sách có thể được cập nhật khi cách vận hành thay đổi. Ngày cập nhật luôn được ghi ở đầu trang."
+        ]
+      }
+    ],
+    "contactCta": "Gửi câu hỏi về quyền riêng tư"
+  },
+  "notFound": {
+    "eyebrow": "Lỗi 404",
+    "title": "Trang này đã trôi khỏi dòng thời gian",
+    "text": "Có thể đường dẫn đã thay đổi, bài viết đã được chuyển hoặc bạn gõ nhầm địa chỉ. Đừng lo, lịch sử vẫn còn rất nhiều lối vào.",
+    "searchCta": "Xem dòng thời gian",
+    "homeCta": "Về trang chủ",
+    "suggestions": "Có thể bạn đang tìm"
+  },
+  "footer": {
+    "tagline": "Bách khoa lịch sử mở, ưu tiên Việt Nam và kết nối với thế giới.",
+    "exploreTitle": "Khám phá",
+    "aboutTitle": "Về dự án",
+    "legalTitle": "Pháp lý",
+    "contributeTitle": "Đóng góp",
+    "contributeText": "Có tư liệu hoặc phát hiện lỗi? Chúng tôi rất mong nhận được.",
+    "contributeButton": "Gửi tư liệu",
+    "license": "Nội dung được biên soạn cho mục đích học tập. Ảnh tư liệu do Wikimedia Commons cung cấp, kèm tên tác giả và giấy phép dưới mỗi ảnh.",
+    "copyright": "© 2026 Sử Ký Toàn Cầu. Một dự án bách khoa độc lập.",
+    "owner": "Chủ quản: {owner} · Đầu mối dữ liệu cá nhân: sukytoancau@gmail.com",
+    "security": "Bảo mật và riêng tư",
+    "languageNote": "Tiếng Việt và English"
+  },
+  "consent": {
+    "title": "Chúng tôi tôn trọng sự riêng tư của bạn",
+    "text": "Trang chỉ tải công cụ phân tích sau khi bạn đồng ý. Bạn có thể từ chối mà vẫn đọc đầy đủ nội dung.",
+    "accept": "Đồng ý",
+    "decline": "Từ chối",
+    "privacy": "Đọc chính sách"
+  },
+  "stickyCta": {
+    "title": "Bạn có tư liệu muốn bổ sung?",
+    "text": "Gửi cho đội ngũ biên tập.",
+    "button": "Đóng góp",
+    "dismiss": "Đóng thông báo"
+  },
+  "errors": {
+    "network": "Không thể kết nối tới máy chủ dữ liệu.",
+    "data": "Dữ liệu nhận được không đúng định dạng.",
+    "loadContent": "Không tải được nội dung lúc này.",
+    "contribution": "Không gửi được đóng góp. Vui lòng thử lại."
+  }
+}
