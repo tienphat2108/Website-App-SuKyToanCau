@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t d">
+  <title id="t">Minh họa thời kỳ cổ đại</title>
+  <desc id="d">Mặt trời mọc trên ruộng bậc thang, nhà sàn và trống đồng.</desc>
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4d9a8"/>
+      <stop offset="0.5" stop-color="#e7b878"/>
+      <stop offset="1" stop-color="#c98d55"/>
+    </linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8f5a3a"/>
+      <stop offset="1" stop-color="#5c3928"/>
+    </linearGradient>
+    <radialGradient id="c" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff2cf"/>
+      <stop offset="1" stop-color="#e2a34f"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#a)"/>
+  <circle cx="590" cy="170" r="96" fill="url(#c)" opacity="0.95"/>
+  <circle cx="590" cy="170" r="126" fill="none" stroke="#fff2cf" stroke-width="1.5" opacity="0.45"/>
+  <path d="M0 360 C 130 300, 250 340, 360 310 C 480 278, 590 330, 800 300 V600 H0 Z" fill="#a46a44" opacity="0.5"/>
+  <path d="M0 410 C 150 360, 270 400, 400 370 C 530 340, 670 390, 800 365 V600 H0 Z" fill="#8a573b" opacity="0.55"/>
+  <path d="M0 470 C 160 430, 300 470, 430 440 C 570 408, 690 450, 800 430 V600 H0 Z" fill="#6d442f" opacity="0.65"/>
+  <g fill="none" stroke="#f4d9a8" stroke-width="2" opacity="0.55">
+    <path d="M0 430 C 170 382, 300 420, 430 392 C 570 362, 690 408, 800 388"/>
+    <path d="M0 500 C 180 460, 320 500, 460 472 C 600 444, 710 480, 800 462"/>
+    <path d="M0 552 C 190 518, 340 552, 480 526 C 620 500, 720 530, 800 516"/>
+  </g>
+  <g transform="translate(180 360)">
+    <path d="M-86 54 h172 l-18 46 h-136 Z" fill="#4c3022"/>
+    <path d="M-72 54 v-30 h144 v30" fill="none" stroke="#4c3022" stroke-width="9"/>
+    <path d="M-66 -6 l66 -54 l66 54" fill="none" stroke="#4c3022" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M-52 -6 v60 M52 -6 v60 M-16 -6 v60 M16 -6 v60" stroke="#4c3022" stroke-width="4" opacity="0.7"/>
+    <circle cx="0" cy="-28" r="16" fill="#e3ad57"/>
+    <circle cx="0" cy="-28" r="8" fill="none" stroke="#7c4a24" stroke-width="2"/>
+  </g>
+  <g transform="translate(610 440)">
+    <ellipse cx="0" cy="86" rx="92" ry="18" fill="#3b2418" opacity="0.35"/>
+    <circle r="82" fill="url(#b)"/>
+    <circle r="82" fill="none" stroke="#f0c684" stroke-width="2" opacity="0.7"/>
+    <circle r="61" fill="none" stroke="#f0c684" stroke-width="1.5" opacity="0.55"/>
+    <circle r="40" fill="none" stroke="#f0c684" stroke-width="1.2" opacity="0.45"/>
+    <path d="M0 -40 L9 -11 L34 -24 L14 0 L38 12 L8 13 L14 40 L0 17 L-14 40 L-8 13 L-38 12 L-14 0 L-34 -24 L-9 -11 Z" fill="#f0c684" opacity="0.9"/>
+    <circle r="6" fill="#7c4a24"/>
+  </g>
+  <g fill="#f8e6bc" opacity="0.75">
+    <circle cx="120" cy="150" r="2.2"/>
+    <circle cx="180" cy="205" r="1.5"/>
+    <circle cx="330" cy="130" r="1.8"/>
+  </g>
+</svg>

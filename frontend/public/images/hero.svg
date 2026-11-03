@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1000" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Minh họa trống đồng Đông Sơn bên dòng sông và những tầng thời gian</title>
+  <desc id="heroDesc">Mặt trời vàng, núi xếp lớp, dòng sông uốn lượn và trống đồng Đông Sơn với hoa văn chim Lạc.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#101b26"/>
+      <stop offset="0.55" stop-color="#1b2d3a"/>
+      <stop offset="1" stop-color="#2a3f45"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f6d58f"/>
+      <stop offset="0.6" stop-color="#e0a94f"/>
+      <stop offset="1" stop-color="#b97c2f"/>
+    </radialGradient>
+    <linearGradient id="bronze" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e2b06a"/>
+      <stop offset="0.45" stop-color="#b9793a"/>
+      <stop offset="1" stop-color="#7c4a24"/>
+    </linearGradient>
+    <linearGradient id="river" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3f7b83"/>
+      <stop offset="0.5" stop-color="#5b9aa0"/>
+      <stop offset="1" stop-color="#2f5b68"/>
+    </linearGradient>
+    <pattern id="stars" width="90" height="90" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="12" r="1.4" fill="#f6d58f" opacity="0.55"/>
+      <circle cx="62" cy="38" r="1.1" fill="#f6d58f" opacity="0.4"/>
+      <circle cx="34" cy="72" r="1.6" fill="#f6d58f" opacity="0.3"/>
+    </pattern>
+    <pattern id="drumPattern" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="13" cy="13" r="2" fill="#f2cf8b" opacity="0.55"/>
+      <path d="M0 13h26M13 0v26" stroke="#f2cf8b" stroke-width="0.6" opacity="0.18"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="1000" fill="url(#sky)"/>
+  <rect width="1200" height="1000" fill="url(#stars)"/>
+
+  <circle cx="820" cy="300" r="210" fill="url(#sunGlow)" opacity="0.18"/>
+  <circle cx="820" cy="300" r="150" fill="url(#sunGlow)" opacity="0.9"/>
+  <circle cx="820" cy="300" r="168" fill="none" stroke="#f2cf8b" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="820" cy="300" r="196" fill="none" stroke="#f2cf8b" stroke-width="0.8" opacity="0.3"/>
+
+  <path d="M0 560 L180 380 L310 500 L470 350 L650 540 L790 430 L930 560 L1080 410 L1200 560 V1000 H0 Z" fill="#16242d" opacity="0.85"/>
+  <path d="M0 660 L160 540 L300 630 L470 500 L640 650 L820 530 L1000 660 L1130 570 L1200 640 V1000 H0 Z" fill="#132029" opacity="0.9"/>
+
+  <path d="M-40 800 C 180 700, 320 900, 520 820 C 760 720, 900 890, 1240 760 L1240 1000 L-40 1000 Z" fill="#1d3338"/>
+  <path d="M-40 860 C 200 760, 360 960, 600 870 C 840 780, 980 930, 1240 830 L1240 1000 L-40 1000 Z" fill="url(#river)" opacity="0.92"/>
+  <path d="M-40 905 C 220 810, 380 990, 620 900 C 860 810, 1000 950, 1240 870" fill="none" stroke="#a9d3d1" stroke-width="2" opacity="0.35"/>
+  <path d="M-40 946 C 210 860, 400 1010, 640 930 C 880 850, 1020 970, 1240 910" fill="none" stroke="#d8ece9" stroke-width="1.2" opacity="0.22"/>
+
+  <g transform="translate(340 640)">
+    <ellipse cx="0" cy="208" rx="250" ry="44" fill="#0b1319" opacity="0.45"/>
+    <circle r="230" fill="url(#bronze)"/>
+    <circle r="230" fill="url(#drumPattern)" opacity="0.5"/>
+    <circle r="230" fill="none" stroke="#f2cf8b" stroke-width="3" opacity="0.7"/>
+    <circle r="196" fill="none" stroke="#5f3717" stroke-width="5" opacity="0.65"/>
+    <circle r="180" fill="none" stroke="#f2cf8b" stroke-width="1.6" opacity="0.55"/>
+    <circle r="146" fill="none" stroke="#5f3717" stroke-width="3" opacity="0.55"/>
+    <circle r="136" fill="none" stroke="#f2cf8b" stroke-width="1.2" opacity="0.5"/>
+
+    <g fill="none" stroke="#5f3717" stroke-width="3" opacity="0.65">
+      <circle r="90"/>
+      <circle r="58"/>
+    </g>
+
+    <g fill="#f2cf8b" opacity="0.92">
+      <path d="M0 -92 L14 -28 L78 -54 L28 -8 L92 18 L24 30 L44 94 L0 46 L-44 94 L-24 30 L-92 18 L-28 -8 L-78 -54 L-14 -28 Z"/>
+    </g>
+    <circle r="22" fill="url(#bronze)" stroke="#5f3717" stroke-width="3"/>
+    <circle r="8" fill="#f2cf8b"/>
+
+    <g fill="#5f3717" opacity="0.55">
+      <circle cx="0" cy="-160" r="5"/>
+      <circle cx="113" cy="-113" r="5"/>
+      <circle cx="160" cy="0" r="5"/>
+      <circle cx="113" cy="113" r="5"/>
+      <circle cx="0" cy="160" r="5"/>
+      <circle cx="-113" cy="113" r="5"/>
+      <circle cx="-160" cy="0" r="5"/>
+      <circle cx="-113" cy="-113" r="5"/>
+    </g>
+
+    <g fill="#5f3717" opacity="0.7">
+      <path d="M-150 -48 c 12 -16 30 -16 42 0 c -12 8 -30 8 -42 0 Z"/>
+      <path d="M108 -48 c 12 -16 30 -16 42 0 c -12 8 -30 8 -42 0 Z"/>
+      <path d="M-150 60 c 12 -16 30 -16 42 0 c -12 8 -30 8 -42 0 Z"/>
+      <path d="M108 60 c 12 -16 30 -16 42 0 c -12 8 -30 8 -42 0 Z"/>
+    </g>
+  </g>
+
+  <g fill="#f2cf8b" opacity="0.7">
+    <circle cx="150" cy="720" r="2"/>
+    <circle cx="210" cy="770" r="1.4"/>
+    <circle cx="1080" cy="700" r="2.2"/>
+    <circle cx="1010" cy="780" r="1.5"/>
+  </g>
+
+  <g stroke="#f2cf8b" stroke-width="1.2" opacity="0.35" fill="none">
+    <path d="M70 240 h160"/>
+    <path d="M70 258 h96"/>
+    <path d="M70 276 h120"/>
+  </g>
+</svg>

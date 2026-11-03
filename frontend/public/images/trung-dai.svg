@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t d">
+  <title id="t">Minh họa thời kỳ trung đại</title>
+  <desc id="d">Cổng thành cổ bên dòng sông, cọc gỗ và ánh trăng.</desc>
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2733"/>
+      <stop offset="0.55" stop-color="#2d3d48"/>
+      <stop offset="1" stop-color="#3f4d4e"/>
+    </linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38565c"/>
+      <stop offset="1" stop-color="#223a44"/>
+    </linearGradient>
+    <radialGradient id="c" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f5e7c4"/>
+      <stop offset="1" stop-color="#cdb07a"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#a)"/>
+  <circle cx="640" cy="130" r="62" fill="url(#c)" opacity="0.9"/>
+  <circle cx="618" cy="112" r="10" fill="#2d3d48" opacity="0.25"/>
+  <circle cx="660" cy="148" r="7" fill="#2d3d48" opacity="0.2"/>
+  <g fill="#f5e7c4" opacity="0.55">
+    <circle cx="120" cy="90" r="1.6"/>
+    <circle cx="250" cy="150" r="1.2"/>
+    <circle cx="420" cy="70" r="1.8"/>
+    <circle cx="520" cy="180" r="1.2"/>
+    <circle cx="700" cy="250" r="1.5"/>
+  </g>
+  <path d="M0 390 C 120 360, 240 380, 360 362 C 500 342, 650 378, 800 352 V600 H0 Z" fill="#22332f"/>
+  <path d="M0 460 C 150 430, 300 458, 450 438 C 600 418, 700 446, 800 430 V600 H0 Z" fill="url(#b)"/>
+  <g transform="translate(230 330)">
+    <rect x="-170" y="40" width="340" height="130" fill="#4a3b31"/>
+    <path d="M-190 40 h380 l-28 -26 h-324 Z" fill="#5b493b"/>
+    <rect x="-120" y="-70" width="240" height="110" fill="#564238"/>
+    <path d="M-142 -70 h284 l-32 -30 h-220 Z" fill="#6a5344"/>
+    <rect x="-52" y="-40" width="104" height="150" fill="#1b2733"/>
+    <path d="M-52 -40 a52 52 0 0 1 104 0 Z" fill="#1b2733"/>
+    <circle cx="0" cy="-52" r="34" fill="#d9b06c" opacity="0.9"/>
+    <path d="M0 -78 L7 -61 L25 -56 L12 -44 L15 -25 L0 -34 L-15 -25 L-12 -44 L-25 -56 L-7 -61 Z" fill="#7a4a28" opacity="0.75"/>
+    <g fill="#2c211b">
+      <rect x="-150" y="-96" width="26" height="42"/>
+      <rect x="-100" y="-96" width="26" height="42"/>
+      <rect x="74" y="-96" width="26" height="42"/>
+      <rect x="124" y="-96" width="26" height="42"/>
+    </g>
+  </g>
+  <g stroke="#4a3b31" stroke-width="9" stroke-linecap="round">
+    <path d="M430 520 l20 -90 M480 528 l14 -100 M530 534 l8 -104 M580 540 l2 -108 M630 546 l-4 -112 M680 550 l-10 -110"/>
+  </g>
+  <g fill="none" stroke="#cfae76" stroke-width="1.4" opacity="0.4">
+    <path d="M0 500 C 150 478, 300 500, 450 486 C 600 472, 700 492, 800 482"/>
+    <path d="M0 540 C 160 520, 310 540, 460 528 C 610 516, 710 532, 800 524"/>
+  </g>
+  <path d="M520 250 c 22 -10 40 2 46 20 c -18 8 -38 4 -46 -20 Z" fill="#d9b06c" opacity="0.7"/>
+  <path d="M566 270 c 18 -6 32 4 36 18 c -16 6 -32 2 -36 -18 Z" fill="#d9b06c" opacity="0.5"/>
+</svg>

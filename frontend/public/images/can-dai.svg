@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t d">
+  <title id="t">Minh họa thời kỳ cận đại</title>
+  <desc id="d">Kinh thành, thuyền buồm và những đường nét kiến trúc thời cận đại.</desc>
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2d9c0"/>
+      <stop offset="0.5" stop-color="#dfa98a"/>
+      <stop offset="1" stop-color="#a96b63"/>
+    </linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b4a5a"/>
+      <stop offset="1" stop-color="#3a3344"/>
+    </linearGradient>
+    <linearGradient id="c" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f6f7e"/>
+      <stop offset="1" stop-color="#314c5c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#a)"/>
+  <circle cx="170" cy="150" r="86" fill="#f9e7c9" opacity="0.7"/>
+  <g fill="#6a4550" opacity="0.28">
+    <path d="M300 260 h140 v18 h-140 Z"/>
+    <path d="M330 220 h80 v40 h-80 Z"/>
+  </g>
+  <path d="M0 390 C 140 370, 250 392, 390 376 C 540 358, 670 388, 800 370 V600 H0 Z" fill="#6b4c50" opacity="0.4"/>
+  <g transform="translate(470 250)">
+    <rect x="-180" y="60" width="360" height="130" fill="url(#b)"/>
+    <path d="M-205 60 h410 l-40 -34 h-330 Z" fill="#4a3f52"/>
+    <g fill="#d9b06c" opacity="0.85">
+      <rect x="-145" y="86" width="34" height="66"/>
+      <rect x="-86" y="86" width="34" height="66"/>
+      <rect x="52" y="86" width="34" height="66"/>
+      <rect x="111" y="86" width="34" height="66"/>
+    </g>
+    <rect x="-26" y="30" width="52" height="160" fill="#3a3344"/>
+    <path d="M-26 30 a26 26 0 0 1 52 0 Z" fill="#3a3344"/>
+    <path d="M-30 10 h60 l-8 -22 h-44 Z" fill="#d9b06c"/>
+    <rect x="-3" y="-38" width="6" height="30" fill="#d9b06c"/>
+    <rect x="-10" y="-24" width="20" height="14" fill="#d9b06c"/>
+    <circle cx="0" cy="-20" r="10" fill="#7f3038"/>
+    <circle cx="0" cy="-20" r="4" fill="#f9e7c9"/>
+  </g>
+  <path d="M0 480 C 170 455, 320 480, 470 465 C 620 450, 720 472, 800 460 V600 H0 Z" fill="url(#c)"/>
+  <g transform="translate(190 430)">
+    <path d="M0 70 h190 l-24 22 h-142 Z" fill="#3a2d33"/>
+    <rect x="86" y="-70" width="5" height="142" fill="#3a2d33"/>
+    <path d="M88 -64 L20 46 h68 Z" fill="#f4e3ce" opacity="0.9"/>
+    <path d="M93 -50 L158 48 h-65 Z" fill="#e8cdb2" opacity="0.92"/>
+    <path d="M88 -70 L62 -30 h26 Z" fill="#b24a4a"/>
+  </g>
+  <g fill="none" stroke="#f6dfc6" stroke-width="1.5" opacity="0.5">
+    <path d="M0 520 C 180 500, 330 520, 480 508 C 630 496, 730 512, 800 504"/>
+    <path d="M0 554 C 190 538, 350 556, 500 546 C 640 536, 740 548, 800 542"/>
+  </g>
+  <g stroke="#5b4a5a" stroke-width="2" opacity="0.4">
+    <path d="M60 220 h120 M60 236 h80"/>
+  </g>
+</svg>
