@@ -201,16 +201,25 @@ Chi tiết xem `devops/README.md`.
 
 Netlify dựng nền tảng Next.js bằng bộ thích ứng OpenNext nên chỉ chứa được `frontend/`; máy chủ dữ liệu .NET phải đặt ở nơi khác (VPS chạy Docker, hoặc một nền tảng hỗ trợ .NET). Khi chưa có máy chủ dữ liệu, website vẫn hiển thị đủ 149 sự kiện vì dữ liệu được nhúng lúc dựng, riêng biểu mẫu đóng góp báo "Không thể gửi đóng góp lúc này."
 
+Lệnh dựng, thư mục publish và các biến bắt buộc đã ghi sẵn trong `frontend/netlify.toml`, nên trên giao diện Netlify chỉ còn phải đặt đúng một mục:
+
 | Mục trong Netlify | Giá trị |
 | --- | --- |
-| Base directory | `frontend` (bắt buộc, thư mục gốc không có `package.json`) |
+| Base directory | `frontend` (bắt buộc; thư mục gốc không có `package.json`, mà Netlify lại không đọc được `base` từ tệp cấu hình) |
+
+Phần `frontend/netlify.toml` lo:
+
+| Mục | Giá trị |
+| --- | --- |
 | Build command | `npm run build` |
-| Publish directory | để trống, Netlify tự nhận `.next` |
+| Publish directory | không đặt, Netlify tự nhận bản dựng Next.js |
 | `NODE_VERSION` | `22`, khớp ảnh `node:22-alpine` trong `devops/Dockerfile.web` |
-| `NEXT_PUBLIC_SITE_URL` | địa chỉ công khai, ví dụ `https://ten-site.netlify.app` |
-| `API_BASE_URL` | địa chỉ máy chủ .NET; để trống khi chưa triển khai |
-| `NEXT_PUBLIC_GA_ID` | để trống nếu chưa bật đo lường |
+| `NEXT_PUBLIC_SITE_URL` | `https://sukytoancau.netlify.app`; đổi tên miền thì sửa trong tệp này |
 | `NETLIFY_NEXT_SKEW_PROTECTION` | `true` |
+
+Muốn đổi giá trị mà không sửa tệp, tạo biến môi trường cùng tên ở **Project configuration → Environment variables**; biến tạo trong bảng đó được ưu tiên hơn `netlify.toml`.
+
+Hai biến để trống có chủ đích: `API_BASE_URL` (địa chỉ máy chủ .NET; chưa triển khai thì biểu mẫu đóng góp báo "Không thể gửi đóng góp lúc này.") và `NEXT_PUBLIC_GA_ID` (chưa bật đo lường, tránh chuyển dữ liệu ra nước ngoài).
 
 Biến `NEXT_PUBLIC_*` nhúng lúc dựng nên đổi xong phải bấm **Clear cache and deploy site**, không chỉ dựng lại.
 
