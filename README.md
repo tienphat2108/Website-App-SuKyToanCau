@@ -199,7 +199,7 @@ Chi tiết xem `devops/README.md`.
 
 ### 7.2. Netlify (chỉ phần giao diện)
 
-Netlify dựng nền tảng Next.js bằng bộ thích ứng OpenNext nên chỉ chứa được `frontend/`; máy chủ dữ liệu .NET phải đặt ở nơi khác (VPS chạy Docker, hoặc một nền tảng hỗ trợ .NET). Khi chưa có máy chủ dữ liệu, website vẫn hiển thị đủ 149 sự kiện vì dữ liệu được nhúng lúc dựng, riêng biểu mẫu đóng góp báo "Không thể gửi đóng góp lúc này."
+Netlify chỉ chứa được phần giao diện (`frontend/`); máy chủ dữ liệu .NET phải đặt ở nơi khác (VPS chạy Docker, hoặc một nền tảng hỗ trợ .NET). Khi chưa có máy chủ dữ liệu, website vẫn hiển thị đủ 149 sự kiện vì dữ liệu được nhúng lúc dựng, riêng biểu mẫu đóng góp báo "Không thể gửi đóng góp lúc này."
 
 Lệnh dựng và các biến bắt buộc đã ghi sẵn trong `netlify.toml` ở thư mục gốc kho, nên trên giao diện Netlify chỉ còn phải đặt đúng một mục:
 
@@ -212,10 +212,13 @@ Phần `netlify.toml` lo:
 | Mục | Giá trị |
 | --- | --- |
 | Build command | `npm run build` |
-| Publish directory | không đặt, Netlify tự nhận bản dựng Next.js |
+| Publish directory | `.next` (đường dẫn tương đối so với Base directory) |
+| Bộ cắm dựng | `[[plugins]] package = "@netlify/plugin-nextjs"` |
 | `NODE_VERSION` | `22`, khớp ảnh `node:22-alpine` trong `devops/Dockerfile.web` |
 | `NEXT_PUBLIC_SITE_URL` | `https://sukytoancau.netlify.app`; đổi tên miền thì sửa trong tệp này |
 | `NETLIFY_NEXT_SKEW_PROTECTION` | `true` |
+
+Phải khai báo rõ `publish` và bộ cắm `@netlify/plugin-nextjs`. Nếu thiếu, Netlify vẫn chạy `npm run build` thành công nhưng rồi phát thẳng nội dung thư mục `frontend` (mã nguồn, không có `_next`, không có function): site trả 404 dù log dựng không báo lỗi. Dấu hiệu nhận biết là bản dựng có `0 functions` và danh sách tệp là `src/`, `package.json`.
 
 Có thể tạo biến môi trường cùng tên ở **Project configuration → Environment variables** để ghi đè mà không sửa tệp, nhưng chỉ nên chọn một chỗ làm nguồn chính; để cả hai dễ dẫn tới giá trị dựng không như ý.
 
