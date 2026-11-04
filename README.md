@@ -185,6 +185,8 @@ node .tmp/verify-a11y-2.mjs 3000  # 16 kiểm tra, đạt 16/16
 
 ## 7. Triển khai
 
+### 7.1. Docker Compose (đủ cả hai phần)
+
 Toàn bộ hệ thống chạy bằng Docker Compose với bốn dịch vụ: cơ sở dữ liệu, máy chủ dữ liệu, giao diện và máy chủ đảo ngược.
 
 ```bash
@@ -194,6 +196,33 @@ docker compose -f devops/docker-compose.yml --env-file devops/.env up -d --build
 ```
 
 Chi tiết xem `devops/README.md`.
+
+### 7.2. Netlify (chỉ phần giao diện)
+
+Netlify dựng nền tảng Next.js bằng bộ thích ứng OpenNext nên chỉ chứa được `frontend/`; máy chủ dữ liệu .NET phải đặt ở nơi khác (VPS chạy Docker, hoặc một nền tảng hỗ trợ .NET). Khi chưa có máy chủ dữ liệu, website vẫn hiển thị đủ 149 sự kiện vì dữ liệu được nhúng lúc dựng, riêng biểu mẫu đóng góp báo "Không thể gửi đóng góp lúc này."
+
+| Mục trong Netlify | Giá trị |
+| --- | --- |
+| Base directory | `frontend` (bắt buộc, thư mục gốc không có `package.json`) |
+| Build command | `npm run build` |
+| Publish directory | để trống, Netlify tự nhận `.next` |
+| `NODE_VERSION` | `22`, khớp ảnh `node:22-alpine` trong `devops/Dockerfile.web` |
+| `NEXT_PUBLIC_SITE_URL` | địa chỉ công khai, ví dụ `https://ten-site.netlify.app` |
+| `API_BASE_URL` | địa chỉ máy chủ .NET; để trống khi chưa triển khai |
+| `NEXT_PUBLIC_GA_ID` | để trống nếu chưa bật đo lường |
+| `NETLIFY_NEXT_SKEW_PROTECTION` | `true` |
+
+Biến `NEXT_PUBLIC_*` nhúng lúc dựng nên đổi xong phải bấm **Clear cache and deploy site**, không chỉ dựng lại.
+
+`frontend/next.config.mjs` bật chế độ xuất standalone có điều kiện theo biến `NETLIFY`: ảnh Docker cần `.next/standalone`, còn OpenNext của Netlify không hỗ trợ chế độ này. Đã xác minh trên máy: `npm run build` thường vẫn sinh `.next/standalone`; `NETLIFY=true npm run build` bỏ qua bước đó và dựng xong bình thường, bảng tuyến không đổi.
+
+Sau khi dựng, rà lại tiêu đề bảo mật theo chuẩn 20 mục bắt buộc:
+
+```powershell
+curl.exe -I https://<site>.netlify.app/
+```
+
+Phải còn `Content-Security-Policy`, `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy`, `Permissions-Policy`, `Cross-Origin-Opener-Policy`, `Cross-Origin-Resource-Policy` và `Strict-Transport-Security`. Thiếu mục nào là dựng sai cấu hình production, không phải lỗi nhỏ cần bỏ qua.
 
 ## 8. Dữ liệu dùng chung
 

@@ -2,6 +2,12 @@
 const isProduction = process.env.NODE_ENV === 'production';
 
 /**
+ * Netlify dựng bằng bộ thích ứng OpenNext nên không chạy được bản xuất standalone,
+ * còn devops/Dockerfile.web lại COPY .next/standalone: bật standalone theo nền tảng.
+ */
+const isNetlify = process.env.NETLIFY === 'true';
+
+/**
  * Nội dung Chính sách bảo mật nội dung.
  * Ghi chú: Next.js chèn một số đoạn mã nội tuyến khi khởi động nên cần cho phép 'unsafe-inline'.
  * Riêng chế độ phát triển cần thêm 'unsafe-eval' vì React Refresh dùng eval để biên dịch lại
@@ -53,7 +59,7 @@ const securityHeaders = [
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  output: 'standalone',
+  output: isNetlify ? undefined : 'standalone',
   experimental: {
     externalDir: true,
     // Giới hạn dung lượng dữ liệu gửi lên hành động máy chủ; website không có tệp đính kèm.
