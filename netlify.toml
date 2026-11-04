@@ -1,6 +1,6 @@
 # Netlify dựng giao diện bằng bộ thích ứng OpenNext.
-# Base directory vẫn phải đặt trong giao diện vì Netlify chỉ đọc tệp cấu hình
-# nằm trong thư mục dựng, mà thư mục gốc của kho không có package.json.
+# Tệp đặt ở thư mục gốc kho để Netlify chắc chắn đọc. Mục Base directory vẫn
+# phải đặt trong giao diện, vì thư mục gốc không có package.json.
 
 [build]
   command = "npm run build"
