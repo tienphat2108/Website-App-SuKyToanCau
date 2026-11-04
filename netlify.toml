@@ -4,6 +4,9 @@
 
 [build]
   command = "npm run build"
+  # Bản dựng Next.js nằm trong frontend/.next; bộ cắm chuyển nó sang dạng
+  # Netlify phục vụ, gồm cả Server Actions, middleware và tiêu đề bảo mật.
+  publish = ".next"
 
 [build.environment]
   # Khớp ảnh node:22-alpine trong devops/Dockerfile.web.
@@ -12,3 +15,6 @@
   NETLIFY_NEXT_SKEW_PROTECTION = "true"
   # Địa chỉ công khai, dùng cho siêu dữ liệu, sơ đồ trang và chuyển hướng giao thức.
   NEXT_PUBLIC_SITE_URL = "https://sukytoancau.netlify.app"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
