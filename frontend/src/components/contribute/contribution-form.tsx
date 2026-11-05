@@ -108,10 +108,12 @@ export function ContributionForm() {
 
   return (
     <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+      {/* Bong bóng trình duyệt bị tắt: Chrome tiếng Việt hiển thị lỗi độ dài
+          thiếu khoảng trắng, còn giới hạn vẫn kiểm ở máy chủ. */}
       <form
         action={formAction}
         className="card relative overflow-hidden p-6 sm:p-8"
-        noValidate={false}
+        noValidate
       >
         <span
           className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-transparent via-gold/70 to-transparent"
