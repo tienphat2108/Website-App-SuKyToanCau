@@ -1,0 +1,69 @@
+# Quét sự kiện mới từ Wikidata/Wikipedia mỗi tuần, nếu có mục mới thì
+# commit tệp dữ liệu và đẩy lên GitHub. Trang /updates đọc tệp này trực
+# tiếp từ CDN (jsDelivr) lúc chạy; Netlify bỏ dựng lượt đẩy chỉ đổi tệp
+# dữ liệu (xem ignore trong netlify.toml) nên không tốn phút dựng miễn phí.
+# Cũng chạy được bằng tay: thẻ Actions > "Cap nhat su kien tu nguon mo" > Run workflow.
+name: Cap nhat su kien tu nguon mo
+
+on:
+  schedule:
+    # 03:00 UTC thứ Hai hằng tuần.
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scan-recent-events
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Cai phu thuoc
+        working-directory: frontend
+        run: npm ci
+      - name: Quet su kien moi tu Wikidata va Wikipedia
+        working-directory: frontend
+        run: npm run history:scan
+      - name: Giu tep cu khi khong co muc moi
+        run: |
+          node -e "
+            const { execSync } = require('node:child_process');
+            const fs = require('node:fs');
+            let old = null;
+            try {
+              old = JSON.parse(execSync('git show HEAD:shared/recent-events.json', { encoding: 'utf8' }));
+            } catch { /* tệp chưa từng được commit */ }
+            const cur = JSON.parse(fs.readFileSync('shared/recent-events.json', 'utf8'));
+            const keys = (feed) => (feed?.items || []).map((i) => i.key).sort().join('|');
+            if (old && keys(old) === keys(cur)) {
+              execSync('git checkout -- shared/recent-events.json');
+              console.log('Khong co muc moi, giu nguyen tep du lieu.');
+            } else {
+              console.log('Co muc moi, se commit va day len GitHub.');
+            }
+          "
+      - name: Commit va day tep du lieu moi
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add shared/recent-events.json
+          if git diff --cached --quiet; then
+            echo "Khong co thay doi de commit."
+          else
+            git commit -m "feat(data): cap nhat su kien moi tu nguon mo"
+            git push
+          fi
+      - name: Lam tuoi CDN de website thay du lieu ngay
+        run: |
+          curl -sS -o /dev/null "https://purge.jsdelivr.net/gh/tienphat2108/Website-App-SuKyToanCau@main/shared/recent-events.json" || true
