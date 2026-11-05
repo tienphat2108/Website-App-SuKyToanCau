@@ -26,6 +26,7 @@ export function Footer() {
     { label: dictionary.nav.home, href: localizePath(locale, '/') },
     { label: dictionary.nav.timeline, href: localizePath(locale, '/timeline') },
     { label: dictionary.nav.stories, href: localizePath(locale, '/stories') },
+    { label: dictionary.nav.updates, href: localizePath(locale, '/updates') },
     { label: dictionary.nav.about, href: localizePath(locale, '/about') },
     { label: dictionary.nav.faq, href: localizePath(locale, '/faq') },
   ];

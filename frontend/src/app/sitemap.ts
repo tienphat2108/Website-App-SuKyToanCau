@@ -7,7 +7,7 @@ import { absoluteUrl } from '@/utils/site';
 export const revalidate = 3600;
 
 /** Đường dẫn tĩnh của website, không gồm trang cảm ơn vì trang đó không được lập chỉ mục. */
-const STATIC_PAGES = ['/', '/timeline', '/stories', '/about', '/faq', '/contribute', '/privacy'] as const;
+const STATIC_PAGES = ['/', '/timeline', '/stories', '/updates', '/about', '/faq', '/contribute', '/privacy'] as const;
 
 /**
  * Tạo đường dẫn công khai cho một ngôn ngữ.

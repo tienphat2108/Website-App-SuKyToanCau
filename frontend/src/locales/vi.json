@@ -35,6 +35,10 @@
       "title": "Hồ sơ chuyên sâu",
       "description": "Ba hồ sơ lịch sử được phân tích theo bối cảnh, bước ngoặt và hệ quả, kèm nguồn kiểm chứng."
     },
+    "updates": {
+      "title": "Cập nhật từ nguồn mở",
+      "description": "Sự kiện lịch sử mới do cộng đồng Wikidata và Wikipedia cập nhật liên tục, có bài bằng cả tiếng Việt và tiếng Anh."
+    },
     "privacy": {
       "title": "Chính sách riêng tư",
       "description": "Cách Sử Ký Toàn Cầu thu thập, sử dụng, bảo vệ và lưu trữ dữ liệu của người đọc."
@@ -62,10 +66,24 @@
       "doi-moi-1986": "Đại hội VI mở đường cho đổi mới kinh tế, một bước ngoặt giúp Việt Nam thoát khỏi khủng hoảng và hội nhập."
     }
   },
+  "updates": {
+    "eyebrow": "Khu cập nhật từ nguồn mở",
+    "title": "Sự kiện mới từ nguồn mở",
+    "subtitle": "Sưu tầm tự động từ Wikidata và Wikipedia: những sự kiện có bài ở cả tiếng Việt lẫn tiếng Anh và được viết bằng từ 20 ngôn ngữ trở lên. Khu này không phải bài biên tập của website.",
+    "autoLabel": "Sưu tầm tự động từ nguồn mở",
+    "licenseNote": "Văn bản lấy từ Wikipedia theo giấy phép CC BY-SA 4.0, dữ liệu Wikidata theo CC0 1.0.",
+    "generatedLabel": "Dữ liệu quét lúc",
+    "languagesLabel": "ngôn ngữ",
+    "revisedLabel": "Sửa gần nhất",
+    "sourcesTitle": "Nguồn bài viết",
+    "viewSource": "Đọc bài gốc",
+    "emptyNote": "Chưa có mục cập nhật nào. Chạy bộ quét nguồn mở để nạp dữ liệu cho khu này."
+  },
   "nav": {
     "home": "Trang chủ",
     "timeline": "Dòng thời gian",
     "stories": "Hồ sơ",
+    "updates": "Cập nhật",
     "about": "Giới thiệu",
     "faq": "Hỏi đáp",
     "contribute": "Đóng góp",

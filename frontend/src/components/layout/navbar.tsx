@@ -15,7 +15,7 @@ import { cn } from '@/utils/format';
 /** Một mục trong thanh điều hướng chính. */
 interface NavItem {
   /** Khóa từ điển của nhãn. */
-  key: 'home' | 'timeline' | 'stories' | 'about' | 'faq' | 'contribute';
+  key: 'home' | 'timeline' | 'stories' | 'updates' | 'about' | 'faq' | 'contribute';
   /** Đường dẫn nội bộ. */
   href: string;
 }
@@ -24,6 +24,7 @@ const NAV_ITEMS: NavItem[] = [
   { key: 'home', href: '/' },
   { key: 'timeline', href: '/timeline' },
   { key: 'stories', href: '/stories' },
+  { key: 'updates', href: '/updates' },
   { key: 'about', href: '/about' },
   { key: 'faq', href: '/faq' },
 ];

@@ -35,6 +35,10 @@
       "title": "In-depth case studies",
       "description": "Three history case studies examined through context, turning point and consequence, with verifiable sources."
     },
+    "updates": {
+      "title": "Updates from open sources",
+      "description": "Recent history events continuously updated by the Wikidata and Wikipedia communities, covered in both Vietnamese and English."
+    },
     "privacy": {
       "title": "Privacy policy",
       "description": "How World History Chronicle collects, uses, protects and retains reader data."
@@ -52,6 +56,7 @@
     "home": "Home",
     "timeline": "Timeline",
     "stories": "Stories",
+    "updates": "Updates",
     "about": "About",
     "faq": "FAQ",
     "contribute": "Contribute",
@@ -72,6 +77,19 @@
       "chien-dich-dien-bien-phu": "Fifty-six days of fighting offer a lesson in logistics, endurance and knowing when to change tactics.",
       "doi-moi-1986": "The Sixth Party Congress opened the door to economic renovation, helping Vietnam exit crisis and join the wider world."
     }
+  },
+  "updates": {
+    "eyebrow": "Open-source updates",
+    "title": "New events from open sources",
+    "subtitle": "Collected automatically from Wikidata and Wikipedia: events covered in both Vietnamese and English and written in at least 20 languages. This section is not editorially reviewed by the site.",
+    "autoLabel": "Collected automatically from open sources",
+    "licenseNote": "Wikipedia text under the CC BY-SA 4.0 licence, Wikidata data under CC0 1.0.",
+    "generatedLabel": "Data scanned at",
+    "languagesLabel": "languages",
+    "revisedLabel": "Last revised",
+    "sourcesTitle": "Article sources",
+    "viewSource": "Read the original article",
+    "emptyNote": "No updates yet. Run the open-source scan to fill this section."
   },
   "common": {
     "readMore": "Read article",
