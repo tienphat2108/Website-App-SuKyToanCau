@@ -146,5 +146,49 @@ node -e "const d=require('./shared/history-events.json');const s=new Set();for(c
 ## 8. Giới hạn đã biết
 
 - Chưa có giao diện quản trị để sửa sự kiện. Việc biên tập hiện thực hiện qua tệp và cơ sở dữ liệu.
-- Chưa có bước kiểm tra tự động cho tính nhất quán của tệp dùng chung. Các kiểm tra ở mục 5 đang thực hiện thủ công.
+- Tệp `shared/history-events.json` chưa có bước kiểm tra tự động, các kiểm tra ở mục 5 vẫn thực hiện thủ công. Riêng tệp khu cập nhật nguồn mở đã có bộ kiểm thử tự động `frontend/tests/recent-updates.test.ts`.
 - Đoạn tóm tắt tham khảo từ bách khoa toàn thư mở chỉ hiển thị khi có dữ liệu, không được lưu vào cơ sở dữ liệu.
+
+## 9. Khu cập nhật từ nguồn mở
+
+Khu riêng tại trang `/updates` (bản tiếng Anh `/en/updates`) trưng bày các sự kiện mới do cộng đồng Wikidata và Wikipedia cập nhật liên tục. Khu này tách hẳn kho 149 sự kiện đã biên tập: dữ liệu không vào cơ sở dữ liệu, không đụng tới `shared/history-events.json`, và được ghi rõ nhãn "sưu tầm tự động từ nguồn mở" cùng giấy phép CC BY-SA 4.0 (văn bản Wikipedia) và CC0 1.0 (Wikidata).
+
+### 9.1. Nguồn và cách lọc
+
+- Mốc sự kiện lấy từ Wikidata qua thuộc tính P585, quét theo cửa sổ sáu tháng để tránh quá tải truy vấn.
+- Chỉ giữ mục có bài ở cả Wikipedia tiếng Việt lẫn tiếng Anh và có từ 20 ngôn ngữ trở lên (ngưỡng mặc định, đổi được bằng `--min-links`).
+- Loại trang không phải bài viết: `Thể loại:`, `Bản mẫu:`, `Wikipedia:`, `Cổng:`, `Danh sách`, `List of`, và các trang "Tháng ... năm ...".
+- Loại mục trùng tiêu đề với kho biên tập bằng cách bỏ dấu và so không phân biệt hoa thường.
+- Tóm tắt hai ngôn ngữ lấy từ đoạn mở đầu bài Wikipedia qua REST `page/summary`, chỉ giữ bài có đoạn mở đầu từ 200 ký tự trở lên.
+
+### 9.2. Cách nạp dữ liệu: tự động hằng tuần, không tốn lượt dựng Netlify
+
+Khu này tự cập nhật bằng GitHub Actions (`.github/workflows/scan-recent-events.yml`):
+
+- 03:00 UTC thứ Hai hằng tuần, bộ quét chạy trên máy của GitHub và nếu có mục mới thì tự commit, tự đẩy tệp `shared/recent-events.json` lên nhánh `main` rồi làm tươi CDN jsDelivr.
+- Trang `/updates` đọc tệp trực tiếp từ CDN khi người xem mở trang, nên dữ liệu mới hiện ra **không cần dựng lại website**. Netlify có quy tắc bỏ dựng (mục `ignore` trong `netlify.toml`) khi lượt đẩy chỉ thay đổi tệp dữ liệu — phút dựng miễn phí chỉ dùng cho lượt đẩy mã code thật.
+- Nếu CDN không đọc được (mất mạng, kho chưa có tệp), trang quay về tệp cục bộ trong bản dựng; không bao giờ trắng trang.
+- Muốn chạy tay ngay: mở thẻ Actions trên GitHub, chọn "Cap nhat su kien tu nguon mo" rồi bấm Run workflow. Hoặc chạy tại máy:
+
+```powershell
+cd frontend
+npm run history:scan                  # mặc định 24 tháng, ngưỡng 20 ngôn ngữ, giữ 40 mục
+npm run history:scan -- --dry-run     # xem trước, không ghi tệp phát hành
+```
+
+- Khi chạy thử tại máy mà muốn trang đọc đúng tệp vừa quét (thay vì bản trên CDN), chạy máy chủ với `UPDATES_FEED_URL="local"`.
+
+Đầu ra:
+
+| Tệp | Ý nghĩa |
+| --- | --- |
+| `shared/recent-events.json` | Tệp phát hành, đẩy lên GitHub và trang `/updates` đọc qua CDN |
+| `frontend/.tmp/ung-vien-lich-su.json` | Toàn bộ ứng viên kèm lý do loại, để đối chiếu |
+
+Bộ nạp dữ liệu nằm ở `frontend/src/data/recent-updates.ts`: ưu tiên đọc CDN (đổi địa chỉ bằng biến môi trường `UPDATES_FEED_URL`), kiểm tra hình dạng dữ liệu từ xa trước khi hiển thị, rồi mới quay về tệp cục bộ. Nếu tệp chưa được quét lần nào, trang vẫn mở bình thường với thông báo chưa có dữ liệu.
+
+### 9.3. Kiểm tra trước khi đưa tệp lên kho
+
+- Chạy `npm test` trong `frontend`: bộ `tests/recent-updates.test.ts` kiểm khóa không trùng, ngày không ở tương lai, đủ hai ngôn ngữ, ngưỡng ngôn ngữ, nguồn trỏ thẳng bài viết (không phải trang chủ), tọa độ hợp lệ và giấy phép mở.
+- Kiểm tra trang `/updates` và `/en/updates` ở 320–1440 px trước khi báo hoàn tất.
+- Nếu mục bị loại bất thường, mở `frontend/.tmp/ung-vien-lich-su.json` để xem lý do ở trường `lyDo`.
