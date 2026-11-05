@@ -9,6 +9,7 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "geo:build": "node scripts/build-world-basemap.mjs",
+    "history:scan": "node scripts/discover-events.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "audit:secrets": "node scripts/security-audit.mjs",
