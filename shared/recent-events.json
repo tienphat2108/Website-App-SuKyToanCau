@@ -1,24 +1,60 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-05T12:22:14.944Z",
+  "generatedAt": "2026-11-09T10:46:49.639Z",
   "windowMonths": 24,
   "source": "Wikidata (moc P585) va Wikipedia tieng Viet, tieng Anh",
   "minLinks": 20,
   "license": "Van ban Wikipedia theo CC BY-SA 4.0, du lieu Wikidata theo CC0 1.0",
   "note": "Khu rieng suu tam tu nguon mo, khong phai bai bien tap cua sukytoancau va khong nam trong kho 149 su kien.",
-  "count": 34,
+  "count": 37,
   "items": [
+    {
+      "key": "Q115857612",
+      "date": "2026-11-03",
+      "titleVi": "Bầu cử Hoa Kỳ 2026",
+      "titleEn": "2026 United States elections",
+      "summaryVi": "Bầu cử Hoa Kỳ 2026 là một bầu cử được tổ chức vào ngày 3 tháng 11 năm 2026. Nó được tổ chức với tư cách là một cuộc bầu cử giữa nhiệm kỳ trong nhiệm kỳ thứ hai của đương kim Tổng thống Hoa Kỳ Donald Trump thuộc Đảng Cộng hòa Hoa Kỳ. Tất cả 435 ghế tại Hạ viện Hoa Kỳ cùng 35 trong tổng số 100 ghế tại Thượng viện Hoa Kỳ đã được tranh cử để xác định số ghế Quốc hội Hoa Kỳ khóa 120. Ngoài ra, các cuộc bầu cử Thống đốc Hoa Kỳ tại 39 tiểu bang và ba vùng lãnh thổ, bầu cử Tổng chưởng lý tiểu bang Hoa Kỳ, cùng nhiều cuộc bầu cử cấp tiểu bang và địa phương khác đã diễn ra.",
+      "summaryEn": "Elections in the United States were held on November 3, 2026. In these midterm elections, which occurred during the non-consecutive second term of incumbent Republican president Donald Trump, all 435 seats in the U.S. House of Representatives and 35 of the 100 seats in the U.S. Senate were contested to determine the 120th United States Congress. Thirty-nine state and territorial U.S. gubernatorial elections, attorney general elections, and numerous state and local elections were also contested. The Democratic Party obtained a majority in both houses of Congress and among state governorships across the United States.",
+      "location": null,
+      "latitude": null,
+      "longitude": null,
+      "languages": 33,
+      "revisedAt": "2026-11-08T04:20:48Z",
+      "sources": [
+        {
+          "title": "Bầu cử Hoa Kỳ 2026",
+          "publisher": "Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/B%E1%BA%A7u_c%E1%BB%AD_Hoa_K%E1%BB%B3_2026",
+          "language": "vi",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "title": "2026 United States elections",
+          "publisher": "Wikipedia tiếng Anh",
+          "url": "https://en.wikipedia.org/wiki/2026_United_States_elections",
+          "language": "en",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "title": "2026 United States elections",
+          "publisher": "Wikidata",
+          "url": "https://www.wikidata.org/wiki/Q115857612",
+          "language": "multilingual",
+          "license": "CC0 1.0"
+        }
+      ]
+    },
     {
       "key": "Q141898879",
       "date": "2026-10-28",
       "titleVi": "Tai nạn xe lửa tại Toledo 2026",
-      "titleEn": "2026 Toledo train collision",
+      "titleEn": "2026 Urda train collision",
       "summaryVi": "Tai nạn xe lửa tại Toledo 2026 là một vụ tai nạn đường sắt xảy ra vào lúc 08:54 giờ CET (UTC+01:00) ngày 28 tháng 10 năm 2026, tại Los Yébenes và Urda thuộc tỉnh Toledo, Castilla-La Mancha, Tây Ban Nha.",
-      "summaryEn": "On 28 October 2026 at 08:54 CET (UTC+01:00), an AVE high-speed train collided end-on with a stationary Iryo high-speed train in Los Yébenes, Toledo, on the Madrid–Seville high-speed rail line, killing 69 people and injuring over 200 more. Both trains were travelling from Atocha station in Madrid to Santa Justa station in Seville.",
+      "summaryEn": "On 28 October 2026 at 08:54 CET (UTC+01:00), an AVE high-speed train collided end-on with a stationary Iryo high-speed train in the municipality of Los Yébenes close to the Urda passing and stabling point (PAET), on the Madrid–Seville high-speed rail line, killing 69 people and injuring over 200 more. Both trains were travelling from Atocha station in Madrid to Santa Justa station in Seville.",
       "location": "Los Yébenes",
       "latitude": null,
       "longitude": null,
-      "languages": 40,
+      "languages": 41,
       "revisedAt": "2026-10-31T11:24:02Z",
       "sources": [
         {
@@ -29,9 +65,9 @@
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 Toledo train collision",
+          "title": "2026 Urda train collision",
           "publisher": "Wikipedia tiếng Anh",
-          "url": "https://en.wikipedia.org/wiki/2026_Toledo_train_collision",
+          "url": "https://en.wikipedia.org/wiki/2026_Urda_train_collision",
           "language": "en",
           "license": "CC BY-SA 4.0"
         },
@@ -50,7 +86,7 @@
       "titleVi": "Chuyến bay 1073 của Flydubai",
       "titleEn": "Flydubai Flight 1073",
       "summaryVi": "Chuyến bay 1073 của Flydubai là một chuyến bay chở khách quốc tế theo lịch trình thường lệ do Flydubai khai thác từ Sân bay Quốc tế Dubai ở Các Tiểu vương quốc Ả Rập Thống nhất đến Sân bay Ben Gurion gần Tel Aviv, Israel. Vào ngày 30 tháng 9 năm 2026, chiếc Boeing 737 MAX 8 đã phát tín hiệu mã squawk báo hiệu bị cướp máy bay, chuyển hướng khỏi đường bay dự kiến ​​và hạ cánh khẩn cấp xuống Sân bay Tabuk ở Tabuk, Ả Rập Xê Út. Theo báo cáo của hành khách, cơ phó đã đâm cơ trưởng Smit Machchhar trong chuyến bay trong một nỗ lực rõ ràng nhằm cướp hoặc làm rơi máy bay nhưng đã bị hành khách và phi hành đoàn khống chế. Các phi công khác của Flydubai trên máy bay sau đó đã hạ cánh máy bay xuống Tabu",
-      "summaryEn": "Flydubai Flight 1073 was a regularly scheduled international passenger flight operated by Flydubai from Dubai International Airport in Dubai, United Arab Emirates, to Ben Gurion Airport near Tel Aviv, Israel. On 30 September 2026, while en route, the Boeing 737 MAX 8 experienced what Israeli and UAE officials have called an attempted terrorist attack.",
+      "summaryEn": "On 30 September 2026, Flydubai Flight 1073, while on a scheduled flight from the United Arab Emirates to Israel, made an emergency landing after one of the pilots attempted to crash the plane. The aircraft, a Boeing 737 MAX 8, was flying from Dubai International Airport to Ben Gurion Airport near Tel Aviv. Israeli and UAE officials have described the incident as an attempted terrorist attack.",
       "location": "Jordan–Saudi Arabia border",
       "latitude": null,
       "longitude": null,
@@ -631,7 +667,7 @@
       "latitude": null,
       "longitude": null,
       "languages": 42,
-      "revisedAt": "2026-06-18T13:06:45Z",
+      "revisedAt": "2026-11-07T09:55:52Z",
       "sources": [
         {
           "title": "Thế vận hội Người khuyết tật Mùa đông 2026",
@@ -774,7 +810,7 @@
       "location": null,
       "latitude": null,
       "longitude": null,
-      "languages": 28,
+      "languages": 27,
       "revisedAt": "2026-09-20T15:27:10Z",
       "sources": [
         {
@@ -945,108 +981,108 @@
       ]
     },
     {
-      "key": "Q123906019",
+      "key": "Q134726007",
       "date": "2026-01-01",
-      "titleVi": "Giải vô địch bóng đá nữ U-20 thế giới 2026",
-      "titleEn": "2026 FIFA U-20 Women's World Cup",
-      "summaryVi": "Giải vô địch bóng đá nữ U-20 thế giới 2026 là giải đấu lần thứ 12 của Giải vô địch bóng đá nữ U-20 thế giới, giải vô địch bóng đá trẻ quốc tế hai năm một lần dành cho nữ giữa các đội tuyển U-20 quốc gia của các liên đoàn thành viên thuộc FIFA. Được tổ chức tại Ba Lan. Đây là lần thứ hai Ba Lan đăng cai một giải đấu của FIFA sau Giải vô địch bóng đá U-20 thế giới 2019. Đây là lần đầu tiên Ba Lan đăng cai một giải đấu của FIFA dành cho nữ.",
-      "summaryEn": "The 2026 FIFA U-20 Women's World Cup was the 12th edition of the FIFA U-20 Women's World Cup, the biennial international women's youth football championship contested by the under-20 national teams of the member associations of FIFA. It was hosted by Poland. It was the second time that Poland had hosted a FIFA tournament, having hosted the men's FIFA U-20 World Cup in 2019. It was the first time that Poland had hosted a FIFA women's tournament.",
-      "location": null,
+      "titleVi": "Quả bóng vàng châu Âu 2026",
+      "titleEn": "2026 Ballon d'Or",
+      "summaryVi": "Quả bóng vàng châu Âu 2026 là lễ trao giải Quả bóng vàng châu Âu thường niên lần thứ 70 do tạp chí France Football tổ chức, nhằm vinh danh những cầu thủ xuất sắc nhất thế giới ở mùa giải 2025–26. Đây là lần thứ năm giải thưởng được trao dựa trên thành tích của một mùa giải thay vì một năm dương lịch, với giai đoạn xét chọn kéo dài từ ngày 3 tháng 8 năm 2025 đến ngày 19 tháng 7 năm 2026. Lễ trao giải diễn ra vào ngày 26 tháng 10 năm 2026 tại nhà hát London Palladium ở Luân Đôn. Đây cũng là lần đầu tiên sự kiện được tổ chức bên ngoài nước Pháp.",
+      "summaryEn": "The 2026 Ballon d'Or was the 70th annual ceremony of the Ballon d'Or, presented by France Football, recognising the best footballers in the world in the 2025–26 season. For the fifth time in the history of the award, it was given based on the results of the season instead of the calendar year. This is the period from 3 August 2025 to 19 July 2026. The ceremony took place on 26 October 2026 at the London Palladium in London. This also marked the first time the ceremony was organised outside France or Switzerland.",
+      "location": "London Palladium",
       "latitude": null,
       "longitude": null,
-      "languages": 21,
-      "revisedAt": "2026-10-04T07:53:00Z",
+      "languages": 24,
+      "revisedAt": "2026-10-28T19:03:31Z",
       "sources": [
         {
-          "title": "Giải vô địch bóng đá nữ U-20 thế giới 2026",
+          "title": "Quả bóng vàng châu Âu 2026",
           "publisher": "Wikipedia tiếng Việt",
-          "url": "https://vi.wikipedia.org/wiki/Gi%E1%BA%A3i_v%C3%B4_%C4%91%E1%BB%8Bch_b%C3%B3ng_%C4%91%C3%A1_n%E1%BB%AF_U-20_th%E1%BA%BF_gi%E1%BB%9Bi_2026",
+          "url": "https://vi.wikipedia.org/wiki/Qu%E1%BA%A3_b%C3%B3ng_v%C3%A0ng_ch%C3%A2u_%C3%82u_2026",
           "language": "vi",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 FIFA U-20 Women's World Cup",
+          "title": "2026 Ballon d'Or",
           "publisher": "Wikipedia tiếng Anh",
-          "url": "https://en.wikipedia.org/wiki/2026_FIFA_U-20_Women's_World_Cup",
+          "url": "https://en.wikipedia.org/wiki/2026_Ballon_d'Or",
           "language": "en",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 FIFA U-20 Women's World Cup",
+          "title": "2026 Ballon d'Or",
           "publisher": "Wikidata",
-          "url": "https://www.wikidata.org/wiki/Q123906019",
+          "url": "https://www.wikidata.org/wiki/Q134726007",
           "language": "multilingual",
           "license": "CC0 1.0"
         }
       ]
     },
     {
-      "key": "Q115915259",
+      "key": "Q135278398",
       "date": "2026-01-01",
-      "titleVi": "Vòng loại Giải vô địch bóng đá thế giới 2026 – Khu vực châu Phi",
-      "titleEn": "2026 FIFA World Cup qualification (CAF)",
-      "summaryVi": "Khu vực châu Phi của vòng loại Giải vô địch bóng đá thế giới 2026 đóng vai trò là vòng loại của Giải vô địch bóng đá thế giới 2026, được tổ chức tại Hoa Kỳ, Canada và Mexico, dành cho các đội tuyển quốc gia là thành viên của Liên đoàn bóng đá châu Phi (CAF). Tổng cộng có chín suất trực tiếp tham dự vòng chung kết và một suất vào vòng play-off liên lục địa có sẵn cho các đội tuyển thuộc CAF.",
-      "summaryEn": "The 2026 FIFA World Cup qualification (CAF) was the African section of the qualification tournament for the 2026 FIFA World Cup, held in the United States, Canada and Mexico. A total of nine slots in the final tournament and one inter-confederation play-off slot were reserved for Confederation of African Football (CAF) teams.",
+      "titleVi": "Siêu cúp bóng đá châu Âu 2026",
+      "titleEn": "2026 UEFA Super Cup",
+      "summaryVi": "Trận Siêu cúp bóng đá châu Âu 2026 sẽ là lần tổ chức thứ 51 của Siêu cúp bóng đá châu Âu, trận đấu bóng đá thường niên do UEFA tổ chức và bao gồm hai đội đương kim vô địch của hai giải đấu cấp câu lạc bộ hàng đầu châu Âu. Trận đấu chứng kiến màn tranh tài giữa Paris Saint-Germain và Aston Villa, và được diễn ra trên sân vận động Red Bull Arena ở Salzburg, Áo vào ngày 12 tháng 8 năm 2026.",
+      "summaryEn": "The 2026 UEFA Super Cup was the 51st edition of the UEFA Super Cup, an annual football match organised by UEFA and contested by the reigning champions of the top two European club competitions, the UEFA Champions League and the UEFA Europa League. The match featured French club Paris Saint-Germain, the winners of the 2025–26 UEFA Champions League and reigning UEFA Super Cup title holders, and English club Aston Villa, the winners of the 2025–26 UEFA Europa League. It was played at the Red Bull Arena in Salzburg, Austria, on 12 August 2026.",
       "location": null,
       "latitude": null,
       "longitude": null,
-      "languages": 33,
-      "revisedAt": "2026-08-31T04:43:00Z",
+      "languages": 26,
+      "revisedAt": "2026-08-18T20:00:30Z",
       "sources": [
         {
-          "title": "Vòng loại Giải vô địch bóng đá thế giới 2026 – Khu vực châu Phi",
+          "title": "Siêu cúp bóng đá châu Âu 2026",
           "publisher": "Wikipedia tiếng Việt",
-          "url": "https://vi.wikipedia.org/wiki/V%C3%B2ng_lo%E1%BA%A1i_Gi%E1%BA%A3i_v%C3%B4_%C4%91%E1%BB%8Bch_b%C3%B3ng_%C4%91%C3%A1_th%E1%BA%BF_gi%E1%BB%9Bi_2026_%E2%80%93_Khu_v%E1%BB%B1c_ch%C3%A2u_Phi",
+          "url": "https://vi.wikipedia.org/wiki/Si%C3%AAu_c%C3%BAp_b%C3%B3ng_%C4%91%C3%A1_ch%C3%A2u_%C3%82u_2026",
           "language": "vi",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 FIFA World Cup qualification (CAF)",
+          "title": "2026 UEFA Super Cup",
           "publisher": "Wikipedia tiếng Anh",
-          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CAF)",
+          "url": "https://en.wikipedia.org/wiki/2026_UEFA_Super_Cup",
           "language": "en",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 FIFA World Cup qualification (CAF)",
+          "title": "2026 UEFA Super Cup",
           "publisher": "Wikidata",
-          "url": "https://www.wikidata.org/wiki/Q115915259",
+          "url": "https://www.wikidata.org/wiki/Q135278398",
           "language": "multilingual",
           "license": "CC0 1.0"
         }
       ]
     },
     {
-      "key": "Q115915260",
+      "key": "Q135334216",
       "date": "2026-01-01",
-      "titleVi": "Vòng loại Giải vô địch bóng đá thế giới 2026 – Khu vực Bắc, Trung Mỹ và Caribe",
-      "titleEn": "2026 FIFA World Cup qualification (CONCACAF)",
-      "summaryVi": "Khu vực Bắc, Trung Mỹ và Caribe (CONCACAF) của Vòng loại Giải vô địch bóng đá thế giới 2026 sẽ đóng vai trò là vòng loại cho FIFA World Cup 2026, được tổ chức tại Canada, Mexico và Hoa Kỳ. Khu vực CONCACAF có ba suất trực tiếp và hai suất dự vòng play-off liên lục địa để tranh vé tham dự vòng chung kết.",
-      "summaryEn": "The North, Central American and Caribbean section of the 2026 FIFA World Cup qualification acted as the qualifiers for the 2026 FIFA World Cup, held in Canada, Mexico, and the United States, for national teams which were members of the Confederation of North, Central American and Caribbean Association Football (CONCACAF). Three direct slots and two inter-confederation play-off slots in the final tournament were available for CONCACAF teams.",
-      "location": null,
+      "titleVi": "Giải quần vợt Wimbledon 2026",
+      "titleEn": "2026 Wimbledon Championships",
+      "summaryVi": "Giải quần vợt Wimbledon 2026 là lần tổ chức thứ 139 của Giải quần vợt Wimbledon, một giải quần vợt Grand Slam diễn ra tại All England Lawn Tennis and Croquet Club ở Wimbledon, Anh và dự kiến được tổ chức từ ngày 29 tháng 6 đến ngày 12 tháng 7 năm 2026, với các vòng loại diễn ra từ ngày 22 đến ngày 25 tháng 6 năm 2026.",
+      "summaryEn": "The 2026 Wimbledon Championships was the 139th edition of the Wimbledon Championships, a major tennis tournament, which took place at the All England Lawn Tennis and Croquet Club in Wimbledon, London, England, from 29 June to 12 July 2026, with the qualifying rounds taking place between 22 and 25 June 2026.",
+      "location": "All England Lawn Tennis and Croquet Club",
       "latitude": null,
       "longitude": null,
-      "languages": 32,
-      "revisedAt": "2026-06-08T14:50:51Z",
+      "languages": 24,
+      "revisedAt": "2026-07-07T21:08:39Z",
       "sources": [
         {
-          "title": "Vòng loại Giải vô địch bóng đá thế giới 2026 – Khu vực Bắc, Trung Mỹ và Caribe",
+          "title": "Giải quần vợt Wimbledon 2026",
           "publisher": "Wikipedia tiếng Việt",
-          "url": "https://vi.wikipedia.org/wiki/V%C3%B2ng_lo%E1%BA%A1i_Gi%E1%BA%A3i_v%C3%B4_%C4%91%E1%BB%8Bch_b%C3%B3ng_%C4%91%C3%A1_th%E1%BA%BF_gi%E1%BB%9Bi_2026_%E2%80%93_Khu_v%E1%BB%B1c_B%E1%BA%AFc%2C_Trung_M%E1%BB%B9_v%C3%A0_Caribe",
+          "url": "https://vi.wikipedia.org/wiki/Gi%E1%BA%A3i_qu%E1%BA%A7n_v%E1%BB%A3t_Wimbledon_2026",
           "language": "vi",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 FIFA World Cup qualification (CONCACAF)",
+          "title": "2026 Wimbledon Championships",
           "publisher": "Wikipedia tiếng Anh",
-          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONCACAF)",
+          "url": "https://en.wikipedia.org/wiki/2026_Wimbledon_Championships",
           "language": "en",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 FIFA World Cup qualification (CONCACAF)",
+          "title": "2026 Wimbledon Championships",
           "publisher": "Wikidata",
-          "url": "https://www.wikidata.org/wiki/Q115915260",
+          "url": "https://www.wikidata.org/wiki/Q135334216",
           "language": "multilingual",
           "license": "CC0 1.0"
         }
@@ -1089,144 +1125,216 @@
       ]
     },
     {
-      "key": "Q115942640",
+      "key": "Q138503695",
       "date": "2026-01-01",
-      "titleVi": "Giải đua xe Công thức 1 2026",
-      "titleEn": "2026 Formula One World Championship",
-      "summaryVi": "Giải đua xe Công thức 1 2026 là mùa giải Công thức 1 thứ 77 vào năm 2026. Giải đua được Liên đoàn Ô tô Quốc tế (FIA), cơ quan quản lý môn đua xe thể thao quốc tế, công nhận là giải đấu cao nhất dành cho xe đua bánh hở. Giải đua xe Công thức 1 2026 đang diễn ra trong vòng 23 chặng đua trên khắp thế giới, bắt đầu vào tháng 3 và kết thúc vào tháng 12. Các tay đua và đội đua đang tranh tài cho các danh hiệu Tay đua Vô địch thế giới và Đội đua Vô địch thế giới. Lando Norris là đuơng kim vô địch Tay đua thế giới trong khi McLaren-Mercedes là đuơng kim vô địch Đội đua thế giới liên tiếp.",
-      "summaryEn": "The 2026 FIA Formula One World Championship is a motor racing championship for Formula One cars and the 77th running of the Formula One World Championship. It is recognised by the Fédération Internationale de l'Automobile (FIA), the governing body of international motorsport, as the highest class of competition for open-wheel racing cars. The championship is contested over twenty-three Grands Prix held around the world. It began in March and is scheduled to end in December. Drivers and teams compete for the titles of World Drivers' Champion and World Constructors' Champion, respectively. Lando Norris was the reigning World Drivers' Champion, while McLaren-Mercedes are the reigning World Cons",
-      "location": null,
+      "titleVi": "Chiến tranh Iran 2026",
+      "titleEn": "2026 Iran war",
+      "summaryVi": "Vào ngày 28 tháng 2 năm 2026, Israel và Hoa Kỳ đã phát động một cuộc tấn công phối hợp nhắm vào nhiều địa điểm khác nhau tại Iran. Chiến dịch này có mật danh là Chiến dịch Sư tử Gầm theo phía Israel và Chiến dịch Cơn thịnh nộ Sử thi theo Bộ Chiến tranh Hoa Kỳ. Cuộc tấn công nhắm vào các quan chức chủ chốt, chỉ huy quân sự và các cơ sở trọng yếu của Iran, bao gồm cả vụ ám sát Lãnh đạo Tối cao thứ hai của Iran, Ali Khamenei.",
+      "summaryEn": "Since 28 February 2026, the United States and Israel have been at war with Iran and its regional allies. The war follows the Twelve-Day War in June 2025 and sporadic fighting during the Middle Eastern crisis sparked by the Gaza war, which began in 2023. Amid ongoing US–Iran negotiations regarding Iran's nuclear program, the war began when the US and Israel conducted hundreds of air strikes on targets across Iran, including strikes that assassinated Supreme Leader Ali Khamenei alongside several other Iranian officials.",
+      "location": "Tehran",
       "latitude": null,
       "longitude": null,
-      "languages": 46,
-      "revisedAt": "2026-11-04T12:03:21Z",
+      "languages": 102,
+      "revisedAt": "2026-10-24T21:29:18Z",
       "sources": [
         {
-          "title": "Giải đua xe Công thức 1 2026",
+          "title": "Chiến tranh Iran 2026",
           "publisher": "Wikipedia tiếng Việt",
-          "url": "https://vi.wikipedia.org/wiki/Gi%E1%BA%A3i_%C4%91ua_xe_C%C3%B4ng_th%E1%BB%A9c_1_2026",
+          "url": "https://vi.wikipedia.org/wiki/Chi%E1%BA%BFn_tranh_Iran_2026",
           "language": "vi",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 Formula One World Championship",
+          "title": "2026 Iran war",
           "publisher": "Wikipedia tiếng Anh",
-          "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship",
+          "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
           "language": "en",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 Formula One World Championship",
+          "title": "2026 Iran War",
           "publisher": "Wikidata",
-          "url": "https://www.wikidata.org/wiki/Q115942640",
+          "url": "https://www.wikidata.org/wiki/Q138503695",
           "language": "multilingual",
           "license": "CC0 1.0"
         }
       ]
     },
     {
-      "key": "Q128810064",
+      "key": "Q139961792",
       "date": "2026-01-01",
-      "titleVi": "Giải vô địch bóng đá thế giới 2026 (Bảng A)",
-      "titleEn": "2026 FIFA World Cup Group A",
-      "summaryVi": "Bảng A của Giải vô địch bóng đá thế giới 2026 được diễn ra từ ngày 11 đến ngày 24 tháng 6 năm 2026. Bảng này bao gồm các đội tuyển México, Nam Phi, Hàn Quốc và Séc. Hai đội đứng đầu mỗi bảng, cùng với đội xếp thứ ba nếu là một trong tám đội có thành tích tốt nhất, sẽ giành quyền vào vòng đấu loại trực tiếp.",
-      "summaryEn": "Group A of the 2026 FIFA World Cup took place from June 11 to 24, 2026. The group consisted of national football teams representing Mexico (co-host), South Africa, South Korea, and the Czech Republic. This also marked the return of the Czech Republic and South Africa to the World Cup, respectively, since 2006 and 2010.",
+      "titleVi": "Đợt nắng nóng tại châu Âu năm 2026",
+      "titleEn": "2026 European heatwaves",
+      "summaryVi": "Đợt nắng nóng tại châu Âu năm 2026 là một loạt các đợt nắng nóng nghiêm trọng kể từ tháng 5 năm 2026 ở châu Âu. Nhiệt độ kỷ lục đã bị phá vỡ ở Áo, Ba Lan, Bỉ, Đan Mạch, Đức, Hà Lan, Hungary, Pháp, România, Séc, Tây Ban Nha, Vương quốc Liên hiệp Anh và Bắc Ireland và Ý. Đợt sóng nhiệt đầu tiên bắt đầu vào ngày 24 tháng 5 với nhiệt độ cao hơn bình thường, gây ra một số trường hợp tử vong. Nhiệt độ cao nhất từng được ghi nhận trong tháng 5, với biến đổi khí hậu khiến mùa hè ở Trung Âu bắt đầu sớm hơn. Tây Âu là khu vực bị ảnh hưởng nặng nề nhất, với các báo cáo về nhiệt độ kỷ lục ở Cộng hòa Ireland, Pháp, và Vương quốc Liên hiệp Anh và Bắc Ireland. Các quốc gia khác có nhiệt độ cao bất thường l",
+      "summaryEn": "Starting in late May 2026, several severe heatwaves affected Europe. Temperature records were broken in Austria, Belarus, Belgium, Czech Republic, Denmark, France, Germany, Hungary, Ireland, Italy, the Netherlands, Poland, Romania, Slovakia, Slovenia, Spain, Switzerland and the United Kingdom. The first heatwave began on 24 May, with temperatures higher than normal and several heat-related deaths. Temperatures were the highest ever recorded for May, with climate change causing the earlier onset of Central Europe's summer. Western Europe was the most affected area, with reports of record-breaking temperatures in France, Ireland and the United Kingdom. Other countries with unusually high tempe",
       "location": null,
       "latitude": null,
       "longitude": null,
-      "languages": 43,
-      "revisedAt": "2026-07-20T06:00:36Z",
+      "languages": 31,
+      "revisedAt": "2026-07-05T11:49:19Z",
       "sources": [
         {
-          "title": "Giải vô địch bóng đá thế giới 2026 (Bảng A)",
+          "title": "Đợt nắng nóng tại châu Âu năm 2026",
           "publisher": "Wikipedia tiếng Việt",
-          "url": "https://vi.wikipedia.org/wiki/Gi%E1%BA%A3i_v%C3%B4_%C4%91%E1%BB%8Bch_b%C3%B3ng_%C4%91%C3%A1_th%E1%BA%BF_gi%E1%BB%9Bi_2026_(B%E1%BA%A3ng_A)",
+          "url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BB%A3t_n%E1%BA%AFng_n%C3%B3ng_t%E1%BA%A1i_ch%C3%A2u_%C3%82u_n%C4%83m_2026",
           "language": "vi",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 FIFA World Cup Group A",
+          "title": "2026 European heatwaves",
           "publisher": "Wikipedia tiếng Anh",
-          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_A",
+          "url": "https://en.wikipedia.org/wiki/2026_European_heatwaves",
           "language": "en",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 FIFA World Cup Group A",
+          "title": "2026 European heatwaves",
           "publisher": "Wikidata",
-          "url": "https://www.wikidata.org/wiki/Q128810064",
+          "url": "https://www.wikidata.org/wiki/Q139961792",
           "language": "multilingual",
           "license": "CC0 1.0"
         }
       ]
     },
     {
-      "key": "Q128810071",
+      "key": "Q131356857",
       "date": "2026-01-01",
-      "titleVi": "Giải vô địch bóng đá thế giới 2026 (Bảng G)",
-      "titleEn": "2026 FIFA World Cup Group G",
-      "summaryVi": "Bảng G của Giải vô địch bóng đá thế giới 2026 được diễn ra từ ngày 15 đến ngày 26 tháng 6 năm 2026. Bảng này bao gồm các đội tuyển Bỉ, Ai Cập, Iran và New Zealand. Hai đội đứng đầu mỗi bảng, cùng với đội xếp thứ ba nếu là một trong tám đội có thành tích tốt nhất, sẽ giành quyền vào vòng đấu loại trực tiếp.",
-      "summaryEn": "Group G of the 2026 FIFA World Cup took place from June 15 to 26, 2026. The group consisted of Belgium, Egypt, Iran, and New Zealand. All of the matches in Group G were played at three venues on the West Coast of the United States and Canada: SoFi Stadium in the Greater Los Angeles area; Lumen Field in Seattle; and BC Place in Vancouver.",
+      "titleVi": "Vòng loại Giải vô địch bóng đá thế giới 2026 – Khu vực châu Âu (Bảng C)",
+      "titleEn": "2026 FIFA World Cup qualification – UEFA Group C",
+      "summaryVi": "Bảng C của vòng loại Giải vô địch bóng đá thế giới 2026 khu vực châu Âu là một trong 12 bảng đấu của UEFA tại vòng loại Giải vô địch bóng đá thế giới để xác định các đội tuyển giành quyền tham dự Giải vô địch bóng đá thế giới 2026 tại Canada, Mexico và Hoa Kỳ. Bảng này bao gồm bốn đội tuyển: Đan Mạch, Belarus, Hy Lạp và Scotland. Các đội sẽ thi đấu với nhau trên sân nhà và sân khách theo thể thức vòng tròn tính điểm từ tháng 9 đến tháng 11 năm 2025.",
+      "summaryEn": "The 2026 FIFA World Cup qualification UEFA Group C was one of the twelve UEFA groups in the World Cup qualification tournament that decided which teams would qualify for the 2026 FIFA World Cup final tournament in Canada, Mexico and the United States. Group C consisted of four teams: Belarus, Denmark, Greece and Scotland. The teams played against each other home-and-away in a round-robin format from September to November 2025.",
       "location": null,
       "latitude": null,
       "longitude": null,
-      "languages": 39,
-      "revisedAt": "2026-07-20T06:33:16Z",
+      "languages": 21,
+      "revisedAt": "2026-03-27T10:24:33Z",
       "sources": [
         {
-          "title": "Giải vô địch bóng đá thế giới 2026 (Bảng G)",
+          "title": "Vòng loại Giải vô địch bóng đá thế giới 2026 – Khu vực châu Âu (Bảng C)",
           "publisher": "Wikipedia tiếng Việt",
-          "url": "https://vi.wikipedia.org/wiki/Gi%E1%BA%A3i_v%C3%B4_%C4%91%E1%BB%8Bch_b%C3%B3ng_%C4%91%C3%A1_th%E1%BA%BF_gi%E1%BB%9Bi_2026_(B%E1%BA%A3ng_G)",
+          "url": "https://vi.wikipedia.org/wiki/V%C3%B2ng_lo%E1%BA%A1i_Gi%E1%BA%A3i_v%C3%B4_%C4%91%E1%BB%8Bch_b%C3%B3ng_%C4%91%C3%A1_th%E1%BA%BF_gi%E1%BB%9Bi_2026_%E2%80%93_Khu_v%E1%BB%B1c_ch%C3%A2u_%C3%82u_(B%E1%BA%A3ng_C)",
           "language": "vi",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 FIFA World Cup Group G",
+          "title": "2026 FIFA World Cup qualification – UEFA Group C",
           "publisher": "Wikipedia tiếng Anh",
-          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_G",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_C",
           "language": "en",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 FIFA World Cup Group G",
+          "title": "2026 FIFA World Cup qualification – UEFA Group C",
           "publisher": "Wikidata",
-          "url": "https://www.wikidata.org/wiki/Q128810071",
+          "url": "https://www.wikidata.org/wiki/Q131356857",
           "language": "multilingual",
           "license": "CC0 1.0"
         }
       ]
     },
     {
-      "key": "Q128810065",
+      "key": "Q131356873",
       "date": "2026-01-01",
-      "titleVi": "Giải vô địch bóng đá thế giới 2026 (Bảng B)",
-      "titleEn": "2026 FIFA World Cup Group B",
-      "summaryVi": "Bảng B của Giải vô địch bóng đá thế giới 2026 được diễn ra từ ngày 12 đến ngày 24 tháng 6 năm 2026. Bảng này bao gồm các đội tuyển Canada, Qatar, Thụy Sĩ và Bosna và Hercegovina. Hai đội đứng đầu mỗi bảng, cùng với đội xếp thứ ba nếu là một trong tám đội có thành tích tốt nhất, sẽ giành quyền vào vòng đấu loại trực tiếp.",
-      "summaryEn": "Group B of the 2026 FIFA World Cup took place from June 12 to 24, 2026. The group consisted of Canada (co-host), Bosnia and Herzegovina, Qatar, and Switzerland. This also marked the return of Bosnia and Herzegovina to the World Cup finals, with the Bosnians making their first appearance since 2014.",
+      "titleVi": "Vòng loại Giải vô địch bóng đá thế giới 2026 – Khu vực châu Âu (Bảng D)",
+      "titleEn": "2026 FIFA World Cup qualification – UEFA Group D",
+      "summaryVi": "Bảng D của vòng loại Giải vô địch bóng đá thế giới 2026 khu vực châu Âu là một trong 12 bảng đấu của UEFA tại vòng loại Giải vô địch bóng đá thế giới để xác định các đội tuyển giành quyền tham dự Giải vô địch bóng đá thế giới 2026 tại Canada, Mexico và Hoa Kỳ. Bảng này bao gồm bốn đội tuyển: Pháp, Azerbaijan, Iceland và Ukraina. Các đội sẽ thi đấu với nhau trên sân nhà và sân khách theo thể thức vòng tròn tính điểm từ tháng 9 đến tháng 11 năm 2025.",
+      "summaryEn": "The 2026 FIFA World Cup qualification UEFA Group D was one of the twelve UEFA groups in the World Cup qualification tournament to decide which teams would qualify for the 2026 FIFA World Cup final tournament in Canada, Mexico and the United States. Group D consisted of four teams: Azerbaijan, France, Iceland and Ukraine. The teams played against each other home-and-away in a round-robin format from September to November 2025.",
       "location": null,
       "latitude": null,
       "longitude": null,
-      "languages": 39,
-      "revisedAt": "2026-07-20T06:04:12Z",
+      "languages": 21,
+      "revisedAt": "2025-11-17T04:13:01Z",
       "sources": [
         {
-          "title": "Giải vô địch bóng đá thế giới 2026 (Bảng B)",
+          "title": "Vòng loại Giải vô địch bóng đá thế giới 2026 – Khu vực châu Âu (Bảng D)",
           "publisher": "Wikipedia tiếng Việt",
-          "url": "https://vi.wikipedia.org/wiki/Gi%E1%BA%A3i_v%C3%B4_%C4%91%E1%BB%8Bch_b%C3%B3ng_%C4%91%C3%A1_th%E1%BA%BF_gi%E1%BB%9Bi_2026_(B%E1%BA%A3ng_B)",
+          "url": "https://vi.wikipedia.org/wiki/V%C3%B2ng_lo%E1%BA%A1i_Gi%E1%BA%A3i_v%C3%B4_%C4%91%E1%BB%8Bch_b%C3%B3ng_%C4%91%C3%A1_th%E1%BA%BF_gi%E1%BB%9Bi_2026_%E2%80%93_Khu_v%E1%BB%B1c_ch%C3%A2u_%C3%82u_(B%E1%BA%A3ng_D)",
           "language": "vi",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 FIFA World Cup Group B",
+          "title": "2026 FIFA World Cup qualification – UEFA Group D",
           "publisher": "Wikipedia tiếng Anh",
-          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_D",
           "language": "en",
           "license": "CC BY-SA 4.0"
         },
         {
-          "title": "2026 FIFA World Cup Group B",
+          "title": "2026 FIFA World Cup qualification – UEFA Group D",
           "publisher": "Wikidata",
-          "url": "https://www.wikidata.org/wiki/Q128810065",
+          "url": "https://www.wikidata.org/wiki/Q131356873",
+          "language": "multilingual",
+          "license": "CC0 1.0"
+        }
+      ]
+    },
+    {
+      "key": "Q131356890",
+      "date": "2026-01-01",
+      "titleVi": "Vòng loại Giải vô địch bóng đá thế giới 2026 – Khu vực châu Âu (Bảng E)",
+      "titleEn": "2026 FIFA World Cup qualification – UEFA Group E",
+      "summaryVi": "Bảng E của vòng loại Giải vô địch bóng đá thế giới 2026 khu vực châu Âu là một trong 12 bảng đấu của UEFA tại vòng loại Giải vô địch bóng đá thế giới để xác định các đội tuyển giành quyền tham dự Giải vô địch bóng đá thế giới 2026 tại Canada, Mexico và Hoa Kỳ. Bảng này bao gồm bốn đội tuyển: Tây Ban Nha, Thổ Nhĩ Kỳ, Gruzia và Bulgaria. Các đội sẽ thi đấu với nhau trên sân nhà và sân khách theo thể thức vòng tròn tính điểm từ tháng 9 đến tháng 11 năm 2025",
+      "summaryEn": "The 2026 FIFA World Cup qualification UEFA Group E was one of the twelve UEFA groups in the World Cup qualification tournament to decide which teams would qualify for the 2026 FIFA World Cup tournament in Canada, Mexico and the United States. Group E consisted of four teams: Bulgaria, Georgia, Spain and Turkey. The teams played against each other home-and-away in a round-robin format from September to November 2025.",
+      "location": null,
+      "latitude": null,
+      "longitude": null,
+      "languages": 23,
+      "revisedAt": "2026-03-24T12:51:58Z",
+      "sources": [
+        {
+          "title": "Vòng loại Giải vô địch bóng đá thế giới 2026 – Khu vực châu Âu (Bảng E)",
+          "publisher": "Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/V%C3%B2ng_lo%E1%BA%A1i_Gi%E1%BA%A3i_v%C3%B4_%C4%91%E1%BB%8Bch_b%C3%B3ng_%C4%91%C3%A1_th%E1%BA%BF_gi%E1%BB%9Bi_2026_%E2%80%93_Khu_v%E1%BB%B1c_ch%C3%A2u_%C3%82u_(B%E1%BA%A3ng_E)",
+          "language": "vi",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "title": "2026 FIFA World Cup qualification – UEFA Group E",
+          "publisher": "Wikipedia tiếng Anh",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_E",
+          "language": "en",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "title": "2026 FIFA World Cup qualification – UEFA Group E",
+          "publisher": "Wikidata",
+          "url": "https://www.wikidata.org/wiki/Q131356890",
+          "language": "multilingual",
+          "license": "CC0 1.0"
+        }
+      ]
+    },
+    {
+      "key": "Q131356908",
+      "date": "2026-01-01",
+      "titleVi": "Vòng loại Giải vô địch bóng đá thế giới 2026 – Khu vực châu Âu (Bảng F)",
+      "titleEn": "2026 FIFA World Cup qualification – UEFA Group F",
+      "summaryVi": "Bảng F của vòng loại Giải vô địch bóng đá thế giới 2026 khu vực châu Âu là một trong 12 bảng đấu của UEFA tại vòng loại Giải vô địch bóng đá thế giới để xác định các đội tuyển giành quyền tham dự Giải vô địch bóng đá thế giới 2026 tại Canada, Mexico và Hoa Kỳ. Bảng này bao gồm bốn đội tuyển: Bồ Đào Nha, Hungary, Cộng hòa Ireland và Armenia. Các đội sẽ thi đấu với nhau trên sân nhà và sân khách theo thể thức vòng tròn tính điểm từ tháng 9 đến tháng 11 năm 2025.",
+      "summaryEn": "The 2026 FIFA World Cup qualification UEFA Group F was one of the twelve UEFA groups in the World Cup qualification tournament to decide which teams would qualify for the 2026 FIFA World Cup final tournament in Canada, Mexico and the United States. Group F consisted of four teams: Armenia, Hungary, Portugal and the Republic of Ireland. The teams played against each other home-and-away in a round-robin format from September to November 2025.",
+      "location": null,
+      "latitude": null,
+      "longitude": null,
+      "languages": 22,
+      "revisedAt": "2026-03-27T10:43:53Z",
+      "sources": [
+        {
+          "title": "Vòng loại Giải vô địch bóng đá thế giới 2026 – Khu vực châu Âu (Bảng F)",
+          "publisher": "Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/V%C3%B2ng_lo%E1%BA%A1i_Gi%E1%BA%A3i_v%C3%B4_%C4%91%E1%BB%8Bch_b%C3%B3ng_%C4%91%C3%A1_th%E1%BA%BF_gi%E1%BB%9Bi_2026_%E2%80%93_Khu_v%E1%BB%B1c_ch%C3%A2u_%C3%82u_(B%E1%BA%A3ng_F)",
+          "language": "vi",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "title": "2026 FIFA World Cup qualification – UEFA Group F",
+          "publisher": "Wikipedia tiếng Anh",
+          "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_F",
+          "language": "en",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "title": "2026 FIFA World Cup qualification – UEFA Group F",
+          "publisher": "Wikidata",
+          "url": "https://www.wikidata.org/wiki/Q131356908",
           "language": "multilingual",
           "license": "CC0 1.0"
         }
