@@ -39,12 +39,18 @@ Mỗi tính năng gồm bốn phần: mục tiêu, phạm vi, luồng sử dụn
 | FE-17 | Đồng bộ dữ liệu dùng chung | Nhóm phát triển | 0.1.0 |
 | FE-18 | Đo lường và đồng ý phân tích | Người đọc, quản trị viên | 0.3.0 |
 | FE-19 | Đóng gói triển khai | Nhóm vận hành | 1.0.0 |
-| FE-20 | Hồ sơ chuyên sâu | Người đọc | 1.1.0 |
+| FE-20 | Hồ sơ đáng đọc | Người đọc | 1.1.0 |
 | FE-21 | Quốc gia ưu tiên | Người đọc | 1.2.0 |
 | FE-22 | Phản hồi chuyển động cho thành phần tương tác | Người đọc | 1.3.0 |
 | FE-23 | Trợ năng cho trình đọc màn hình | Người đọc | 1.4.0 |
 | FE-24 | Trắc nghiệm ôn tập trên trang sự kiện | Người đọc | 1.5.0 |
 | FE-25 | Tuân thủ pháp lý Việt Nam về dữ liệu cá nhân | Người đọc, người gửi đóng góp | 1.6.0 |
+| FE-26 | Ngày này năm xưa | Người đọc | 1.7.0 |
+| FE-27 | Chủ đề tuyến bài học | Người đọc | 1.7.0 |
+| FE-28 | Thanh trượt thời gian trên bản đồ | Người đọc | 1.7.0 |
+| FE-29 | Lưu sự kiện và trang ôn tập | Người đọc | 1.7.0 |
+| FE-30 | Đọc tiếp theo và chuỗi nhân quả | Người đọc | 1.7.0 |
+| FE-31 | In bài và nguồn cấp RSS | Người đọc, máy đọc tin | 1.7.0 |
 
 ## 3. Đặc tả chi tiết
 
@@ -145,7 +151,7 @@ Mỗi tính năng gồm bốn phần: mục tiêu, phạm vi, luồng sử dụn
 
 ### FE-05. Dòng thời gian và bộ lọc
 
-**Mục tiêu:** người đọc duyệt 149 sự kiện theo trục thời gian và thu hẹp danh sách theo nhu cầu.
+**Mục tiêu:** người đọc duyệt 187 sự kiện theo trục thời gian và thu hẹp danh sách theo nhu cầu.
 
 **Phạm vi:** danh sách sự kiện sắp theo năm, bộ lọc thời kỳ, quốc gia và khoảng năm, nút xóa bộ lọc, trạng thái rỗng, chuyển chế độ xem danh sách và bản đồ.
 
@@ -158,7 +164,7 @@ Mỗi tính năng gồm bốn phần: mục tiêu, phạm vi, luồng sử dụn
 
 **Điều kiện chấp nhận:**
 
-- [ ] Danh sách mặc định có đủ 149 sự kiện, sắp theo năm bắt đầu tăng dần.
+- [ ] Danh sách mặc định có đủ 187 sự kiện, sắp theo năm bắt đầu tăng dần.
 - [ ] Kết hợp nhiều bộ lọc cho kết quả thỏa tất cả điều kiện.
 - [ ] Số lượng hiển thị khớp số thẻ thực tế sau lọc.
 - [ ] Không có kết quả thì hiện thông báo rõ và nút xóa bộ lọc, không để vùng trắng.
@@ -337,17 +343,17 @@ Mỗi tính năng gồm bốn phần: mục tiêu, phạm vi, luồng sử dụn
 
 **Mục tiêu:** người đọc hiểu về đơn vị biên soạn, cách làm việc và quyền của mình.
 
-**Phạm vi:** trang giới thiệu có đội ngũ, trang câu hỏi thường gặp năm câu, trang chính sách bảo mật, trang cảm ơn.
+**Phạm vi:** trang giới thiệu có người phụ trách, trang câu hỏi thường gặp năm câu, trang chính sách bảo mật, trang cảm ơn.
 
 **Luồng sử dụng:**
 
-1. Mở trang giới thiệu để xem mục tiêu, phương pháp và đội ngũ.
+1. Mở trang giới thiệu để xem mục tiêu, phương pháp và người phụ trách.
 2. Mở trang câu hỏi thường gặp, mở từng câu để đọc.
 3. Mở trang chính sách bảo mật để biết dữ liệu nào được thu thập.
 
 **Điều kiện chấp nhận:**
 
-- [ ] Trang giới thiệu có mục tiêu, phương pháp biên soạn và bốn thành viên với ảnh, vai trò, mô tả.
+- [ ] Trang giới thiệu có mục tiêu, phương pháp biên soạn và một người phụ trách (Đỗ Tiến Phát) với chân dung, vai trò, tiểu sử và các phần việc phụ trách.
 - [ ] Trang câu hỏi có đúng năm câu, mở đóng được, câu trả lời đọc được bằng trình đọc màn hình.
 - [ ] Trang chính sách nêu dữ liệu thu thập, mục đích, thời gian lưu, quyền người dùng và cách liên hệ.
 - [ ] Trang cảm ơn không nằm trong sơ đồ trang và không được lập chỉ mục.
@@ -396,7 +402,7 @@ Mỗi tính năng gồm bốn phần: mục tiêu, phạm vi, luồng sử dụn
 - [ ] Hai phiên bản ngôn ngữ trỏ về nhau bằng thẻ liên kết ngôn ngữ.
 - [ ] Sơ đồ trang có 122 địa chỉ, không chứa trang cảm ơn và trang quản trị.
 - [ ] Tệp robots chặn thư mục máy chủ dữ liệu và trang cảm ơn.
-- [ ] Trang hồ sơ chuyên sâu có tiêu đề, mô tả riêng và có mặt trong sơ đồ trang ở cả hai ngôn ngữ.
+- [ ] Trang hồ sơ đáng đọc có tiêu đề, mô tả riêng và có mặt trong sơ đồ trang ở cả hai ngôn ngữ.
 - [ ] Trang chi tiết có dữ liệu có cấu trúc loại bài viết kèm ngày và ảnh.
 - [ ] Ảnh chia sẻ hiện đúng chữ tiếng Việt có dấu.
 
@@ -437,7 +443,7 @@ Mỗi tính năng gồm bốn phần: mục tiêu, phạm vi, luồng sử dụn
 **Điều kiện chấp nhận:**
 
 - [ ] Danh sách sự kiện trả 200 với đủ 20 bản ghi và siêu dữ liệu phân trang.
-- [ ] Kích thước trang được kẹp trong khoảng 1 tới 200, đủ tải trọn bộ 149 sự kiện trong một yêu cầu.
+- [ ] Kích thước trang được kẹp trong khoảng 1 tới 200, đủ tải trọn bộ 187 sự kiện trong một yêu cầu.
 - [ ] Chi tiết theo mã định danh trả 200 hoặc 404, không trả 500.
 - [ ] Danh sách thời kỳ và số liệu khớp dữ liệu sự kiện.
 - [ ] Điểm cuối kiểm tra trạng thái trả 200 khi cơ sở dữ liệu sẵn sàng.
@@ -451,7 +457,7 @@ Mỗi tính năng gồm bốn phần: mục tiêu, phạm vi, luồng sử dụn
 
 **Mục tiêu:** một tệp dữ liệu duy nhất nuôi cả máy chủ và giao diện, tránh lệch nội dung.
 
-**Phạm vi:** tệp dữ liệu dùng chung 149 sự kiện hai ngôn ngữ, nhúng vào máy chủ lúc biên dịch, nhập vào giao diện làm dự phòng, bộ chuyển đổi dùng chung quy tắc.
+**Phạm vi:** tệp dữ liệu dùng chung 187 sự kiện hai ngôn ngữ, nhúng vào máy chủ lúc biên dịch, nhập vào giao diện làm dự phòng, bộ chuyển đổi dùng chung quy tắc.
 
 **Điều kiện chấp nhận:**
 
@@ -496,33 +502,35 @@ Mỗi tính năng gồm bốn phần: mục tiêu, phạm vi, luồng sử dụn
 
 **Kịch bản liên quan:** TC-BM-31, TC-BM-32, TC-API-35.
 
-### FE-20. Hồ sơ chuyên sâu
+### FE-20. Hồ sơ đáng đọc
 
-**Mục tiêu:** người đọc có một lối vào riêng cho những bài phân tích dài, giúp hiểu bối cảnh và hệ quả của sự kiện thay vì chỉ đọc tóm tắt.
+**Mục tiêu:** người đọc có một lối vào riêng cho những bài phân tích dài, giúp hiểu bối cảnh và hệ quả của sự kiện thay vì chỉ đọc tóm tắt; khi đã chọn quốc gia ưu tiên, hồ sơ của quốc gia đó được đẩy lên đầu.
 
-**Phạm vi:** trang `/stories` và `/en/stories`, ba hồ sơ tiêu biểu, lý do đáng đọc riêng, hai đoạn mở đầu, nguồn tham khảo, liên kết tới bài đầy đủ, breadcrumb và dữ liệu có cấu trúc.
+**Phạm vi:** trang `/stories` và `/en/stories`, bốn hồ sơ mặc định của Việt Nam (Cách mạng Tháng Tám, Chiến dịch Điện Biên Phủ, Xe tăng tiến vào Dinh Độc Lập, Đổi mới), ưu tiên theo cookie `wh-country` (khi đã chọn quốc gia thì chỉ hiển thị sự kiện của quốc gia đó, tối đa ba hồ sơ, không trộn với hồ sơ Việt Nam), dòng ghi chú, lý do đáng đọc riêng, hai đoạn mở đầu, nguồn tham khảo, liên kết tới bài đầy đủ, breadcrumb và dữ liệu có cấu trúc.
 
 **Luồng sử dụng:**
 
 1. Từ thanh điều hướng hoặc chân trang, mở mục Hồ sơ.
 2. Đọc phần giới thiệu và lý do đáng đọc của từng hồ sơ.
-3. Bấm nút đọc bài để mở trang chi tiết đầy đủ, hoặc mở nguồn tham khảo ở thẻ mới.
+3. Khi đã chọn quốc gia ở bộ chọn, trang hiển thị dòng ghi chú và chỉ còn hồ sơ của quốc gia đó.
+4. Bấm nút đọc bài để mở trang chi tiết đầy đủ, hoặc mở nguồn tham khảo ở thẻ mới.
 
 **Điều kiện chấp nhận:**
 
-- [ ] Trang có đúng ba hồ sơ theo thứ tự đã định, không lặp và không thiếu khi máy chủ dữ liệu tắt.
+- [ ] Chưa chọn quốc gia: trang có đúng bốn hồ sơ của Việt Nam theo thứ tự đã định, không lặp và không thiếu khi máy chủ dữ liệu tắt.
+- [ ] Đã chọn quốc gia có sự kiện: dòng ghi chú hiện kèm tên quốc gia; chỉ hiển thị sự kiện của quốc gia đó, tối đa ba hồ sơ, nổi bật trước rồi theo năm tăng dần, không còn hồ sơ Việt Nam.
 - [ ] Mỗi hồ sơ có ảnh, ngày tháng, địa điểm, lý do đáng đọc, hai đoạn nội dung đầu và hai nguồn tham khảo.
 - [ ] Nguồn tham khảo mở ở thẻ mới và có thuộc tính an toàn.
 - [ ] Trang có tiêu đề, mô tả, breadcrumb và dữ liệu có cấu trúc danh sách riêng.
 - [ ] Bản tiếng Anh hiển thị đúng nhãn và nội dung tiếng Anh; liên kết điều hướng trỏ đúng tiền tố ngôn ngữ.
 
-**Kịch bản liên quan:** TC-CN-32, TC-CN-33, TC-NN-25, TC-NN-28, TC-SEO-29, TC-SEO-30, TC-SEO-32.
+**Kịch bản liên quan:** TC-CN-32, TC-CN-33, TC-CN-87, TC-CN-88, TC-CN-89, TC-NN-25, TC-NN-28, TC-NN-41, TC-SEO-29, TC-SEO-30, TC-SEO-32.
 
 ### FE-21. Quốc gia ưu tiên
 
 **Mục tiêu:** người đọc ở bất kỳ quốc gia nào cũng thấy lịch sử của nước mình trước tiên, sau đó mới khám phá phần còn lại của thế giới.
 
-**Phạm vi:** bộ chọn quốc gia hoặc khu vực gồm 51 mục trong thanh điều hướng và menu di động, lưu lựa chọn trong cookie `wh-country`, đẩy sự kiện của quốc gia đã chọn lên đầu trang chủ và đầu mỗi nhóm thời kỳ, dòng hướng dẫn chỉ hiện khi chưa chọn, nút bỏ ưu tiên đặt cạnh bộ chọn và trong dải nhắc, nhãn song ngữ.
+**Phạm vi:** bộ chọn quốc gia hoặc khu vực gồm 57 mục trong thanh điều hướng và menu di động, lưu lựa chọn trong cookie `wh-country`, đẩy sự kiện của quốc gia đã chọn lên đầu trang chủ và đầu mỗi nhóm thời kỳ, dòng hướng dẫn chỉ hiện khi chưa chọn, nút bỏ ưu tiên đặt cạnh bộ chọn và trong dải nhắc, nhãn song ngữ.
 
 **Luồng sử dụng:**
 
@@ -564,9 +572,9 @@ Mỗi tính năng gồm bốn phần: mục tiêu, phạm vi, luồng sử dụn
 - [ ] Không phóng to nút hay thẻ chỉ vì con trỏ đi qua; khác biệt khi rê chuột chỉ nằm ở màu, viền, bóng và mức nâng tối đa 2 điểm ảnh.
 - [ ] Ảnh trong thẻ sự kiện không bị phóng sẵn ở trạng thái thường; phần phóng luôn bị khung thẻ cắt lại, không tràn sang thẻ bên cạnh.
 - [ ] Trên thiết bị chạm, sau khi nhấc tay, không có thẻ, nút hay ảnh nào còn giữ trạng thái khi rê chuột.
-- [ ] Ô chọn quốc gia vẫn là danh sách chuẩn của trình duyệt: mở được bằng phím, đủ 51 mục, không bị thay bằng danh sách tự vẽ; phần phản hồi chuyển sang viền ô chọn và nút bỏ ưu tiên.
+- [ ] Ô chọn quốc gia vẫn là danh sách chuẩn của trình duyệt: mở được bằng phím, đủ 57 mục, không bị thay bằng danh sách tự vẽ; phần phản hồi chuyển sang viền ô chọn và nút bỏ ưu tiên.
 - [ ] Bật thiết lập giảm chuyển động của hệ điều hành: bỏ hết thu, nâng, phóng, trượt; đổi màu, viền, bóng và pha mờ vẫn chạy ở 150 mili giây; viền tiêu điểm bàn phím vẫn rõ.
-- [ ] Khi đang giảm chuyển động, bản đồ vẫn đủ 149 sự kiện (tổng số ghi trên các cụm cộng số điểm lẻ bằng 149), kéo và thu phóng được, hai tên “Hoàng Sa” và “Trường Sa” vẫn bằng tiếng Việt.
+- [ ] Khi đang giảm chuyển động, bản đồ vẫn đủ 187 sự kiện (tổng số ghi trên các cụm cộng số điểm lẻ bằng 187), kéo và thu phóng được, hai tên “Hoàng Sa” và “Trường Sa” vẫn bằng tiếng Việt.
 - [ ] Không có hiệu ứng lặp vô hạn; mọi hiệu ứng tự kết thúc và trả phần tử về trạng thái thường, gồm cả vòng sáng báo đổi ưu tiên và nút bỏ ưu tiên hiện ra sau đó.
 - [ ] Không thêm thư viện hoạt ảnh nào vào dự án; toàn bộ nằm trong định kiểu toàn cục và các tên lớp dùng lại được.
 
@@ -665,6 +673,148 @@ Mỗi tính năng gồm bốn phần: mục tiêu, phạm vi, luồng sử dụn
 
 **Kịch bản liên quan:** TC-CN-79 đến TC-CN-81; TC-NN-39; TC-BM-53; TC-TN-42.
 
+### FE-26. Ngày này năm xưa
+
+**Mục tiêu:** người đọc mở trang chủ là thấy ngay những sự kiện trong kho từng diễn ra đúng ngày hôm nay, kèm số năm đã trôi qua, và có trang riêng để xem trọn ngày cùng các kỷ niệm sắp tới.
+
+**Phạm vi:** dải “Ngày này năm xưa” trên trang chủ, trang `/on-this-day` (bản tiếng Anh `/en/on-this-day`), mục “Ngày này” trong thanh điều hướng. Dữ liệu lấy từ trường ngày của 187 sự kiện trong kho, so với ngày hiện tại tính theo giờ Việt Nam; không gọi dịch vụ ngoài. Không gồm: lịch chọn ngày bất kỳ, nhắc hẹn qua thư.
+
+**Luồng sử dụng:**
+
+1. Người đọc mở trang chủ: dải “Ngày này năm xưa” hiện dưới phần mở đầu với tối đa ba sự kiện trùng ngày hôm nay, mỗi thẻ ghi “Cách đây {n} năm”; sự kiện đúng năm nay ghi “Năm nay”.
+2. Bấm “Xem tất cả” hoặc mục “Ngày này” trong thanh điều hướng: mở trang riêng có khối “Hôm nay” liệt kê mọi sự kiện trùng ngày và khối “Sắp tới trong 60 ngày” liệt kê các kỷ niệm sắp đến.
+3. Ngày hôm nay không trùng sự kiện nào: trang riêng hiện dòng “Hôm nay không có sự kiện nào được ghi ngày”, khối sắp tới vẫn hiện.
+4. Bấm thẻ bất kỳ để mở bài sự kiện tương ứng.
+
+**Điều kiện chấp nhận:**
+
+- [ ] Dải trang chủ hiện tối đa ba sự kiện trùng ngày hôm nay, ghi đủ năm và “Cách đây {n} năm” hoặc “Năm nay”; mỗi thẻ mở đúng bài.
+- [ ] Trang riêng có đủ hai khối “Hôm nay” và “Sắp tới trong 60 ngày”; khối sắp tới chỉ gồm sự kiện trong 60 ngày tới, sắp theo ngày gần trước, mỗi mục ghi “Kỷ niệm: {title}”.
+- [ ] Ngày không có sự kiện trùng vẫn trả trang hợp lệ với dòng “Hôm nay không có sự kiện nào được ghi ngày”, không khung trống, không lỗi.
+- [ ] Kết quả tính theo ngày hệ thống và không đổi khi đổi ngôn ngữ; bản `/en/on-this-day` dùng trọn chuỗi tiếng Anh, không sót chuỗi tiếng Việt.
+- [ ] Mục “Ngày này” trong thanh điều hướng và menu di động trỏ đúng trang theo ngôn ngữ; ở 320, 375 và 1440 điểm ảnh dải trang chủ và trang riêng không tràn ngang.
+
+**Kịch bản liên quan:** TC-CN-93 đến TC-CN-95.
+
+### FE-27. Chủ đề tuyến bài học
+
+**Mục tiêu:** người đọc muốn học lịch sử theo mạch có thể theo một tuyến đọc được biên tập sẵn, nối các sự kiện đã có trong kho thành hành trình có thứ tự, thay vì tự nhặt bài rời rạc.
+
+**Phạm vi:** trang `/collections` liệt kê sáu tuyến, trang chi tiết mỗi tuyến tại `/collections/{slug}` với lời dẫn song ngữ và danh sách bước có thứ tự, mục “Chủ đề” trong thanh điều hướng. Mỗi tuyến trỏ tới các bài sự kiện đã có trong kho, không tạo nội dung mới. Không gồm: đánh dấu tiến độ tuyến, đề kiểm tra cuối tuyến.
+
+**Luồng sử dụng:**
+
+1. Người đọc mở “Chủ đề” từ thanh điều hướng: thấy sáu thẻ tuyến, mỗi thẻ ghi tên, lời dẫn, số bước và năm khởi đầu.
+2. Bấm một thẻ: mở trang tuyến có khối tóm tắt ghi “Tuyến đọc này gồm:” kèm số bước và thời lượng đọc ước tính, rồi danh sách các bước theo thứ tự.
+3. Bấm “Bắt đầu tuyến” hoặc bấm một bước: mở bài sự kiện tương ứng.
+4. Bấm “Về danh sách chủ đề” để quay lại trang tuyến; bấm “Khám phá dòng thời gian” để sang dòng thời gian.
+
+**Điều kiện chấp nhận:**
+
+- [ ] Trang `/collections` hiện đúng sáu tuyến: Nguồn cội quốc gia, Đại Việt: một nghìn năm độc lập, Những cuộc cách mạng làm thay đổi thế giới, Chiến tranh Lạnh: từ Thế chiến II đến bức tường sụp đổ, Việt Nam từ độc lập đến hội nhập, Những phát minh định hình thế giới.
+- [ ] Mỗi thẻ tuyến ghi số bước khớp danh sách bên trong; mỗi bước trỏ tới một bài sự kiện có thật trong kho và mở được.
+- [ ] Các bước trong một tuyến sắp theo năm bắt đầu tăng dần, không lặp bài trong cùng tuyến; dòng ghi chú “Đọc theo thứ tự từ trên xuống để theo mạch câu chuyện.” hiện trước danh sách.
+- [ ] Trang tuyến ở bản tiếng Anh `/en/collections/{slug}` dùng trọn tên, lời dẫn và nhãn tiếng Anh; số bước và thứ tự hai ngôn ngữ giống nhau.
+- [ ] Ở 320, 375 và 1440 điểm ảnh thẻ tuyến và danh sách bước không tràn ngang; mục “Chủ đề” trong menu di động trỏ đúng trang theo ngôn ngữ.
+
+**Kịch bản liên quan:** TC-CN-96 đến TC-CN-98.
+
+### FE-28. Thanh trượt thời gian trên bản đồ
+
+**Mục tiêu:** người đọc nhìn bản đồ có thể kéo một thanh trượt để chỉ xem các sự kiện tính tới một năm chặn trên, quan sát lịch sử trải ra theo không gian lẫn thời gian mà không phải dựng lại trang.
+
+**Phạm vi:** thanh trượt nằm dưới khung bản đồ trên trang chủ và trong chế độ bản đồ của trang dòng thời gian. Kéo thanh chỉ lọc điểm đánh dấu theo năm bắt đầu, không dựng lại bản đồ; bỏ lọc đưa về toàn thời gian. Không gồm: hoạt ảnh trượt điểm, thanh trượt khoảng năm hai đầu.
+
+**Luồng sử dụng:**
+
+1. Người đọc mở chế độ bản đồ của trang dòng thời gian: dưới khung bản đồ có thẻ “Thanh trượt thời gian” ghi năm đang chọn.
+2. Kéo thanh sang trái: chỉ còn điểm của sự kiện có năm bắt đầu nhỏ hơn hoặc bằng năm chọn, dòng năm cập nhật theo tay; kéo về hết bên phải nghĩa là “Toàn thời gian”.
+3. Bấm “Bỏ lọc năm” để trở về toàn bộ điểm.
+4. Trên trang chủ, thanh trượt của bản đồ hoạt động độc lập trong khung đó, không ảnh hưởng bộ lọc dòng thời gian.
+
+**Điều kiện chấp nhận:**
+
+- [ ] Thanh trượt hiện khi bản đồ có ít nhất hai mốc năm khác nhau; giá trị chạy từ năm nhỏ nhất tới năm lớn nhất của các điểm đang hiển thị, bước 1.
+- [ ] Kéo thanh lọc điểm ngay theo năm chọn: điểm có năm bắt đầu lớn hơn năm chọn biến mất, số cụm và danh sách địa điểm bên dưới cập nhật cùng một mảng dữ liệu; không tải lại trang, không dựng lại bản đồ.
+- [ ] Dòng năm hiện “Năm {year}” khi đang lọc và “Toàn thời gian” khi kéo về hết bên phải; nút “Bỏ lọc năm” chỉ hiện khi đang lọc và bấm một lần là về toàn thời gian.
+- [ ] Thanh trượt trên trang dòng thời gian và bản đồ trang chủ không ảnh hưởng lẫn nhau; bộ lọc thời kỳ, quốc gia và từ khóa vẫn hoạt động bình thường khi đang lọc năm.
+- [ ] Nhãn, dòng năm và nút bỏ lọc dùng chuỗi từ điển đúng ngôn ngữ; ở 320 và 390 điểm ảnh thanh trượt cao không dưới 44 điểm ảnh, bấm kéo được bằng ngón tay, không tràn ngang.
+- [ ] Khi đang giảm chuyển động, thanh trượt vẫn dùng được và bản đồ vẫn đủ 187 sự kiện ở mức toàn thời gian.
+
+**Kịch bản liên quan:** TC-CN-99, TC-CN-100.
+
+### FE-29. Lưu sự kiện và trang ôn tập
+
+**Mục tiêu:** người đọc gặp bài hay có thể lưu lại để đọc sau, và xem lại được tiến độ trắc nghiệm của mình ở một nơi tập trung, không cần tài khoản.
+
+**Phạm vi:** nút lưu trên trang sự kiện, mục “Ôn tập” (biểu tượng trái tim) trong thanh điều hướng và menu di động, trang `/study` (bản tiếng Anh `/en/study`) gồm khối “Sự kiện đã lưu” và khối “Tiến độ ôn tập trắc nghiệm”. Danh sách lưu, kết quả trắc nghiệm và lựa chọn chế độ xem nằm trong bộ nhớ cục bộ của trình duyệt, không gửi lên máy chủ. Kết quả trắc nghiệm ghi từ lần nộp của FE-24: tỉ lệ đúng cao nhất, số lần làm, điểm lần gần nhất và ngày nộp. Không gồm: tài khoản, đồng bộ nhiều thiết bị, danh sách lưu chia thư mục.
+
+**Luồng sử dụng:**
+
+1. Người đọc bấm nút lưu trên trang sự kiện: nút chuyển sang trạng thái đã lưu; bấm lần nữa để bỏ lưu.
+2. Bấm biểu tượng trái tim trên thanh điều hướng: mở `/study` với khối “Sự kiện đã lưu” liệt kê các bài đã lưu kèm nút “Bỏ lưu”.
+3. Làm một bài trắc nghiệm ở FE-24 rồi quay lại `/study`: khối “Tiến độ ôn tập trắc nghiệm” liệt kê từng bài đã làm với ba nhãn “Cao nhất: {percent}%”, “{count} lần làm” và “Gần nhất: {date}”, sắp theo lần nộp gần nhất trước.
+4. Xóa bộ nhớ trình duyệt thì cả hai khối trở về trống; dữ liệu không hề rời khỏi máy.
+
+**Điều kiện chấp nhận:**
+
+- [ ] Nút lưu có nhãn đọc màn hình “Lưu sự kiện”/“Bỏ lưu sự kiện” đúng trạng thái, giữ nguyên sau khi tải lại trang; bấm lại thì bỏ lưu.
+- [ ] Trang `/study` chỉ hiển thị dữ liệu sau khi gắn kết ở trình duyệt, không lệch giữa bản dựng máy chủ và bản chạy thật; khi chưa có dữ liệu, mỗi khối hiện dòng trống kèm nút dẫn tới dòng thời gian hoặc một bài viết.
+- [ ] Khối “Sự kiện đã lưu” giữ thứ tự lưu, không hiện bài trùng, mỗi thẻ mở đúng bài và nút “Bỏ lưu” gỡ ngay khỏi danh sách.
+- [ ] Khối “Tiến độ ôn tập trắc nghiệm” ghi đúng tỉ lệ cao nhất (so được giữa đề 5 câu và 10 câu), số lần làm, điểm và ngày lần gần nhất; danh sách sắp theo lần nộp gần nhất trước.
+- [ ] Mọi dữ liệu chỉ nằm trong kho lưu trữ cục bộ `wh-history-preferences`; bảng điều khiển mạng không ghi yêu cầu nào gửi lên máy chủ từ trang này.
+- [ ] Bản `/en/study` dùng trọn chuỗi tiếng Anh; ở 320, 375 và 1440 điểm ảnh hai khối không tràn ngang, nút “Bỏ lưu” bấm được bằng ngón tay.
+- [ ] `npx vitest run tests/store.test.ts` đạt 9/9 và `npx vitest run` đạt 121/121.
+
+**Kịch bản liên quan:** TC-CN-101 đến TC-CN-103.
+
+### FE-30. Đọc tiếp theo và chuỗi nhân quả
+
+**Mục tiêu:** người đọc đọc xong một bài có ngay các bài gần gũi để đọc tiếp, và với các mốc nằm trong chuỗi biên tập thì theo được mạch nguyên nhân – hệ quả từ bước trước tới bước sau.
+
+**Phạm vi:** khối “Sự kiện liên quan” ở cuối trang sự kiện được bổ sung gợi ý tính từ dữ liệu (cùng thời kỳ, cùng quốc gia, cùng chủ đề, gần về thời gian) khi bài không đủ ba liên kết biên tập; khối “Chuỗi nhân quả” hiện giữa khối cùng năm và khối nguồn khi bài nằm trong một trong ba chuỗi: “Từ Bắc thuộc đến độc lập”, “Bức tường Berlin trong Chiến tranh Lạnh”, “Chạy đua vũ trụ”. Mỗi bước trong chuỗi là một bài có nguồn kiểm chứng riêng. Không gồm: lịch sử đọc cá nhân hóa, theo dõi hành vi.
+
+**Luồng sử dụng:**
+
+1. Người đọc cuộn cuối bài: khối “Sự kiện liên quan” hiện tối đa ba bài; bài do biên tập chọn hiện trước, chỗ thiếu được lấp bằng bài gợi ý tính từ dữ liệu kèm nhãn lý do như “Cùng thời kỳ”, “Cùng quốc gia”, “Cùng chủ đề”, “Gần về thời gian”.
+2. Bài nằm trong chuỗi: khối “Chuỗi nhân quả” hiện dưới khối cùng năm, liệt kê các bước theo thứ tự thời gian; bước đang đọc được đánh dấu “Sự kiện hiện tại”, các bước còn lại là liên kết.
+3. Bấm mục “Chuỗi liên quan” trong mục lục để cuộn tới khối.
+4. Bấm một bước bất kỳ để mở bài của bước đó.
+
+**Điều kiện chấp nhận:**
+
+- [ ] Khối “Sự kiện liên quan” luôn đủ ba bài khi kho còn ứng viên, không trùng nhau, không trỏ về chính bài đang đọc và không trùng bài đã hiện ở khối “Cùng năm”.
+- [ ] Bài gợi ý tính từ dữ liệu mang đúng một nhãn lý do; thứ tự ưu tiên: biên tập chọn trước, rồi theo điểm tương đồng (cùng thời kỳ, cùng quốc gia, cùng chủ đề, gần về thời gian), điểm bằng nhau thì ưu tiên năm gần hơn.
+- [ ] Khối “Chuỗi nhân quả” chỉ hiện ở bài thuộc chuỗi; các bước sắp theo năm tăng dần, bước đang đọc đánh dấu `aria-current="step"` và ghi “Sự kiện hiện tại”, các bước khác mở đúng bài.
+- [ ] Mục lục chỉ thêm mục “Chuỗi liên quan” khi bài có chuỗi; bấm mục này trang cuộn tới khối; nhãn “Bước {n}” của từng liên kết chỉ trình đọc màn hình nghe thấy.
+- [ ] Mọi chuỗi dùng dữ liệu song ngữ; bản tiếng Anh dùng trọn chuỗi tiếng Anh và các bước vẫn trỏ đúng bài ở `/en/event/…`.
+- [ ] `npx vitest run tests/related-events.test.ts` đạt 6/6 và `npx vitest run tests/history-chains.test.ts` đạt 6/6.
+
+**Kịch bản liên quan:** TC-CN-104, TC-CN-105.
+
+### FE-31. In bài và nguồn cấp RSS
+
+**Mục tiêu:** người đọc muốn giữ bài dưới dạng giấy hoặc tệp có thể in bài gọn gàng; người dùng trình đọc tin theo dõi được kho sự kiện qua một nguồn cấp RSS hợp lệ.
+
+**Phạm vi:** nút “In bài viết” trên trang sự kiện (gọi lệnh in của trình duyệt), định kiểu in ẩn thanh điều hướng, chân trang và các khối tương tác (trắc nghiệm, bản đồ, chia sẻ, kêu gọi, trước/sau), nguồn cấp `/feed.xml` và liên kết “Nguồn cấp RSS” ở chân trang, khai báo `application/rss+xml` trong đầu trang. Không gồm: xuất EPUB hay PDF dựng sẵn, bản tin qua thư.
+
+**Luồng sử dụng:**
+
+1. Người đọc bấm nút máy in cạnh các nút chia sẻ: hộp thoại in của trình duyệt mở; bản in chỉ còn tiêu đề và nội dung bài, không có thanh điều hướng, chân trang hay các nút tương tác.
+2. Người dùng trình đọc tin thêm `/feed.xml`: nhận 187 mục, mỗi mục trỏ tới một bài sự kiện, sắp từ sự kiện mới nhất trở về cũ.
+3. Bấm “Nguồn cấp RSS” ở chân trang để mở nguồn cấp; máy đọc tin tự phát hiện qua thẻ `alternate` trong đầu trang.
+
+**Điều kiện chấp nhận:**
+
+- [ ] Nút in có nhãn “In bài viết”, vùng chạm đạt chuẩn, ẩn khỏi bản in; bấm gọi đúng lệnh in của trình duyệt.
+- [ ] Bản in ẩn thanh điều hướng, chân trang, menu, khối trắc nghiệm, khối bản đồ, nút chia sẻ, khối kêu gọi và khối sự kiện trước/sau; nội dung bài in trên nền trắng, chữ tối, liên kết không gạch chân màu.
+- [ ] `/feed.xml` trả mã 200 với kiểu `application/rss+xml`, đủ 187 mục, mỗi mục có `title`, `link`, `guid` và `pubDate`; sắp theo năm bắt đầu giảm dần; chữ `&`, `<`, `>` trong tiêu đề và tóm tắt được thoát đúng.
+- [ ] Nguồn cấp chỉ có một bản tiếng Việt và không gắn tiền tố ngôn ngữ; liên kết “Nguồn cấp RSS” ở chân trang trỏ đúng `/feed.xml` ở cả hai bản ngôn ngữ; đầu trang khai báo `application/rss+xml`.
+- [ ] Nguồn cấp không lộ thư điện tử hay bí mật nào; thẻ nguồn cấp không làm tăng dung lượng trang.
+- [ ] `npx vitest run tests/rss-feed.test.ts` đạt 4/4.
+
+**Kịch bản liên quan:** TC-CN-106, TC-CN-107.
+
 ## 4. Ma trận truy vết
 
 | Tính năng | Phiên bản | Kịch bản kiểm thử |
@@ -694,6 +844,12 @@ Mỗi tính năng gồm bốn phần: mục tiêu, phạm vi, luồng sử dụn
 | FE-23 | 1.4.0 | TC-TN-01 đến TC-TN-39 |
 | FE-24 | 1.5.0 | TC-CN-72 đến TC-CN-77, TC-NN-32, TC-NN-38, TC-TN-40 |
 | FE-25 | 1.6.0 | TC-CN-79 đến TC-CN-81, TC-NN-39, TC-BM-53, TC-TN-42 |
+| FE-26 | 1.7.0 | TC-CN-93 đến TC-CN-95 |
+| FE-27 | 1.7.0 | TC-CN-96 đến TC-CN-98 |
+| FE-28 | 1.7.0 | TC-CN-99, TC-CN-100 |
+| FE-29 | 1.7.0 | TC-CN-101 đến TC-CN-103 |
+| FE-30 | 1.7.0 | TC-CN-104, TC-CN-105 |
+| FE-31 | 1.7.0 | TC-CN-106, TC-CN-107 |
 
 ## 5. Quy ước đặt tên phiếu
 
@@ -738,7 +894,7 @@ Một phiếu chỉ chuyển sang Hoàn thành khi thỏa đủ sáu điểm sau
 - Nền bản đồ do dự án tự vẽ từ dữ liệu phạm vi công cộng, độ chính xác đường bờ biển dừng ở mức bản đồ thế giới thu nhỏ. Nếu cần hiển thị địa hình hay đường phố, phải chọn nguồn có giấy phép phù hợp và vẫn giữ bộ tên địa danh tiếng Việt do dự án kiểm soát.
 - Chưa có bản dựng thử bằng Docker trong môi trường phát triển hiện tại, nên FE-19 mới được kiểm tra cú pháp và cấu hình, chưa chạy trọn bộ.
 - Hai phần của FE-22 còn để trống chủ ý: biểu tượng mặt trời và mặt trăng trong nút đổi giao diện vẫn hoán đổi tức thì (muốn làm mượt phải giữ cả hai biểu tượng trên cây nội dung), và danh sách sự kiện vẫn thay đổi thứ tự ngay khi chọn quốc gia (muốn các thẻ trượt sang chỗ mới phải thêm cơ chế đo vị trí cũ, dễ va chạm với phần giữ cuộn). Cả hai chỉ là việc thẩm mỹ, không ảnh hưởng chức năng.
-- FE-23 mới được xác minh bằng cây trợ năng của Chrome, định kiểu tính toán và phím mô phỏng (TC-TN-01 đến TC-TN-35). Chưa có lượt nghe thật bằng NVDA hay VoiceOver, tức các mã TC-TN-36 đến TC-TN-39, nên chưa loại trừ được hai vấn đề chỉ lộ ra khi nghe: thứ tự và nhịp thông báo của khối lỗi, cách trình đọc đọc một danh sách 149 mục.
+- FE-23 mới được xác minh bằng cây trợ năng của Chrome, định kiểu tính toán và phím mô phỏng (TC-TN-01 đến TC-TN-35). Chưa có lượt nghe thật bằng NVDA hay VoiceOver, tức các mã TC-TN-36 đến TC-TN-39, nên chưa loại trừ được hai vấn đề chỉ lộ ra khi nghe: thứ tự và nhịp thông báo của khối lỗi, cách trình đọc đọc một danh sách 187 mục.
 - Rào mềm công cụ kiểm tra của trình duyệt (TC-BM-49 đến TC-BM-52) chỉ chặn được phím tắt ở lớp sự kiện. Người dùng biết nghề vẫn mở được công cụ bằng menu của trình duyệt; đây là giới hạn của website nói chung, không phải lỗi cần sửa.
 - FE-25 mới đóng ba mục ưu tiên cao trong báo cáo rà soát pháp lý `docs_and_qa/rà_soát_pháp_lý/rà_soát_pháp_lý_2026-11-03.md`. Tên chủ quản đang để là “Sử Ký Toàn Cầu”; trước khi công bố rộng phải thay bằng tên thật (cá nhân hoặc tổ chức đã đăng ký) trong khóa `privacy.ownerName` của `frontend/src/locales/vi.json` và `frontend/src/locales/en.json`.
 - Bốn mục ưu tiên trung bình của FE-25 còn mở, xếp theo thứ tự nên làm: chưa có control để người gửi rút hoặc sửa đồng ý sau khi đã gửi; chưa lưu bằng chứng đồng ý (ai, lúc nào, nội dung nào được hiển thị); chưa có hạn chế tự động hai mươi tháng và điểm xóa dữ liệu theo yêu cầu; chính sách chưa tách riêng mục dữ liệu nhạy cảm cùng chi tiết quyền của người có dữ liệu.

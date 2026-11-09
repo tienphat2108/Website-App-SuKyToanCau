@@ -171,7 +171,7 @@ Bật thiết lập “giảm chuyển động” của hệ điều hành, giao
 - Thu khi nhấn, nâng khi rê, phóng ảnh và trượt đều tắt.
 - Đổi màu, viền, bóng và pha mờ vẫn chạy, với thời lượng cố định 150 mili giây, đủ để người đọc biết thao tác đã được nhận.
 - Vòng sáng báo đã đổi ưu tiên về gần như tức thì nhưng vẫn kết thúc đúng quy trình, nên nút “Bỏ ưu tiên” hiện ra sạch sẽ và nằm lại cho tới khi người đọc bỏ ưu tiên.
-- Bản đồ không bị ảnh hưởng: vẫn đủ 149 sự kiện (tổng số ghi trên các vòng cụm cộng số điểm lẻ bằng 149), kéo và thu phóng được, hai tên “Hoàng Sa” và “Trường Sa” vẫn hiển thị bằng tiếng Việt.
+- Bản đồ không bị ảnh hưởng: vẫn đủ 187 sự kiện (tổng số ghi trên các vòng cụm cộng số điểm lẻ bằng 187), kéo và thu phóng được, hai tên “Hoàng Sa” và “Trường Sa” vẫn hiển thị bằng tiếng Việt.
 
 ## 13. Danh sách kiểm tra giao diện
 

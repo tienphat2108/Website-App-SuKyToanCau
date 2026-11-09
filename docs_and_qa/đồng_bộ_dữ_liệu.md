@@ -151,7 +151,7 @@ node -e "const d=require('./shared/history-events.json');const s=new Set();for(c
 
 ## 9. Khu cập nhật từ nguồn mở
 
-Khu riêng tại trang `/updates` (bản tiếng Anh `/en/updates`) trưng bày các sự kiện mới do cộng đồng Wikidata và Wikipedia cập nhật liên tục. Khu này tách hẳn kho 149 sự kiện đã biên tập: dữ liệu không vào cơ sở dữ liệu, không đụng tới `shared/history-events.json`, và được ghi rõ nhãn "sưu tầm tự động từ nguồn mở" cùng giấy phép CC BY-SA 4.0 (văn bản Wikipedia) và CC0 1.0 (Wikidata).
+Khu riêng tại trang `/updates` (bản tiếng Anh `/en/updates`) trưng bày các sự kiện mới do cộng đồng Wikidata và Wikipedia cập nhật liên tục. Khu này tách hẳn kho 187 sự kiện đã biên tập: dữ liệu không vào cơ sở dữ liệu, không đụng tới `shared/history-events.json`, và được ghi rõ nhãn "sưu tầm tự động từ nguồn mở" cùng giấy phép CC BY-SA 4.0 (văn bản Wikipedia) và CC0 1.0 (Wikidata).
 
 ### 9.1. Nguồn và cách lọc
 

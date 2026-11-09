@@ -125,10 +125,10 @@ Mỗi khối là một `<details>` đóng sẵn; dòng tiêu đề là `<summary
 
 ## 5. Giới hạn đã biết
 
-1. **Không có trình đọc màn hình thật trong môi trường phát triển.** Toàn bộ xác minh hiện tại dựa vào cây trợ năng của Chrome, định kiểu tính toán và mô phỏng phím. Cần một lượt nghe thật bằng NVDA hoặc VoiceOver trước khi phát hành; hai mục hay lộ vấn đề ở lượt này là thứ tự thông báo của khối lỗi và cách đọc danh sách địa điểm dài 149 mục.
+1. **Không có trình đọc màn hình thật trong môi trường phát triển.** Toàn bộ xác minh hiện tại dựa vào cây trợ năng của Chrome, định kiểu tính toán và mô phỏng phím. Cần một lượt nghe thật bằng NVDA hoặc VoiceOver trước khi phát hành; hai mục hay lộ vấn đề ở lượt này là thứ tự thông báo của khối lỗi và cách đọc danh sách địa điểm dài 187 mục.
 2. **Trình đọc màn hình chỉ đọc được những gì có trong cây tài liệu.** Nội dung ảnh tư liệu mà chú thích chưa mô tả đủ thì vẫn phải viết lại `imageAltVi`/`imageAltEn`; không cơ chế tự động nào thay được.
 3. **Bản đồ vẫn là nội dung đồ họa.** Danh sách bằng chữ cho phép biết và mở từng địa điểm, nhưng trải nghiệm “đọc bản đồ” không thể tương đương với nhìn bản đồ.
-4. **Danh sách địa điểm 149 mục là khối dài.** Nó nằm trong `<details>` đóng nên không chặn người dùng bàn phím khi vừa mở trang; người thật sự cần vẫn mở được bằng một phím Enter.
+4. **Danh sách địa điểm 187 mục là khối dài.** Nó nằm trong `<details>` đóng nên không chặn người dùng bàn phím khi vừa mở trang; người thật sự cần vẫn mở được bằng một phím Enter.
 5. **Tiêu điểm bàn phím trong bản đồ do Leaflet quyết định.** Các nút thu phóng, cụm và ghim nhận tiêu điểm theo cách Leaflet dựng phần tử; dự án chỉ gắn nhãn, không đổi thứ tự tab trong khung bản đồ.
 
 ## 6. Chạy lại kiểm tra tự động

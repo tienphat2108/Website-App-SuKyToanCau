@@ -61,12 +61,12 @@ Tài liệu này đối chiếu bốn mươi hạng mục bảo mật và chuẩ
 | Liên kết nội bộ | Đã có | Trang chủ, chi tiết, chân trang liên kết chéo |
 | Trang cảm ơn | Đã có | `/thank-you` và `/en/thank-you`, không lập chỉ mục |
 | Đường dẫn phân cấp | Đã có | Mọi trang chính và trang chi tiết |
-| Hồ sơ chuyên sâu | Bổ sung | `/stories` với ba hồ sơ, lý do đáng đọc và nguồn kiểm chứng |
+| Hồ sơ đáng đọc | Bổ sung | `/stories` với bốn hồ sơ Việt Nam, ưu tiên theo quốc gia đã chọn, lý do đáng đọc và nguồn kiểm chứng |
 | Năm câu hỏi thường gặp | Đã có | Trang `/faq` kèm dữ liệu có cấu trúc |
 | Cam kết thời gian phản hồi | Bổ sung | Thẻ cam kết dưới biểu mẫu đóng góp |
 | Thanh hành động dính trên di động | Đã có | Hiện ở đáy màn hình, không che nội dung |
 | Tệp robots | Đã có | Chặn thư mục giao diện lập trình và trang cảm ơn |
-| Tiêu đề riêng từng trang | Đã có | Thêm tiêu đề và mô tả riêng cho hồ sơ chuyên sâu |
+| Tiêu đề riêng từng trang | Đã có | Thêm tiêu đề và mô tả riêng cho hồ sơ đáng đọc |
 | Mô tả riêng từng trang | Đã có | Sinh theo ngôn ngữ hiện tại |
 | Ảnh chia sẻ mạng xã hội | Đã có | Ảnh lớn 1200 nhân 630, địa chỉ tuyệt đối |
 | Bản đồ và chỉ đường | Bổ sung | Hai liên kết ngoài đúng tọa độ; dữ liệu địa điểm trong khối bài viết |
@@ -75,7 +75,7 @@ Tài liệu này đối chiếu bốn mươi hạng mục bảo mật và chuẩ
 | Dữ liệu có cấu trúc địa phương | Bổ sung | Bài viết có địa điểm, quốc gia, tọa độ; trang giới thiệu có tổ chức |
 | Trang chính sách riêng tư | Đã có | Nêu dữ liệu thu thập, mục đích, thời hạn và quyền người đọc |
 | Đo lường truy cập | Đã có | Chỉ tải sau khi người đọc đồng ý, kiểm tra mã hợp lệ |
-| Ảnh đội ngũ | Đã có | Bốn chân dung minh họa kèm mô tả; không dùng ảnh nhóm giả |
+| Ảnh người phụ trách | Đã có | Một chân dung minh họa của Đỗ Tiến Phát kèm vai trò, tiểu sử và các phần việc phụ trách; không dùng ảnh nhóm giả |
 
 ## 6. Kết quả kiểm chứng
 
@@ -83,7 +83,7 @@ Thực hiện ngày 31 tháng 10 năm 2026 trên máy phát triển:
 
 | Phép kiểm tra | Kết quả |
 | --- | --- |
-| `npm test` | 51 bài đạt, 7 tệp |
+| `npm test` | 100 bài đạt, 12 tệp |
 | `npm run typecheck` | Không có lỗi |
 | `npm run build` | Dựng thành công 15 tuyến đường |
 | `npm audit` | Không còn lỗ hổng |
@@ -120,3 +120,13 @@ dotnet test WorldHistory.sln
 ```
 
 Khi phát hiện hạng mục không đạt, tạo báo cáo lỗi theo mẫu trong thư mục `báo_cáo_lỗi`, gắn nhãn `bảo-mật` nếu liên quan tới dữ liệu hoặc quyền truy cập.
+
+### Thứ tự dựng lại sau khi sửa kho dữ liệu
+
+Next.js lưu phản hồi API trong `frontend\.next\cache\fetch-cache` và **không tự xóa khi dựng lại**. Nếu máy chủ dữ liệu đang tắt, bản dựng sẽ lấy lại phản hồi cũ đã hết hạn thay vì chạy phương án dự phòng tại máy, khiến trang hiển thị số sự kiện của lần dựng trước. Vì vậy, sau mỗi lần gộp sự kiện mới:
+
+1. Dựng và khởi động lại máy chủ dữ liệu (`dotnet build` rồi chạy lại tiến trình ở cổng 5080) để API trả đúng kho hiện hành.
+2. Nếu không bật máy chủ dữ liệu, xóa hoặc đổi tên `frontend\.next\cache\fetch-cache` trước khi `npm run build`.
+3. Kiểm tra nhanh: dải chữ trên thanh điều hướng và bốn thẻ số liệu trang chủ phải trùng nhau; số liên kết `/event/…` trong `/timeline` phải bằng số sự kiện của kho.
+
+Lớp phòng hộ trong `historical.service.ts` bỏ qua phản hồi API có số sự kiện nhỏ hơn kho phát hành kèm giao diện, nên hai số liệu không thể lệch nhau như trước.
