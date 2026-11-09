@@ -1113,8 +1113,12 @@ button.chip:active {
    */
 }
 
-/* Khi in bài viết, ẩn các phần điều hướng và nút tương tác. */
+/* Khi in bài viết, ẩn các phần điều hướng và nút tương tác, trả giấy trắng chữ đen. */
 @media print {
+  @page {
+    margin: 18mm 16mm;
+  }
+
   header,
   footer,
   nav,
@@ -1130,5 +1134,17 @@ button.chip:active {
 
   .prose-history {
     color: #111;
+  }
+
+  /* Bản in không cần màu nền khối; giữ nguyên viền để bố cục không vỡ. */
+  .card,
+  .bg-surface,
+  .bg-raised {
+    background-color: #fff !important;
+  }
+
+  a {
+    color: #111;
+    text-decoration: none;
   }
 }

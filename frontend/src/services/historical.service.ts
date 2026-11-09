@@ -187,13 +187,25 @@ export class HistoricalService {
     params.set('page', String(query.page ?? 1));
     params.set('pageSize', String(query.pageSize ?? 12));
 
+    // Khi máy chủ dữ liệu không phản hồi lúc dựng trang, Next.js có thể phát lại phản hồi
+    // hết hạn còn lưu trong bộ nhớ đệm; danh sách không lọc vì thế không được ít hơn
+    // số sự kiện của kho phát hành kèm giao diện.
+    const isFullList =
+      !query.era &&
+      !query.country &&
+      !query.search &&
+      query.fromYear === undefined &&
+      query.toYear === undefined &&
+      query.featured === undefined &&
+      (query.page ?? 1) === 1;
+
     try {
       const response = await this.client.get<ApiPaged<EventData>>(
         `/api/events?${params.toString()}`,
         { revalidate: 300, tags: ['events'] },
       );
 
-      if (response) {
+      if (response && (!isFullList || response.total >= this.fallbackEvents.length)) {
         return {
           items: response.items.map((item) => new HistoricalEvent(item)),
           page: response.page,
@@ -277,7 +289,9 @@ export class HistoricalService {
         tags: ['stats'],
       });
 
-      if (response) {
+      // Bộ nhớ đệm của Next.js có thể trả phản hồi cũ dựng từ khi kho còn ít sự kiện hơn,
+      // nên số liệu thấp hơn bộ dữ liệu phát hành kèm giao diện bị coi là lỗi thời.
+      if (response && response.totalEvents >= this.fallbackEvents.length) {
         return response;
       }
     } catch (error) {

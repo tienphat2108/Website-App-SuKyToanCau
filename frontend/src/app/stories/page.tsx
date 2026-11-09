@@ -5,7 +5,13 @@ import { JsonLd } from '@/components/ui/json-ld';
 import { PageHero } from '@/components/ui/page-hero';
 import { getI18n } from '@/core/i18n/server';
 import { localizePath } from '@/core/i18n/config';
-import { CASE_STUDY_SLUGS } from '@/data/case-studies';
+import { formatMessage } from '@/core/i18n/dictionary';
+import { getPreferredCountry } from '@/core/preferences/server';
+import {
+  selectCaseStudySlugs,
+  VIETNAM_COUNTRY_KEY,
+} from '@/data/case-studies';
+import { countryLabel } from '@/data/countries';
 import type { HistoricalEvent } from '@/core/models/HistoricalEvent';
 import { historicalService } from '@/services/historical.service';
 import { absoluteUrl } from '@/utils/site';
@@ -38,14 +44,36 @@ export default async function StoriesPage() {
   const storiesHref = localizePath(locale, '/stories');
   const timelineHref = localizePath(locale, '/timeline');
 
+  const [allEvents, preferredCountry] = await Promise.all([
+    historicalService.getAll(),
+    getPreferredCountry(),
+  ]);
+  // Ưu tiên hồ sơ của quốc gia người đọc đã chọn; chưa chọn thì luôn hiển thị các mốc quan trọng của Việt Nam.
+  const slugs = selectCaseStudySlugs(allEvents, preferredCountry);
+
   // Danh sách API được rút gọn nên không kèm nguồn tham khảo.
   // Đọc chi tiết từng hồ sơ để giữ nguyên yêu cầu giảm dữ liệu ở điểm cuối danh sách.
   const details = await Promise.all(
-    CASE_STUDY_SLUGS.map((slug) => historicalService.getBySlug(slug)),
+    slugs.map((slug) => historicalService.getBySlug(slug)),
   );
   const caseStudies = details.filter(
     (event): event is HistoricalEvent => event !== null,
   );
+
+  // Dòng ghi chú cho biết nội dung đang ưu tiên theo quốc gia nào.
+  const preferredName = countryLabel(preferredCountry, locale);
+  const hasPreferredEvents = preferredCountry
+    ? allEvents.some((event) => event.country === preferredCountry)
+    : false;
+  const priorityNote =
+    preferredCountry && preferredCountry !== VIETNAM_COUNTRY_KEY
+      ? formatMessage(
+          hasPreferredEvents
+            ? dictionary.stories.preferredNote
+            : dictionary.stories.fallbackNote,
+          { country: preferredName },
+        )
+      : '';
 
   const breadcrumbJsonLd = createBreadcrumbJsonLd([
     { label: dictionary.common.home, url: absoluteUrl(homeHref) },
@@ -93,6 +121,11 @@ export default async function StoriesPage() {
           {dictionary.stories.eyebrow}
         </p>
         <span className="gold-rule mt-3 block max-w-xs" aria-hidden="true" />
+        {priorityNote ? (
+          <p role="status" className="mt-4 text-[0.9375rem] text-muted">
+            {priorityNote}
+          </p>
+        ) : null}
       </section>
 
       <div className="container-page space-y-14 pb-16 sm:space-y-20 sm:pb-20">
@@ -100,6 +133,12 @@ export default async function StoriesPage() {
           const paragraphs = event.content(locale).slice(0, 2);
           const sources = event.sources.slice(0, 2);
           const isReversed = index % 2 === 1;
+          // Chỉ hồ sơ biên tập riêng mới có phần "Vì sao đáng đọc"; hồ sơ chọn theo
+          // quốc gia vẫn đủ tiêu đề, tóm tắt và nguồn kiểm chứng.
+          const reason =
+            dictionary.stories.reasons[
+              event.slug as keyof typeof dictionary.stories.reasons
+            ];
 
           return (
             <article
@@ -154,14 +193,16 @@ export default async function StoriesPage() {
                     {event.title(locale)}
                   </h2>
 
-                  <div className="mt-4 rounded-xl border border-gold/25 bg-gold/[0.06] p-4">
-                    <p className="font-ui text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-accent">
-                      {dictionary.stories.whyTitle}
-                    </p>
-                    <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-ink">
-                      {dictionary.stories.reasons[event.slug as keyof typeof dictionary.stories.reasons]}
-                    </p>
-                  </div>
+                  {reason ? (
+                    <div className="mt-4 rounded-xl border border-gold/25 bg-gold/[0.06] p-4">
+                      <p className="font-ui text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-accent">
+                        {dictionary.stories.whyTitle}
+                      </p>
+                      <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-ink">
+                        {reason}
+                      </p>
+                    </div>
+                  ) : null}
 
                   <p className="mt-4 text-[1.0625rem] leading-[1.75] text-muted">{event.summary(locale)}</p>
 

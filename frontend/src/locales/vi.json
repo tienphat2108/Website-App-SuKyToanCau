@@ -20,8 +20,8 @@
       "description": "Duyệt gần một trăm sự kiện lịch sử Việt Nam và thế giới theo thời kỳ, quốc gia và địa điểm trên bản đồ."
     },
     "about": {
-      "title": "Giới thiệu đội ngũ",
-      "description": "Sử Ký Toàn Cầu là dự án bách khoa mở do đội ngũ biên tập, thiết kế và kỹ thuật cùng xây dựng vì một cách học lịch sử dễ tiếp cận hơn."
+      "title": "Giới thiệu người phụ trách",
+      "description": "Sử Ký Toàn Cầu là dự án bách khoa mở do một người phụ trách toàn bộ biên tập, thiết kế và kỹ thuật vì một cách học lịch sử dễ tiếp cận hơn."
     },
     "faq": {
       "title": "Câu hỏi thường gặp",
@@ -32,8 +32,8 @@
       "description": "Gửi tư liệu, hình ảnh hoặc chỉnh sửa của bạn để đội ngũ biên tập xem xét và bổ sung vào bách khoa lịch sử."
     },
     "stories": {
-      "title": "Hồ sơ chuyên sâu",
-      "description": "Ba hồ sơ lịch sử được phân tích theo bối cảnh, bước ngoặt và hệ quả, kèm nguồn kiểm chứng."
+      "title": "Hồ sơ đáng đọc",
+      "description": "Những hồ sơ lịch sử được phân tích theo bối cảnh, bước ngoặt và hệ quả, kèm nguồn kiểm chứng."
     },
     "updates": {
       "title": "Cập nhật từ nguồn mở",
@@ -50,12 +50,26 @@
     "notFound": {
       "title": "Không tìm thấy trang",
       "description": "Trang bạn tìm có thể đã được di chuyển hoặc không còn tồn tại."
+    },
+    "onThisDay": {
+      "title": "Ngày này năm xưa – sự kiện trùng ngày hôm nay",
+      "description": "Xem những sự kiện lịch sử Việt Nam và thế giới từng diễn ra đúng ngày hôm nay, tính theo giờ Việt Nam."
+    },
+    "collections": {
+      "title": "Chủ đề tuyến bài học lịch sử",
+      "description": "Đọc lịch sử theo mạch chủ đề: các tuyến biên tập nối sự kiện thành hành trình có thứ tự, kèm lời dẫn song ngữ."
+    },
+    "study": {
+      "title": "Ôn tập – sự kiện đã lưu và tiến độ trắc nghiệm",
+      "description": "Xem lại các bài viết bạn đã lưu và kết quả trắc nghiệm, được giữ riêng trong bộ nhớ của trình duyệt."
     }
   },
   "stories": {
     "eyebrow": "Hồ sơ chuyên sâu",
-    "title": "Ba hồ sơ đáng đọc",
+    "title": "Hồ sơ đáng đọc",
     "subtitle": "Mỗi hồ sơ mở một sự kiện qua bối cảnh, bước ngoặt và hệ quả, kèm nguồn tham khảo để bạn tự kiểm chứng.",
+    "preferredNote": "Các mốc lịch sử quan trọng của {country}.",
+    "fallbackNote": "Kho chưa có sự kiện của {country} — hiển thị các mốc quan trọng của Việt Nam.",
     "whyTitle": "Vì sao đáng đọc",
     "readCase": "Đọc toàn bộ hồ sơ",
     "sourcesTitle": "Nguồn kiểm chứng",
@@ -63,6 +77,7 @@
     "reasons": {
       "cach-mang-thang-tam-1945": "Một cuộc tổng khởi nghĩa diễn ra trong khoảng thời gian ngắn, cho thấy nghệ thuật chớp thời cơ và sức mạnh của tổ chức quần chúng.",
       "chien-dich-dien-bien-phu": "Chiến dịch kéo dài 56 ngày đêm là bài học về hậu cần, kiên trì và thay đổi phương châm tác chiến đúng lúc.",
+      "xe-tang-tien-vao-dinh-doc-lap-1975": "Khoảnh khắc xe tăng 843 húc đổ cổng Dinh Độc Lập khép lại ba mươi năm chia cắt, được kể qua chính những người lính trên hai chiếc xe tăng 843 và 390.",
       "doi-moi-1986": "Đại hội VI mở đường cho đổi mới kinh tế, một bước ngoặt giúp Việt Nam thoát khỏi khủng hoảng và hội nhập."
     }
   },
@@ -82,6 +97,9 @@
   "nav": {
     "home": "Trang chủ",
     "timeline": "Dòng thời gian",
+    "collections": "Chủ đề",
+    "onThisDay": "Ngày này",
+    "study": "Ôn tập",
     "stories": "Hồ sơ",
     "updates": "Cập nhật",
     "about": "Giới thiệu",
@@ -142,7 +160,8 @@
     "zoomIn": "Phóng to bản đồ",
     "zoomOut": "Thu nhỏ bản đồ",
     "closePopup": "Đóng thông tin sự kiện",
-    "searchOnTimeline": "Mở ô tìm kiếm ở trang Dòng thời gian"
+    "searchOnTimeline": "Mở ô tìm kiếm ở trang Dòng thời gian",
+    "studyLink": "Trang ôn tập và sự kiện đã lưu"
   },
   "preferences": {
     "countryLabel": "Quốc gia của bạn",
@@ -236,7 +255,11 @@
     "startExploring": "Bắt đầu khám phá",
     "sortNote": "Sắp xếp từ cổ đến kim",
     "quickFilters": "Lọc nhanh",
-    "activeFilters": "Bộ lọc đang áp dụng"
+    "activeFilters": "Bộ lọc đang áp dụng",
+    "timeSliderLabel": "Thanh trượt thời gian",
+    "timeSliderYear": "Năm {year}",
+    "timeSliderAll": "Toàn thời gian",
+    "timeSliderReset": "Bỏ lọc năm"
   },
   "event": {
     "breadcrumbHome": "Trang chủ",
@@ -247,12 +270,22 @@
     "country": "Quốc gia",
     "tags": "Từ khóa",
     "share": "Chia sẻ bài viết",
+    "print": "In bài viết",
     "copyLink": "Sao chép liên kết",
     "copied": "Đã sao chép liên kết",
     "facebook": "Chia sẻ lên Facebook",
     "x": "Chia sẻ lên X",
     "related": "Sự kiện liên quan",
     "relatedSubtitle": "Những mốc thời gian gần gũi để tiếp tục đọc.",
+    "relatedEra": "Cùng thời kỳ",
+    "relatedCountry": "Cùng quốc gia",
+    "relatedTag": "Cùng chủ đề",
+    "relatedYear": "Gần về thời gian",
+    "chainEyebrow": "Chuỗi nhân quả",
+    "chainToc": "Chuỗi liên quan",
+    "chainNote": "Chuỗi được biên tập để bạn theo mạch nguyên nhân – hệ quả; mỗi bài trong chuỗi đều có nguồn kiểm chứng riêng.",
+    "chainStep": "Bước {n}",
+    "chainCurrent": "Sự kiện hiện tại",
     "mapTitle": "Vị trí trên bản đồ",
     "mapHint": "Vị trí được đánh dấu theo tọa độ ước lệ của sự kiện.",
     "directions": "Chỉ đường",
@@ -324,6 +357,49 @@
     "quizExplainEarliest": "“{title}” bắt đầu vào {date}, sớm nhất trong các lựa chọn.",
     "quizExplainLatest": "“{title}” bắt đầu vào {date}, muộn nhất trong các lựa chọn."
   },
+  "onThisDay": {
+    "title": "Ngày này năm xưa",
+    "subtitle": "Những sự kiện từng diễn ra đúng ngày hôm nay, tính theo giờ Việt Nam.",
+    "pageIntro": "Mỗi ngày trong năm đều từng chứng kiến những bước ngoặt. Dưới đây là các sự kiện trong kho dữ liệu trùng ngày hôm nay, kèm số năm đã trôi qua.",
+    "datePrefix": "Hôm nay",
+    "yearsAgo": "Cách đây {n} năm",
+    "thisYear": "Năm nay",
+    "emptyTitle": "Hôm nay không có sự kiện nào được ghi ngày",
+    "emptyText": "Kho dữ liệu chưa có sự kiện trùng ngày hôm nay. Hãy xem các ngày kỷ niệm sắp tới bên cạnh, hoặc khám phá toàn bộ dòng thời gian.",
+    "upcomingLabel": "Sắp tới trong 60 ngày",
+    "upcomingItem": "Kỷ niệm: {title}",
+    "viewAll": "Xem tất cả"
+  },
+  "collections": {
+    "title": "Chủ đề tuyến bài học",
+    "subtitle": "Những tuyến đọc được biên tập theo mạch chủ đề: mỗi tuyến nối các sự kiện đã có trong kho dữ liệu thành một hành trình có thứ tự, kèm lời dẫn song ngữ.",
+    "stepCount": "{count} bước",
+    "rangeLabel": "Khởi đầu: {date}",
+    "startPath": "Bắt đầu tuyến",
+    "pathSummary": "Tuyến đọc này gồm:",
+    "stepsLabel": "Bước",
+    "minutesEstimate": "~{count}",
+    "readingTimeLabel": "phút đọc ước tính",
+    "orderNote": "Đọc theo thứ tự từ trên xuống để theo mạch câu chuyện.",
+    "backToList": "Về danh sách chủ đề",
+    "browseTimeline": "Khám phá dòng thời gian"
+  },
+  "study": {
+    "title": "Ôn tập",
+    "pageIntro": "Góc cá nhân của bạn: các bài viết đã lưu và kết quả trắc nghiệm. Mọi dữ liệu chỉ nằm trong bộ nhớ của trình duyệt này, không gửi lên máy chủ.",
+    "savedTitle": "Sự kiện đã lưu",
+    "savedSubtitle": "Các bài viết bạn đã bấm lưu để đọc lại sau.",
+    "savedEmpty": "Chưa có sự kiện nào được lưu.",
+    "savedEmptyCta": "Khám phá dòng thời gian",
+    "unsave": "Bỏ lưu",
+    "progressTitle": "Tiến độ ôn tập trắc nghiệm",
+    "progressSubtitle": "Kết quả các bài trắc nghiệm bạn đã nộp trong các bài viết.",
+    "progressEmpty": "Chưa nộp bài trắc nghiệm nào.",
+    "progressEmptyCta": "Mở một bài viết để ôn tập",
+    "best": "Cao nhất: {percent}%",
+    "attempts": "{count} lần làm",
+    "last": "Gần nhất: {date}"
+  },
   "contribute": {
     "eyebrow": "Cùng viết lịch sử",
     "title": "Gửi tư liệu của bạn",
@@ -388,7 +464,7 @@
   },
   "about": {
     "eyebrow": "Về chúng tôi",
-    "title": "Đội ngũ phía sau Sử Ký Toàn Cầu",
+    "title": "Người đứng sau Sử Ký Toàn Cầu",
     "lead": "Chúng tôi tin rằng lịch sử không chỉ là những mốc ngày tháng. Đó là cách con người ra quyết định, va chạm và để lại dấu vết. Dự án này được xây dựng để việc học lịch sử trở nên gần gũi, có thể tra cứu và đáng tin cậy.",
     "missionTitle": "Sứ mệnh",
     "missionText": "Tạo một bách khoa lịch sử mở, ưu tiên Việt Nam nhưng luôn đặt trong bối cảnh khu vực và thế giới; viết cho người đọc phổ thông nhưng tôn trọng chuẩn mực học thuật.",
@@ -422,37 +498,26 @@
       "Hình ảnh minh họa hiện là tranh do đội ngũ thiết kế, không sử dụng ảnh có bản quyền chưa rõ nguồn. Khi bổ sung ảnh tư liệu, chúng tôi ghi rõ nguồn và giấy phép.",
       "Đóng góp của độc giả được kiểm tra trước khi xuất bản. Việc gửi đóng góp không bảo đảm nội dung sẽ được đăng."
     ],
-    "teamTitle": "Những người làm nội dung",
-    "teamEyebrow": "Đội ngũ",
-    "teamSubtitle": "Một nhóm nhỏ, làm việc theo nguyên tắc biên tập công khai và kiểm tra chéo.",
+    "teamTitle": "Người làm nội dung",
+    "teamEyebrow": "Người phụ trách",
+    "teamSubtitle": "Toàn bộ nội dung, thiết kế và kỹ thuật của bách khoa do một người phụ trách, theo nguyên tắc biên tập công khai và kiểm tra nguồn.",
+    "teamDutiesLabel": "Các phần việc phụ trách",
     "team": [
       {
-        "name": "Nguyễn Minh Anh",
-        "role": "Trưởng nhóm biên tập",
-        "bio": "Phụ trách cấu trúc nội dung, đối chiếu nguồn và giữ giọng văn thống nhất cho toàn bộ bách khoa.",
-        "image": "/images/team-1.svg",
-        "alt": "Chân dung minh họa của Nguyễn Minh Anh"
-      },
-      {
-        "name": "Trần Quốc Bảo",
-        "role": "Biên tập viên lịch sử Việt Nam",
-        "bio": "Theo dõi các thời kỳ cổ đại đến cận đại, đặc biệt quan tâm đến lịch sử địa phương và tư liệu gia đình.",
-        "image": "/images/team-2.svg",
-        "alt": "Chân dung minh họa của Trần Quốc Bảo"
-      },
-      {
-        "name": "Lê Thu Hà",
-        "role": "Biên tập viên lịch sử thế giới",
-        "bio": "Kết nối các sự kiện toàn cầu với bối cảnh Việt Nam, phụ trách phần so sánh và dòng thời gian song song.",
-        "image": "/images/team-3.svg",
-        "alt": "Chân dung minh họa của Lê Thu Hà"
-      },
-      {
-        "name": "Phạm Đức Long",
-        "role": "Thiết kế và kỹ thuật",
-        "bio": "Xây dựng trải nghiệm đọc, bản đồ và hạ tầng bảo mật để nội dung đến được với nhiều người hơn.",
-        "image": "/images/team-4.svg",
-        "alt": "Chân dung minh họa của Phạm Đức Long"
+        "name": "Đỗ Tiến Phát",
+        "role": "Chủ biên · Biên tập, thiết kế và kỹ thuật",
+        "bio": "Phụ trách toàn bộ bách khoa: cấu trúc nội dung và giọng văn, đối chiếu nguồn cho cả lịch sử Việt Nam lẫn thế giới, thiết kế trải nghiệm đọc, bản đồ, dữ liệu và hạ tầng bảo mật.",
+        "duties": [
+          "Biên tập nội dung",
+          "Kiểm chứng nguồn",
+          "Lịch sử Việt Nam",
+          "Lịch sử thế giới",
+          "Thiết kế giao diện",
+          "Bản đồ và dữ liệu",
+          "Kỹ thuật và bảo mật"
+        ],
+        "image": "/images/team-do-tien-phat.svg",
+        "alt": "Chân dung minh họa của Đỗ Tiến Phát"
       }
     ],
     "ctaTitle": "Cùng chúng tôi hoàn thiện bách khoa",
@@ -596,6 +661,7 @@
     "copyright": "© 2026 Sử Ký Toàn Cầu. Một dự án bách khoa độc lập.",
     "owner": "Chủ quản: {owner} · Đầu mối dữ liệu cá nhân: sukytoancau@gmail.com",
     "security": "Bảo mật và riêng tư",
+    "rss": "Nguồn cấp RSS",
     "languageNote": "Tiếng Việt và English"
   },
   "consent": {

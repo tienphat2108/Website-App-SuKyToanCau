@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t d">
-  <title id="t">Chân dung minh họa của Phạm Đức Long</title>
-  <desc id="d">Hình minh họa trừu tượng một người đàn ông với nền xanh đêm.</desc>
+  <title id="t">Chân dung minh họa của Đỗ Tiến Phát</title>
+  <desc id="d">Hình minh họa trừu tượng một người đàn ông trên nền xanh đêm, phía sau là họa tiết trống đồng màu vàng đồng.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#334b6a"/>
@@ -13,6 +13,12 @@
   </defs>
   <rect width="400" height="400" fill="url(#bg)"/>
   <circle cx="80" cy="300" r="110" fill="#4f7fa1" opacity="0.2"/>
+  <g fill="none" stroke="#d8b36a" opacity="0.28">
+    <circle cx="316" cy="104" r="62" stroke-width="2"/>
+    <circle cx="316" cy="104" r="46" stroke-width="1.5"/>
+    <circle cx="316" cy="104" r="30" stroke-width="1.5"/>
+  </g>
+  <path d="M316 78 l7 19 l19 7 l-19 7 l-7 19 l-7 -19 l-19 -7 l19 -7 Z" fill="#d8b36a" opacity="0.5"/>
   <path d="M36 400 C 46 300, 118 258, 200 258 C 282 258, 354 300, 364 400 Z" fill="#26384a"/>
   <path d="M154 258 h92 v42 c-22 18 -70 18 -92 0 Z" fill="url(#skin)"/>
   <ellipse cx="200" cy="198" rx="66" ry="76" fill="url(#skin)"/>
@@ -24,15 +30,10 @@
   </g>
   <path d="M188 230 c 8 6 16 6 24 0" fill="none" stroke="#8f5138" stroke-width="3" stroke-linecap="round"/>
   <path d="M172 224 c 10 12 18 16 28 16 c 10 0 18 -4 28 -16 c -12 4 -44 4 -56 0 Z" fill="#3a2a24" opacity="0.7"/>
-  <g fill="#8fb3c9" opacity="0.8">
-    <rect x="286" y="150" width="7" height="26" rx="3"/>
-    <rect x="300" y="138" width="7" height="38" rx="3"/>
-    <rect x="314" y="158" width="7" height="18" rx="3"/>
-  </g>
-  <path d="M200 284 l8 20 l-8 20 l-8 -20 Z" fill="#d9b06c" opacity="0.8"/>
+  <path d="M200 284 l8 20 l-8 20 l-8 -20 Z" fill="#d9b06c" opacity="0.85"/>
   <g fill="#f4d9b0" opacity="0.3">
     <circle cx="70" cy="110" r="3"/>
     <circle cx="108" cy="86" r="2"/>
-    <circle cx="340" cy="90" r="2.5"/>
+    <circle cx="52" cy="176" r="2.5"/>
   </g>
 </svg>

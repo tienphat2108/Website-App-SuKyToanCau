@@ -22,6 +22,7 @@ export interface EventCardLabels {
  * @param props.priority Ưu tiên tải ảnh cho các thẻ nằm trong vùng nhìn đầu tiên.
  * @param props.variant Bố cục dọc mặc định hoặc bố cục ngang cho bài nổi bật.
  * @param props.showFeaturedBadge Hiện nhãn "nổi bật"; tắt khi cả danh sách đều nổi bật.
+ * @param props.extraChip Nhãn phụ hiển thị cạnh tên thời kỳ trên ảnh bìa.
  * @param props.className Lớp bổ sung cho bố cục bên ngoài.
  */
 export function EventCard({
@@ -30,6 +31,7 @@ export function EventCard({
   priority = false,
   variant = 'default',
   showFeaturedBadge = true,
+  extraChip,
   className,
 }: {
   event: EventCardModel;
@@ -37,6 +39,7 @@ export function EventCard({
   priority?: boolean;
   variant?: 'default' | 'wide';
   showFeaturedBadge?: boolean;
+  extraChip?: string;
   className?: string;
 }) {
   const isWide = variant === 'wide';
@@ -75,9 +78,16 @@ export function EventCard({
             aria-hidden="true"
           />
 
-          <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-2">
-            <span className="rounded-full border border-white/15 bg-night/60 px-3 py-1 font-ui text-[0.75rem] font-medium text-white/90 backdrop-blur">
-              {event.eraName}
+          <div className="absolute inset-x-3 top-3 flex flex-wrap items-start justify-between gap-2">
+            <span className="flex flex-wrap items-center gap-1.5">
+              <span className="rounded-full border border-white/15 bg-night/60 px-3 py-1 font-ui text-[0.75rem] font-medium text-white/90 backdrop-blur">
+                {event.eraName}
+              </span>
+              {extraChip ? (
+                <span className="rounded-full bg-gold px-3 py-1 font-ui text-[0.75rem] font-semibold text-[#241a0b]">
+                  {extraChip}
+                </span>
+              ) : null}
             </span>
 
             {event.featured && showFeaturedBadge ? (

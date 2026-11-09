@@ -25,10 +25,13 @@ export function Footer() {
   const exploreLinks: FooterLink[] = [
     { label: dictionary.nav.home, href: localizePath(locale, '/') },
     { label: dictionary.nav.timeline, href: localizePath(locale, '/timeline') },
+    { label: dictionary.nav.collections, href: localizePath(locale, '/collections') },
+    { label: dictionary.nav.onThisDay, href: localizePath(locale, '/on-this-day') },
     { label: dictionary.nav.stories, href: localizePath(locale, '/stories') },
     { label: dictionary.nav.updates, href: localizePath(locale, '/updates') },
     { label: dictionary.nav.about, href: localizePath(locale, '/about') },
     { label: dictionary.nav.faq, href: localizePath(locale, '/faq') },
+    { label: dictionary.nav.study, href: localizePath(locale, '/study') },
   ];
 
   const projectLinks: FooterLink[] = [
@@ -38,6 +41,8 @@ export function Footer() {
       href: `${localizePath(locale, '/privacy')}#bao-mat`,
     },
     { label: dictionary.nav.privacy, href: localizePath(locale, '/privacy') },
+    // Nguồn cấp RSS chỉ có một bản tiếng Việt nên không gắn tiền tố ngôn ngữ.
+    { label: dictionary.footer.rss, href: '/feed.xml' },
   ];
 
   return (

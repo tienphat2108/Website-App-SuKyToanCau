@@ -75,7 +75,7 @@ describe('HistoricalEvent', () => {
 
 describe('dữ liệu mẫu', () => {
   it('có kho dữ liệu mở rộng với khóa duy nhất', () => {
-    expect(seedEvents.length).toBe(149);
+    expect(seedEvents.length).toBe(187);
     expect(seedEventsBySlug.size).toBe(seedEvents.length);
     expect(new Set(seedEvents.map((event) => event.slug)).size).toBe(seedEvents.length);
   });

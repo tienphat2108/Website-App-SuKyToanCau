@@ -7,6 +7,7 @@ import { BreathingImage } from '@/components/motion/breathing-image';
 import { Reveal } from '@/components/motion/reveal';
 import { revealDelay } from '@/components/motion/stagger';
 import { StatCounter } from '@/components/motion/stat-counter';
+import { OnThisDayStrip } from '@/components/on-this-day/on-this-day-strip';
 import { CountryPreference } from '@/components/preferences/country-preference';
 import { BrandMark } from '@/components/ui/brand-mark';
 import { SectionHeading } from '@/components/ui/section-heading';
@@ -82,6 +83,7 @@ export default async function HomePage() {
     href: event.href(locale),
     latitude: event.latitude,
     longitude: event.longitude,
+    year: event.startYear,
   }));
 
   const mapLabels = {
@@ -94,6 +96,13 @@ export default async function HomePage() {
     zoomOut: dictionary.a11y.zoomOut,
     closePopup: dictionary.a11y.closePopup,
     externalLink: dictionary.a11y.externalLink,
+  };
+
+  const sliderLabels = {
+    label: dictionary.timeline.timeSliderLabel,
+    year: dictionary.timeline.timeSliderYear,
+    all: dictionary.timeline.timeSliderAll,
+    reset: dictionary.timeline.timeSliderReset,
   };
 
   const eventLabels = {
@@ -298,6 +307,28 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <OnThisDayStrip
+        events={cards}
+        locale={locale}
+        limit={3}
+        viewAllHref={localizePath(locale, '/on-this-day')}
+        labels={{
+          title: dictionary.onThisDay.title,
+          subtitle: dictionary.onThisDay.subtitle,
+          datePrefix: dictionary.onThisDay.datePrefix,
+          yearsAgo: dictionary.onThisDay.yearsAgo,
+          thisYear: dictionary.onThisDay.thisYear,
+          emptyTitle: dictionary.onThisDay.emptyTitle,
+          emptyText: dictionary.onThisDay.emptyText,
+          upcomingLabel: dictionary.onThisDay.upcomingLabel,
+          upcomingItem: dictionary.onThisDay.upcomingItem,
+          viewAll: dictionary.onThisDay.viewAll,
+          readMore: dictionary.common.readMore,
+          featured: dictionary.common.featured,
+          minutes: dictionary.event.minuteRead,
+        }}
+      />
+
       {preferredCards.length > 0 ? (
         <section className="border-y border-line bg-gold/[0.05] section-y">
           <div className="container-page">
@@ -431,6 +462,7 @@ export default async function HomePage() {
               markers={mapMarkers}
               labels={mapLabels}
               className="map-night h-[24rem] !border-white/10 shadow-night lg:h-[27rem]"
+              sliderLabels={sliderLabels}
             />
           </div>
         </div>

@@ -15,7 +15,17 @@ import { cn } from '@/utils/format';
 /** Một mục trong thanh điều hướng chính. */
 interface NavItem {
   /** Khóa từ điển của nhãn. */
-  key: 'home' | 'timeline' | 'stories' | 'updates' | 'about' | 'faq' | 'contribute';
+  key:
+    | 'home'
+    | 'timeline'
+    | 'collections'
+    | 'onThisDay'
+    | 'stories'
+    | 'updates'
+    | 'about'
+    | 'faq'
+    | 'contribute'
+    | 'study';
   /** Đường dẫn nội bộ. */
   href: string;
 }
@@ -23,6 +33,8 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { key: 'home', href: '/' },
   { key: 'timeline', href: '/timeline' },
+  { key: 'collections', href: '/collections' },
+  { key: 'onThisDay', href: '/on-this-day' },
   { key: 'stories', href: '/stories' },
   { key: 'updates', href: '/updates' },
   { key: 'about', href: '/about' },
@@ -118,7 +130,8 @@ export function Navbar({
 
   /**
    * Kiểm tra một mục có đang được chọn hay không.
-   * Trang chi tiết sự kiện được xem là thuộc dòng thời gian.
+   * Trang chi tiết sự kiện được xem là thuộc dòng thời gian, trang chi tiết
+   * tuyến bài học thuộc mục chủ đề.
    * @param href Đường dẫn nội bộ của mục.
    * @returns Đúng nếu mục đang hoạt động.
    */
@@ -129,6 +142,10 @@ export function Navbar({
 
     if (href === '/timeline') {
       return internalPath === '/timeline' || internalPath.startsWith('/event/');
+    }
+
+    if (href === '/collections') {
+      return internalPath === '/collections' || internalPath.startsWith('/collections/');
     }
 
     return internalPath === href;
@@ -197,7 +214,7 @@ export function Navbar({
               action={timelineHref}
               method="get"
               role="search"
-              className="search-pill hidden items-center rounded-full border border-line bg-surface/70 pl-3 transition focus-within:border-accent/50 xl:flex"
+              className="search-pill hidden items-center rounded-full border border-line bg-surface/70 pl-3 transition focus-within:border-accent/50 2xl:flex"
             >
               <svg
                 width="15"
@@ -225,7 +242,7 @@ export function Navbar({
             <Link
               href={timelineHref}
               aria-label={dictionary.a11y.searchOnTimeline}
-              className="press inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-ink hover:border-gold/50 hover:bg-raised xl:hidden"
+              className="press inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-ink hover:border-gold/50 hover:bg-raised 2xl:hidden"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
                 <circle cx="11" cy="11" r="7" />
@@ -234,6 +251,17 @@ export function Navbar({
             </Link>
 
             <div className="hidden items-center gap-2 md:flex">
+              {/* Góc cá nhân: sự kiện đã lưu và tiến độ ôn tập, giữ trong bộ nhớ trình duyệt. */}
+              <Link
+                href={localizePath(locale, '/study')}
+                aria-label={dictionary.a11y.studyLink}
+                aria-current={isActive('/study') ? 'page' : undefined}
+                className="press inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-ink hover:border-gold/50 hover:bg-raised"
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                  <path d="M12 20.3 4.6 13a4.6 4.6 0 0 1 6.5-6.5l.9.9.9-.9A4.6 4.6 0 0 1 19.4 13Z" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
               <LanguageSwitch />
               <ThemeToggle />
             </div>
@@ -316,7 +344,11 @@ export function Navbar({
             </div>
 
             <nav aria-label={dictionary.a11y.mobileNav} className="grid gap-1">
-              {[...NAV_ITEMS, { key: 'contribute' as const, href: '/contribute' }].map((item, index) => (
+              {[
+                ...NAV_ITEMS,
+                { key: 'study' as const, href: '/study' },
+                { key: 'contribute' as const, href: '/contribute' },
+              ].map((item, index) => (
                 <Link
                   key={item.href}
                   href={localizePath(locale, item.href)}

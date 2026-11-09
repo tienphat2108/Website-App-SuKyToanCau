@@ -102,6 +102,9 @@ export async function generateMetadata(): Promise<Metadata> {
         en: absoluteUrl('/en'),
         'x-default': absoluteUrl('/'),
       },
+      types: {
+        'application/rss+xml': absoluteUrl('/feed.xml'),
+      },
     },
     openGraph: {
       type: 'website',

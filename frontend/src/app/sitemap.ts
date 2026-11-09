@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { locales, type Locale } from '@/core/i18n/config';
+import { collections } from '@/data/collections';
 import { historicalService } from '@/services/historical.service';
 import { absoluteUrl } from '@/utils/site';
 
@@ -7,7 +8,19 @@ import { absoluteUrl } from '@/utils/site';
 export const revalidate = 3600;
 
 /** Đường dẫn tĩnh của website, không gồm trang cảm ơn vì trang đó không được lập chỉ mục. */
-const STATIC_PAGES = ['/', '/timeline', '/stories', '/updates', '/about', '/faq', '/contribute', '/privacy'] as const;
+const STATIC_PAGES = [
+  '/',
+  '/timeline',
+  '/stories',
+  '/updates',
+  '/about',
+  '/faq',
+  '/contribute',
+  '/privacy',
+  '/on-this-day',
+  '/collections',
+  ...collections.map((collection) => `/collections/${collection.slug}`),
+] as const;
 
 /**
  * Tạo đường dẫn công khai cho một ngôn ngữ.

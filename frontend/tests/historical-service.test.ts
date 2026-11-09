@@ -204,6 +204,43 @@ describe('HistoricalService', () => {
     expect(event).toBeNull();
   });
 
+  it('bỏ qua danh sách API không lọc có tổng nhỏ hơn bộ dữ liệu mẫu', async () => {
+    const client = {
+      get: vi.fn().mockResolvedValue({
+        items: [],
+        page: 1,
+        pageSize: 200,
+        total: seedEvents.length - 38,
+        totalPages: 1,
+      }),
+      post: vi.fn(),
+    } as unknown as ApiClient;
+
+    const service = new HistoricalService(client);
+    const events = await service.getAll();
+
+    expect(events).toHaveLength(seedEvents.length);
+  });
+
+  it('vẫn dùng danh sách API khi có bộ lọc', async () => {
+    const pageData = {
+      items: [],
+      page: 1,
+      pageSize: 12,
+      total: 0,
+      totalPages: 0,
+    };
+    const client = {
+      get: vi.fn().mockResolvedValue(pageData),
+      post: vi.fn(),
+    } as unknown as ApiClient;
+
+    const service = new HistoricalService(client);
+    const page = await service.list({ era: 'co-dai' });
+
+    expect(page.total).toBe(0);
+  });
+
   it('tự tính số liệu khi API không phản hồi', async () => {
     const client = {
       get: vi.fn().mockRejectedValue(new Error('offline')),
@@ -216,6 +253,26 @@ describe('HistoricalService', () => {
     expect(stats.totalEvents).toBe(seedEvents.length);
     expect(stats.totalEras).toBe(4);
     expect(stats.totalCountries).toBeGreaterThan(1);
+  });
+
+  it('bỏ qua số liệu API cũ hơn bộ dữ liệu mẫu', async () => {
+    const client = {
+      get: vi.fn().mockResolvedValue({
+        totalEvents: seedEvents.length - 38,
+        totalEras: 4,
+        totalCountries: 51,
+        featuredEvents: 55,
+        earliestYear: -10000,
+        latestYear: 2015,
+      }),
+      post: vi.fn(),
+    } as unknown as ApiClient;
+
+    const service = new HistoricalService(client);
+    const stats = await service.getStats();
+
+    expect(stats.totalEvents).toBe(seedEvents.length);
+    expect(stats.totalCountries).toBe(new Set(seedEvents.map((event) => event.country)).size);
   });
 
   it('danh sách quốc gia không trùng lặp và sắp xếp theo tiếng Việt', async () => {

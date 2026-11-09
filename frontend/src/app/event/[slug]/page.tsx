@@ -6,6 +6,7 @@ import { JsonLd } from '@/components/ui/json-ld';
 import { EventCard } from '@/components/events/event-card';
 import { EventQuiz } from '@/components/event/event-quiz';
 import { FavoriteButton } from '@/components/event/favorite-button';
+import { PrintButton } from '@/components/event/print-button';
 import { ShareButtons } from '@/components/event/share-buttons';
 import { MapPanel } from '@/components/map/map-panel';
 import { BreathingImage } from '@/components/motion/breathing-image';
@@ -13,9 +14,12 @@ import { Reveal } from '@/components/motion/reveal';
 import { revealDelay } from '@/components/motion/stagger';
 import { getI18n } from '@/core/i18n/server';
 import { localizePath } from '@/core/i18n/config';
+import { formatMessage } from '@/core/i18n/dictionary';
 import { toEventCard } from '@/core/presenters/event.presenter';
 import { historicalService, findSameYearWorldEvents, type ExternalSummary } from '@/services/historical.service';
 import { getImageCredit, licenseLabel } from '@/data/image-credits';
+import { findChainsForEvent, resolveChainEvents } from '@/data/history-chains';
+import { findRelatedEvents, type RelatedReason } from '@/lib/related-events';
 import { absoluteUrl } from '@/utils/site';
 import { buildQuizDeck } from '@/lib/event-quiz';
 import { createBreadcrumbJsonLd, createPageMetadata } from '@/lib/seo';
@@ -118,11 +122,34 @@ export default async function EventPage({ params }: PageProps) {
     .map((relatedSlug) => allEvents.find((item) => item.slug === relatedSlug))
     .filter((item): item is NonNullable<typeof item> => Boolean(item));
 
-  const relatedEvents = (event.related.length > 0 ? event.related : relatedFromSlugs)
+  const curatedRelated = (event.related.length > 0 ? event.related : relatedFromSlugs)
     .filter((item) => item.slug !== event.slug)
     .slice(0, 3);
 
   const sameYearEvents = findSameYearWorldEvents(allEvents, event, 3);
+
+  // Gợi ý "đọc tiếp theo": ưu tiên các bài do biên tập chọn sẵn, phần còn lại
+  // bù bằng các sự kiện tương đồng nhất, không trùng với bài đã chọn hay khối cùng năm.
+  const relatedEvents = [
+    ...curatedRelated.map((item) => ({ event: item, reason: null as RelatedReason | null })),
+    ...findRelatedEvents(allEvents, event, 6)
+      .filter(
+        (match) =>
+          !curatedRelated.some((item) => item.slug === match.event.slug) &&
+          !sameYearEvents.some(({ event: sameYear }) => sameYear.slug === match.event.slug),
+      )
+      .slice(0, Math.max(0, 3 - curatedRelated.length))
+      .map((match) => ({ event: match.event, reason: match.reasons[0] })),
+  ];
+
+  const relatedReasonLabels: Record<RelatedReason, string> = {
+    sameEra: dictionary.event.relatedEra,
+    sameCountry: dictionary.event.relatedCountry,
+    sameTag: dictionary.event.relatedTag,
+    nearYear: dictionary.event.relatedYear,
+  };
+
+  const chains = findChainsForEvent(event.slug);
 
   /**
    * Định dạng năm hiển thị, kèm nhãn trước Công nguyên khi cần.
@@ -143,6 +170,9 @@ export default async function EventPage({ params }: PageProps) {
     { id: 'ban-do', label: dictionary.event.mapTitle },
     ...(sameYearEvents.length > 0
       ? [{ id: 'cung-nam', label: dictionary.event.sameYearToc }]
+      : []),
+    ...(chains.length > 0
+      ? [{ id: 'chuoi', label: dictionary.event.chainToc }]
       : []),
     { id: 'nguon', label: dictionary.event.sources },
   ];
@@ -289,7 +319,7 @@ export default async function EventPage({ params }: PageProps) {
                 </span>
               </div>
 
-              <div className="mt-6 flex flex-wrap items-center gap-3">
+              <div className="no-print mt-6 flex flex-wrap items-center gap-3">
                 <FavoriteButton
                   slug={event.slug}
                   favoriteLabel={dictionary.a11y.favorite}
@@ -307,6 +337,7 @@ export default async function EventPage({ params }: PageProps) {
                     x: dictionary.event.x,
                   }}
                 />
+                <PrintButton label={dictionary.event.print} />
               </div>
             </div>
 
@@ -399,9 +430,11 @@ export default async function EventPage({ params }: PageProps) {
           ) : null}
 
           {quizDeck.length > 0 ? (
-            <EventQuiz
+            <div className="no-print">
+              <EventQuiz
               key={`${event.slug}:${locale}`}
               deck={quizDeck}
+              slug={event.slug}
               labels={{
                 eyebrow: dictionary.event.quizEyebrow,
                 title: dictionary.event.quizTitle,
@@ -418,6 +451,7 @@ export default async function EventPage({ params }: PageProps) {
                 needAll: dictionary.event.quizNeedAll,
               }}
             />
+            </div>
           ) : null}
 
           {sameYearEvents.length > 0 ? (
@@ -499,6 +533,125 @@ export default async function EventPage({ params }: PageProps) {
               </ol>
             </section>
           ) : null}
+
+          {chains.map((chain) => {
+            const chainEvents = resolveChainEvents(chain, allEvents);
+            return (
+              <section
+                key={chain.slug}
+                id="chuoi"
+                aria-labelledby="chuoi-title"
+                className="relative mt-10 scroll-mt-28 overflow-hidden rounded-2xl border border-gold/30 bg-surface p-5 sm:p-6"
+              >
+                <span
+                  className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-gold via-accent to-accent-strong"
+                  aria-hidden="true"
+                />
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <p className="font-ui text-[0.8125rem] font-medium text-gold">
+                      {dictionary.event.chainEyebrow}
+                    </p>
+                    <h2 id="chuoi-title" className="mt-1.5 font-display text-xl font-semibold text-ink">
+                      {locale === 'vi' ? chain.titleVi : chain.titleEn}
+                    </h2>
+                  </div>
+                  <span
+                    className="grid h-10 w-10 place-items-center rounded-full border border-gold/30 bg-gold/10 text-gold"
+                    aria-hidden="true"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+                      <path d="M6 4v16M6 12h12" strokeLinecap="round" />
+                      <circle cx="6" cy="4" r="1.8" fill="currentColor" stroke="none" />
+                      <circle cx="6" cy="20" r="1.8" fill="currentColor" stroke="none" />
+                      <circle cx="18" cy="12" r="1.8" fill="currentColor" stroke="none" />
+                    </svg>
+                  </span>
+                </div>
+                <p className="mt-2 text-[0.875rem] leading-relaxed text-muted">
+                  {locale === 'vi' ? chain.descriptionVi : chain.descriptionEn}
+                </p>
+                <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-muted/80">
+                  {dictionary.event.chainNote}
+                </p>
+
+                <ol className="mt-5">
+                  {chainEvents.map((step, index) => {
+                    const isCurrent = step.slug === event.slug;
+                    const stepLabel = formatMessage(dictionary.event.chainStep, { n: index + 1 });
+
+                    return (
+                      <li
+                        key={step.slug}
+                        className="relative flex gap-4 pb-5 last:pb-0"
+                        aria-current={isCurrent ? 'step' : undefined}
+                      >
+                        <div className="flex flex-col items-center">
+                          <span
+                            className={`grid h-8 w-8 shrink-0 place-items-center rounded-full border font-ui text-[0.8125rem] font-semibold ${
+                              isCurrent
+                                ? 'border-gold bg-gold text-[#241a0b]'
+                                : 'border-gold/30 bg-gold/10 text-gold'
+                            }`}
+                          >
+                            {index + 1}
+                          </span>
+                          {index < chainEvents.length - 1 ? (
+                            <span
+                              className="mt-1 w-px flex-1 bg-gradient-to-b from-gold/50 to-line"
+                              aria-hidden="true"
+                            />
+                          ) : null}
+                        </div>
+
+                        {isCurrent ? (
+                          <div className="min-w-0 flex-1 self-center rounded-xl border border-gold/50 bg-gold/5 px-4 py-3">
+                            <span className="sr-only">{stepLabel}</span>
+                            <span className="flex flex-wrap items-center gap-2">
+                              <span className="font-display text-[0.9375rem] font-bold leading-snug text-ink">
+                                {step.title(locale)}
+                              </span>
+                              <span className="chip chip-active">{dictionary.event.chainCurrent}</span>
+                            </span>
+                            <span className="mt-1 block text-[0.8125rem] text-muted">
+                              {step.dateLabel(locale)}
+                            </span>
+                          </div>
+                        ) : (
+                          <Link
+                            href={step.href(locale)}
+                            className="group flex min-w-0 flex-1 items-center gap-3 self-center rounded-xl border border-line/70 bg-raised/40 px-3.5 py-3 transition hover:border-gold/40 hover:bg-raised"
+                          >
+                            <span className="min-w-0 flex-1">
+                              <span className="sr-only">{stepLabel}</span>
+                              <span className="block text-[0.9375rem] font-semibold leading-snug text-ink transition group-hover:text-accent">
+                                {step.title(locale)}
+                              </span>
+                              <span className="mt-1 block text-[0.8125rem] text-muted">
+                                {step.dateLabel(locale)}
+                              </span>
+                            </span>
+                            <svg
+                              width="14"
+                              height="14"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              className="shrink-0 text-muted transition group-hover:translate-x-0.5 group-hover:text-accent"
+                              aria-hidden="true"
+                            >
+                              <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                          </Link>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ol>
+              </section>
+            );
+          })}
 
           <div
             id="nguon"
@@ -619,7 +772,7 @@ export default async function EventPage({ params }: PageProps) {
             ) : null}
           </div>
 
-          <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-raised/40 px-5 py-4 text-sm text-muted">
+          <div className="no-print mt-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-raised/40 px-5 py-4 text-sm text-muted">
             <p className="max-w-xl">{dictionary.event.contentNote}</p>
             <Link
               href={localizePath(locale, '/contribute')}
@@ -632,7 +785,7 @@ export default async function EventPage({ params }: PageProps) {
             </Link>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          <div className="no-print mt-10 grid gap-4 sm:grid-cols-2">
             {previousEvent ? (
               <Link
                 href={previousEvent.href(locale)}
@@ -754,7 +907,7 @@ export default async function EventPage({ params }: PageProps) {
             </div>
           </div>
 
-          <div id="ban-do" className="scroll-mt-28">
+          <div id="ban-do" className="no-print scroll-mt-28">
             <h2 className="mb-3 font-display text-lg font-semibold text-ink">{dictionary.event.mapTitle}</h2>
             <MapPanel
               markers={[marker]}
@@ -815,12 +968,13 @@ export default async function EventPage({ params }: PageProps) {
             </div>
 
             <div className="mt-9 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {relatedEvents.map((related, index) => (
+              {relatedEvents.map(({ event: related, reason }, index) => (
                 <Reveal key={related.slug} className="h-full" delay={revealDelay(index)}>
                   <EventCard
                     event={toEventCard(related, locale)}
                     labels={eventLabels}
                     className="h-full"
+                    extraChip={reason ? relatedReasonLabels[reason] : undefined}
                   />
                 </Reveal>
               ))}

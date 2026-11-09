@@ -125,8 +125,35 @@ export function TimelineExplorer({
         href: event.href,
         latitude: event.latitude,
         longitude: event.longitude,
+        year: event.startYear,
       })),
     [ordered],
+  );
+
+  /**
+   * Năm chặn trên của thanh trượt thời gian, nâng lên khỏi khung bản đồ để danh sách
+   * chữ thay thế bản đồ liệt kê đúng các điểm đang hiển thị. null là toàn thời gian.
+   */
+  const [mapYearCeiling, setMapYearCeiling] = useState<number | null>(null);
+
+  /** Điểm còn hiển thị sau khi kéo thanh trượt, dùng cho danh sách chữ song song. */
+  const visibleMapMarkers = useMemo(() => {
+    if (mapYearCeiling === null) {
+      return mapMarkers;
+    }
+
+    return mapMarkers.filter((marker) => marker.year === undefined || marker.year <= mapYearCeiling);
+  }, [mapMarkers, mapYearCeiling]);
+
+  /** Nhãn thanh trượt thời gian giữ nguyên tham chiếu giữa các lần render. */
+  const sliderLabels = useMemo(
+    () => ({
+      label: dictionary.timeline.timeSliderLabel,
+      year: dictionary.timeline.timeSliderYear,
+      all: dictionary.timeline.timeSliderAll,
+      reset: dictionary.timeline.timeSliderReset,
+    }),
+    [dictionary],
   );
 
   /** Nhãn bản đồ giữ nguyên tham chiếu giữa các lần render để tránh dựng lại bản đồ. */
@@ -378,7 +405,14 @@ export function TimelineExplorer({
       ) : view === 'map' ? (
         <div className="mt-8">
           <div className="overflow-hidden rounded-2xl border border-line/80 bg-surface p-2">
-            <MapPanel markers={mapMarkers} labels={mapLabels} className="h-[34rem] !border-0 !shadow-none" />
+            <MapPanel
+              markers={mapMarkers}
+              labels={mapLabels}
+              className="h-[34rem] !border-0 !shadow-none"
+              sliderLabels={sliderLabels}
+              yearCeiling={mapYearCeiling}
+              onYearCeilingChange={setMapYearCeiling}
+            />
           </div>
           <p className="mt-3 text-[0.8125rem] text-muted">{dictionary.timeline.mapHint}</p>
 
@@ -389,10 +423,10 @@ export function TimelineExplorer({
            */}
           <details className="mt-3 rounded-xl border border-line/80 bg-surface/60 px-4 py-3">
             <summary className="cursor-pointer font-ui text-[0.8125rem] font-semibold text-ink">
-              {formatMessage(dictionary.timeline.mapListSummary, { count: mapMarkers.length })}
+              {formatMessage(dictionary.timeline.mapListSummary, { count: visibleMapMarkers.length })}
             </summary>
             <ol className="mt-3 grid gap-2 font-ui text-[0.875rem] text-muted sm:grid-cols-2">
-              {mapMarkers.map((marker, index) => (
+              {visibleMapMarkers.map((marker, index) => (
                 <li key={marker.slug} className="flex gap-2">
                   <span aria-hidden="true" className="shrink-0 font-semibold text-ink">
                     {index + 1}.

@@ -20,8 +20,8 @@
       "description": "Browse nearly one hundred events from Vietnamese and world history by era, country and place on the map."
     },
     "about": {
-      "title": "About the team",
-      "description": "World History Chronicle is an open encyclopedia built by an editorial, design and engineering team for a more accessible way to learn history."
+      "title": "About the editor",
+      "description": "World History Chronicle is an open encyclopedia run by one person responsible for all editing, design and engineering for a more accessible way to learn history."
     },
     "faq": {
       "title": "Frequently asked questions",
@@ -32,8 +32,8 @@
       "description": "Send documents, images or corrections for the editorial team to review and add to the encyclopedia."
     },
     "stories": {
-      "title": "In-depth case studies",
-      "description": "Three history case studies examined through context, turning point and consequence, with verifiable sources."
+      "title": "Stories worth reading",
+      "description": "History case studies examined through context, turning point and consequence, with verifiable sources."
     },
     "updates": {
       "title": "Updates from open sources",
@@ -50,11 +50,26 @@
     "notFound": {
       "title": "Page not found",
       "description": "The page you are looking for may have moved or no longer exists."
+    },
+    "onThisDay": {
+      "title": "On this day – events that match today's date",
+      "description": "Browse Vietnamese and world history events that happened on this very day, counted in Vietnam time."
+    },
+    "collections": {
+      "title": "History learning paths",
+      "description": "Read history by theme: curated paths that link events into ordered journeys, with bilingual introductions."
+    },
+    "study": {
+      "title": "Study – saved events and quiz progress",
+      "description": "Review the articles you saved and your quiz results, kept privately in this browser's local storage."
     }
   },
   "nav": {
     "home": "Home",
     "timeline": "Timeline",
+    "collections": "Paths",
+    "onThisDay": "On this day",
+    "study": "Study",
     "stories": "Stories",
     "updates": "Updates",
     "about": "About",
@@ -66,8 +81,10 @@
   },
   "stories": {
     "eyebrow": "Deep dives",
-    "title": "Three stories worth reading",
+    "title": "Stories worth reading",
     "subtitle": "Each case study follows an event through context, turning point and consequence, with sources you can check yourself.",
+    "preferredNote": "Key moments from {country}.",
+    "fallbackNote": "The archive has no events for {country} yet — showing key moments from Vietnam.",
     "whyTitle": "Why it matters",
     "readCase": "Read the full story",
     "sourcesTitle": "Sources to verify",
@@ -75,6 +92,7 @@
     "reasons": {
       "cach-mang-thang-tam-1945": "A general uprising compressed into weeks, showing how timing and mass organisation can change a country's course.",
       "chien-dich-dien-bien-phu": "Fifty-six days of fighting offer a lesson in logistics, endurance and knowing when to change tactics.",
+      "xe-tang-tien-vao-dinh-doc-lap-1975": "The moment tank 843 smashed through the gates of Independence Palace closed three decades of division, told through the soldiers who rode tanks 843 and 390.",
       "doi-moi-1986": "The Sixth Party Congress opened the door to economic renovation, helping Vietnam exit crisis and join the wider world."
     }
   },
@@ -142,7 +160,8 @@
     "zoomIn": "Zoom in the map",
     "zoomOut": "Zoom out the map",
     "closePopup": "Close event details",
-    "searchOnTimeline": "Open the search box on the Timeline page"
+    "searchOnTimeline": "Open the search box on the Timeline page",
+    "studyLink": "Saved events and study progress page"
   },
   "preferences": {
     "countryLabel": "Your country",
@@ -236,7 +255,11 @@
     "startExploring": "Start exploring",
     "sortNote": "Ordered from earliest to latest",
     "quickFilters": "Quick filters",
-    "activeFilters": "Active filters"
+    "activeFilters": "Active filters",
+    "timeSliderLabel": "Time slider",
+    "timeSliderYear": "Year {year}",
+    "timeSliderAll": "All time",
+    "timeSliderReset": "Clear year filter"
   },
   "event": {
     "breadcrumbHome": "Home",
@@ -247,12 +270,22 @@
     "country": "Country",
     "tags": "Keywords",
     "share": "Share this article",
+    "print": "Print this article",
     "copyLink": "Copy link",
     "copied": "Link copied",
     "facebook": "Share on Facebook",
     "x": "Share on X",
     "related": "Related events",
     "relatedSubtitle": "Nearby moments in time to keep reading.",
+    "relatedEra": "Same era",
+    "relatedCountry": "Same country",
+    "relatedTag": "Same topic",
+    "relatedYear": "Close in time",
+    "chainEyebrow": "Cause and effect chain",
+    "chainToc": "Related chain",
+    "chainNote": "The chain is curated so you can follow the cause and effect; every article in the chain has its own verifiable sources.",
+    "chainStep": "Step {n}",
+    "chainCurrent": "Current event",
     "mapTitle": "Location on the map",
     "mapHint": "The marker follows the approximate coordinates of the event.",
     "directions": "Directions",
@@ -324,6 +357,49 @@
     "quizExplainEarliest": "“{title}” began in {date}, the earliest of the options.",
     "quizExplainLatest": "“{title}” began in {date}, the latest of the options."
   },
+  "onThisDay": {
+    "title": "On this day",
+    "subtitle": "Events that happened on this very day, counted in Vietnam time.",
+    "pageIntro": "Every day of the year has witnessed turning points. Below are the events in our archive that match today's date, with the years that have passed since.",
+    "datePrefix": "Today",
+    "yearsAgo": "{n} years ago",
+    "thisYear": "This year",
+    "emptyTitle": "No event in our archive matches today",
+    "emptyText": "Our archive has no event on this date. Check the upcoming anniversaries beside, or browse the full timeline.",
+    "upcomingLabel": "Coming up within 60 days",
+    "upcomingItem": "Anniversary: {title}",
+    "viewAll": "View all"
+  },
+  "collections": {
+    "title": "Learning paths",
+    "subtitle": "Editor-curated reading paths: each path links events already in the archive into an ordered journey, with bilingual introductions.",
+    "stepCount": "{count} steps",
+    "rangeLabel": "Starts: {date}",
+    "startPath": "Start the path",
+    "pathSummary": "This path contains:",
+    "stepsLabel": "Steps",
+    "minutesEstimate": "~{count}",
+    "readingTimeLabel": "min estimated reading",
+    "orderNote": "Read top to bottom to follow the storyline.",
+    "backToList": "Back to all paths",
+    "browseTimeline": "Browse the timeline"
+  },
+  "study": {
+    "title": "Study",
+    "pageIntro": "Your personal corner: saved articles and quiz results. Everything stays in this browser's local storage — nothing is sent to the server.",
+    "savedTitle": "Saved events",
+    "savedSubtitle": "Articles you saved to read again later.",
+    "savedEmpty": "No saved events yet.",
+    "savedEmptyCta": "Explore the timeline",
+    "unsave": "Remove",
+    "progressTitle": "Quiz study progress",
+    "progressSubtitle": "Results of the quizzes you submitted inside articles.",
+    "progressEmpty": "No quiz submitted yet.",
+    "progressEmptyCta": "Open an article to study",
+    "best": "Best: {percent}%",
+    "attempts": "{count} attempts",
+    "last": "Latest: {date}"
+  },
   "contribute": {
     "eyebrow": "Write history with us",
     "title": "Send your materials",
@@ -388,7 +464,7 @@
   },
   "about": {
     "eyebrow": "About us",
-    "title": "The team behind World History Chronicle",
+    "title": "The person behind World History Chronicle",
     "lead": "We believe history is more than dates. It is how people made decisions, collided and left traces. This project exists to make learning history more approachable, searchable and trustworthy.",
     "missionTitle": "Mission",
     "missionText": "To create an open historical encyclopedia that prioritises Vietnam while always placing it in regional and global context; written for general readers but respectful of scholarly standards.",
@@ -422,37 +498,26 @@
       "Illustrations are currently produced by our design team; we do not use images with unclear copyright. When archival images are added, their source and licence are stated.",
       "Reader contributions are reviewed before publication. Sending a contribution does not guarantee that it will be published."
     ],
-    "teamTitle": "The people behind the content",
-    "teamEyebrow": "The team",
-    "teamSubtitle": "A small team working with transparent editorial principles and cross-checking.",
+    "teamTitle": "The person behind the content",
+    "teamEyebrow": "Editor and maintainer",
+    "teamSubtitle": "One person is responsible for all of the encyclopedia's content, design and engineering, following transparent editorial principles and source checking.",
+    "teamDutiesLabel": "Areas of responsibility",
     "team": [
       {
-        "name": "Nguyen Minh Anh",
-        "role": "Editorial lead",
-        "bio": "Oversees content structure, source checking and a consistent voice across the encyclopedia.",
-        "image": "/images/team-1.svg",
-        "alt": "Illustrated portrait of Nguyen Minh Anh"
-      },
-      {
-        "name": "Tran Quoc Bao",
-        "role": "Vietnamese history editor",
-        "bio": "Covers the ancient to early modern periods, with a particular interest in local history and family archives.",
-        "image": "/images/team-2.svg",
-        "alt": "Illustrated portrait of Tran Quoc Bao"
-      },
-      {
-        "name": "Le Thu Ha",
-        "role": "World history editor",
-        "bio": "Connects global events with Vietnamese context and oversees comparisons and parallel timelines.",
-        "image": "/images/team-3.svg",
-        "alt": "Illustrated portrait of Le Thu Ha"
-      },
-      {
-        "name": "Pham Duc Long",
-        "role": "Design and engineering",
-        "bio": "Builds the reading experience, maps and secure infrastructure so the content can reach more people.",
-        "image": "/images/team-4.svg",
-        "alt": "Illustrated portrait of Pham Duc Long"
+        "name": "Do Tien Phat",
+        "role": "Editor-in-chief · Content, design and engineering",
+        "bio": "Runs the whole encyclopedia: content structure and voice, source checking for both Vietnamese and world history, the reading experience, maps, data and secure infrastructure.",
+        "duties": [
+          "Content editing",
+          "Source verification",
+          "Vietnamese history",
+          "World history",
+          "Interface design",
+          "Maps and data",
+          "Engineering and security"
+        ],
+        "image": "/images/team-do-tien-phat.svg",
+        "alt": "Illustrated portrait of Do Tien Phat"
       }
     ],
     "ctaTitle": "Help us complete the encyclopedia",
@@ -596,6 +661,7 @@
     "copyright": "© 2026 World History Chronicle. An independent encyclopedia project.",
     "owner": "Managed by {owner} · Personal data contact: sukytoancau@gmail.com",
     "security": "Security and privacy",
+    "rss": "RSS feed",
     "languageNote": "Vietnamese and English"
   },
   "consent": {

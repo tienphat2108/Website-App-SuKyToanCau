@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, type FormEvent } from 'react';
+import { useHistoryStore } from '@/store/history.store';
 import {
   pickQuizQuestions,
   QUIZ_COUNTS,
@@ -61,14 +62,18 @@ function createSeed(): string {
  * riêng vào màu, và điểm số được đọc lên sau khi chấm.
  * @param props.deck Bộ câu hỏi dự phòng đã bản địa hóa.
  * @param props.labels Chuỗi giao diện theo ngôn ngữ đang hiển thị.
+ * @param props.slug Khóa sự kiện, dùng để ghi tiến độ ôn tập vào bộ nhớ trình duyệt.
  */
 export function EventQuiz({
   deck,
   labels,
+  slug,
 }: {
   deck: QuizQuestionData[];
   labels: EventQuizLabels;
+  slug: string;
 }) {
+  const recordQuizAttempt = useHistoryStore((state) => state.recordQuizAttempt);
   const [count, setCount] = useState<QuizCount>(QUIZ_COUNTS[0]);
   const [questions, setQuestions] = useState<QuizQuestion[]>(() =>
     pickQuizQuestions(deck, QUIZ_COUNTS[0], 'initial'),
@@ -166,6 +171,8 @@ export function EventQuiz({
     }
 
     setError('');
+    // Ghi tiến độ vào bộ nhớ trình duyệt để trang ôn tập tổng hợp được kết quả.
+    recordQuizAttempt(slug, correctCount, total);
     setSubmitted(true);
   };
 

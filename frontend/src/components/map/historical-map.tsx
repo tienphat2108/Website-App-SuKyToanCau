@@ -21,6 +21,8 @@ export interface MapMarker {
   latitude: number;
   /** Kinh độ. */
   longitude: number;
+  /** Năm bắt đầu, dùng cho thanh trượt thời gian; bỏ trống nghĩa là luôn hiển thị. */
+  year?: number;
 }
 
 /** Nhãn dùng trong bản đồ. */
@@ -134,6 +136,7 @@ function splitZoom(map: LeafletMap, positions: L.LatLng[], zoom: number): number
  * @param props.center Tâm bản đồ khi có một điểm.
  * @param props.zoom Mức thu phóng.
  * @param props.className Lớp bổ sung cho khung bản đồ.
+ * @param props.yearCeiling Năm chặn trên của thanh trượt thời gian; null là không lọc.
  */
 export function HistoricalMap({
   markers,
@@ -141,17 +144,29 @@ export function HistoricalMap({
   center,
   zoom = 5,
   className,
+  yearCeiling,
 }: {
   markers: MapMarker[];
   labels: MapLabels;
   center?: [number, number];
   zoom?: number;
   className?: string;
+  yearCeiling?: number | null;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { locale } = useI18n();
   // Địa chỉ mở đúng vùng đang nhìn; chưa có địa chỉ khi bản đồ còn chưa dựng xong.
   const [googleHref, setGoogleHref] = useState<string | null>(null);
+
+  // Thanh trượt chỉ thay đổi mức lọc chứ không dựng lại bản đồ: giá trị chặn nằm trong
+  // ref, còn hàm vẽ lại được giữ trong ref để hiệu ứng thanh trượt luôn gọi đúng bản vẽ mới nhất.
+  const yearCeilingRef = useRef<number | null>(yearCeiling ?? null);
+  const renderMarkersRef = useRef<() => void>(() => {});
+
+  useEffect(() => {
+    yearCeilingRef.current = yearCeiling ?? null;
+    renderMarkersRef.current();
+  }, [yearCeiling]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -262,11 +277,17 @@ export function HistoricalMap({
      */
     const renderMarkers = (): void => {
       const currentZoom = map.getZoom();
+      const ceiling = yearCeilingRef.current;
+      // Sự kiện không có năm luôn hiển thị; sự kiện có năm chỉ hiện khi chưa vượt mức trượt.
+      const visible =
+        ceiling === null
+          ? markers
+          : markers.filter((marker) => marker.year === undefined || marker.year <= ceiling);
       markerLayer.clearLayers();
       container.classList.toggle('map-markers-spread', currentZoom >= SPREAD_ZOOM);
 
-      if (currentZoom >= SPREAD_ZOOM || markers.length < 2) {
-        markers.forEach((marker, index) => {
+      if (currentZoom >= SPREAD_ZOOM || visible.length < 2) {
+        visible.forEach((marker, index) => {
           markerLayer.addLayer(singleMarker(marker, index));
         });
 
@@ -277,7 +298,7 @@ export function HistoricalMap({
       type Cluster = { cellX: number; cellY: number; points: ClusteredPoint[] };
       const groups = new Map<string, Cluster>();
 
-      markers.forEach((marker, index) => {
+      visible.forEach((marker, index) => {
         const position = L.latLng(marker.latitude, marker.longitude);
         const point = map.project(position, currentZoom);
         // Ô lưới tính theo tọa độ pixel thế giới nên cụm không đổi khi kéo bản đồ.
@@ -351,6 +372,7 @@ export function HistoricalMap({
       }
     };
 
+    renderMarkersRef.current = renderMarkers;
     renderMarkers();
     map.on('zoomend', renderMarkers);
 
@@ -386,6 +408,9 @@ export function HistoricalMap({
       markerLayer.remove();
       markerCache.clear();
       map.remove();
+      // Bản đồ cũ đã bị gỡ; chặn hiệu ứng thanh trượt gọi lại hàm vẽ lỗi thời
+      // cho tới khi bản đồ mới được dựng xong trong cùng lượt kết xuất.
+      renderMarkersRef.current = () => {};
     };
   }, [markers, labels, center, zoom, locale]);
 

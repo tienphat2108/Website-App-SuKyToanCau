@@ -24,9 +24,9 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 /**
- * Trang giới thiệu sứ mệnh, nguyên tắc biên tập, quy trình kiểm chứng và đội ngũ.
+ * Trang giới thiệu sứ mệnh, nguyên tắc biên tập, quy trình kiểm chứng và người phụ trách.
  * Bố cục đi theo nhịp biên tập của trang chủ: khung mở đầu có cột sứ mệnh tối màu,
- * câu chuyện dự án, dải nguyên tắc trên nền đêm, quy trình đánh số và hồ sơ đội ngũ.
+ * câu chuyện dự án, dải nguyên tắc trên nền đêm, quy trình đánh số và hồ sơ người phụ trách.
  */
 export default async function AboutPage() {
   const { locale, dictionary } = await getI18n();
@@ -204,38 +204,51 @@ export default async function AboutPage() {
             align="center"
           />
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
-            {dictionary.about.team.map((member, index) => (
+          <div className="mx-auto mt-10 max-w-4xl">
+            {dictionary.about.team.map((member) => (
               <article
                 key={member.name}
-                className="card group grid grid-cols-[6.5rem_minmax(0,1fr)] overflow-hidden sm:block"
+                className="card group grid overflow-hidden sm:grid-cols-[minmax(0,17rem)_minmax(0,1fr)]"
               >
-                <div className="relative min-h-[9.5rem] overflow-hidden bg-raised sm:aspect-[4/5] sm:min-h-0">
+                <div className="relative min-h-[15rem] overflow-hidden bg-raised sm:min-h-[22rem]">
                   <Image
                     src={member.image}
                     alt={member.alt}
                     fill
-                    sizes="(max-width: 640px) 30vw, (max-width: 1024px) 45vw, 22vw"
+                    sizes="(max-width: 640px) 100vw, 272px"
                     className="object-cover transition duration-500 group-hover:scale-[1.04]"
                   />
                   <div
                     className="absolute inset-0 bg-gradient-to-t from-night/70 via-transparent to-transparent opacity-70"
                     aria-hidden="true"
                   />
-                  <span className="absolute left-3 top-3 rounded-full border border-white/15 bg-night/70 px-2 py-0.5 font-display text-[0.75rem] font-semibold text-gold backdrop-blur sm:left-4 sm:top-4 sm:px-2.5 sm:py-1">
-                    0{index + 1}
-                  </span>
                 </div>
 
-                <div className="p-4 sm:p-5">
-                  <h3 className="font-display text-base font-semibold leading-snug text-ink sm:text-lg">
+                <div className="p-6 sm:p-8">
+                  <p className="font-ui text-[0.75rem] font-semibold uppercase tracking-[0.18em] text-gold">
+                    {dictionary.about.teamEyebrow}
+                  </p>
+                  <h3 className="mt-2 font-display text-2xl font-semibold leading-tight text-ink sm:text-[1.75rem]">
                     {member.name}
                   </h3>
-                  <p className="mt-1 text-[0.8125rem] font-medium leading-snug text-accent">
+                  <p className="mt-2 text-[0.9375rem] font-medium leading-snug text-accent">
                     {member.role}
                   </p>
-                  <span className="mt-3 block h-px w-10 bg-gold/60" aria-hidden="true" />
-                  <p className="mt-3 text-[0.875rem] leading-relaxed text-muted sm:text-[0.9375rem]">{member.bio}</p>
+                  <span className="mt-4 block h-px w-12 bg-gold/60" aria-hidden="true" />
+                  <p className="mt-4 text-[0.9375rem] leading-[1.8] text-muted">{member.bio}</p>
+                  <ul
+                    className="mt-5 flex flex-wrap gap-2"
+                    aria-label={dictionary.about.teamDutiesLabel}
+                  >
+                    {member.duties.map((duty) => (
+                      <li
+                        key={duty}
+                        className="rounded-full border border-line bg-raised/70 px-3 py-1 font-ui text-[0.8125rem] leading-snug text-ink"
+                      >
+                        {duty}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </article>
             ))}
