@@ -69,6 +69,7 @@ export function Navbar({
   const frameRef = useRef(0);
 
   const timelineHref = localizePath(locale, '/timeline');
+  const searchHref = localizePath(locale, '/search');
 
   // Đóng bảng điều hướng mỗi khi chuyển trang.
   useEffect(() => {
@@ -194,7 +195,7 @@ export function Navbar({
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-0.5 whitespace-nowrap xl:flex" aria-label={dictionary.a11y.mainNav}>
+          <nav className="hidden items-center gap-0.5 whitespace-nowrap min-[1400px]:flex" aria-label={dictionary.a11y.mainNav}>
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
@@ -211,7 +212,7 @@ export function Navbar({
           <div className="flex shrink-0 items-center gap-2">
             {/* Biểu mẫu tìm kiếm thật, hoạt động cả khi JavaScript chưa tải xong. */}
             <form
-              action={timelineHref}
+              action={searchHref}
               method="get"
               role="search"
               className="search-pill hidden items-center rounded-full border border-line bg-surface/70 pl-3 transition focus-within:border-accent/50 2xl:flex"
@@ -240,8 +241,8 @@ export function Navbar({
             </form>
 
             <Link
-              href={timelineHref}
-              aria-label={dictionary.a11y.searchOnTimeline}
+              href={searchHref}
+              aria-label={dictionary.a11y.search}
               className="press inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-ink hover:border-gold/50 hover:bg-raised 2xl:hidden"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
@@ -279,7 +280,7 @@ export function Navbar({
             <button
               type="button"
               onClick={() => setOpen((value) => !value)}
-              className="press inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-ink hover:bg-raised xl:hidden"
+              className="press inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-ink hover:bg-raised min-[1400px]:hidden"
               aria-expanded={open}
               aria-controls="mobile-navigation"
               aria-label={open ? dictionary.common.closeMenu : dictionary.common.openMenu}
@@ -309,11 +310,11 @@ export function Navbar({
         {open ? (
           <div
             id="mobile-navigation"
-            className="absolute inset-x-0 top-full max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-line bg-background px-5 pb-8 pt-5 shadow-lift xl:hidden"
+            className="absolute inset-x-0 top-full max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-line bg-background px-5 pb-8 pt-5 shadow-lift min-[1400px]:hidden"
           >
-            <form action={timelineHref} method="get" role="search" className="mb-5">
+            <form action={searchHref} method="get" role="search" className="mb-5">
               <label htmlFor="mobile-search" className="sr-only">
-                {dictionary.timeline.searchLabel}
+                {dictionary.a11y.search}
               </label>
               <div className="relative">
                 <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted" aria-hidden="true">
@@ -327,7 +328,7 @@ export function Navbar({
                   type="search"
                   name="q"
                   maxLength={120}
-                  placeholder={dictionary.timeline.searchPlaceholder}
+                  placeholder={dictionary.search.placeholder}
                   className="field pl-11"
                 />
               </div>

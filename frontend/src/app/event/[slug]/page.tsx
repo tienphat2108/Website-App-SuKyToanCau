@@ -124,6 +124,10 @@ export default async function EventPage({ params }: PageProps) {
 
   const curatedRelated = (event.related.length > 0 ? event.related : relatedFromSlugs)
     .filter((item) => item.slug !== event.slug)
+    .filter(
+      (item, index, list) =>
+        list.findIndex((other) => other.slug === item.slug) === index,
+    )
     .slice(0, 3);
 
   const sameYearEvents = findSameYearWorldEvents(allEvents, event, 3);

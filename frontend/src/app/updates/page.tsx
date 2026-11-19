@@ -121,6 +121,17 @@ export default async function UpdatesPage() {
               </>
             ) : null}
           </p>
+          <a
+            href="/updates/feed.xml"
+            type="application/rss+xml"
+            className="mt-2 inline-flex items-center gap-1.5 font-ui text-[0.875rem] font-semibold text-accent underline decoration-gold/50 underline-offset-4 hover:text-accent-strong"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" aria-hidden="true">
+              <path d="M5 19a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor" />
+              <path d="M5 12a7 7 0 0 1 7 7M5 5a14 14 0 0 1 14 14" strokeLinecap="round" />
+            </svg>
+            {dictionary.updates.feedCta}
+          </a>
         </div>
 
         {feed.items.length === 0 ? (

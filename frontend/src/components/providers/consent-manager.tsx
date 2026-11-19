@@ -16,6 +16,22 @@ type ConsentValue = 'granted' | 'denied';
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? '';
 
 /**
+ * Miền đo lường Plausible (không cookie).
+ * Khi được cấu hình, website dùng Plausible thay cho Google Analytics và không
+ * hiện hộp xin đồng ý, vì không có cookie hay mã nhận dạng cá nhân nào được lưu.
+ */
+const PLAUSIBLE_DOMAIN = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN ?? '';
+
+/**
+ * Kiểm tra tên miền cấu hình cho Plausible để không chèn chuỗi lạ vào thẻ script.
+ * @param value Giá trị cần kiểm tra.
+ * @returns Đúng nếu là tên miền hợp lệ.
+ */
+function isValidPlausibleDomain(value: string): boolean {
+  return /^[a-z0-9.-]{3,253}$/i.test(value) && value.includes('.');
+}
+
+/**
  * Kiểm tra mã đo lường có đúng định dạng công khai hay không.
  * Việc kiểm tra tránh chèn chuỗi lạ vào mã khởi tạo phân tích.
  * @param value Giá trị cần kiểm tra.
@@ -64,6 +80,17 @@ export function ConsentManager() {
   };
 
   const analyticsEnabled = decision === 'granted' && isValidMeasurementId(GA_ID);
+  const plausibleEnabled = isValidPlausibleDomain(PLAUSIBLE_DOMAIN);
+
+  if (plausibleEnabled) {
+    return (
+      <Script
+        src="https://plausible.io/js/script.js"
+        data-domain={PLAUSIBLE_DOMAIN}
+        strategy="afterInteractive"
+      />
+    );
+  }
 
   return (
     <>

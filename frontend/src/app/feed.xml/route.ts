@@ -1,4 +1,5 @@
 import { seedEvents } from '@/data/seed';
+import { isBrowserFeedRequest, renderFeedPreview } from '@/lib/feed-preview';
 import { absoluteUrl } from '@/utils/site';
 
 /**
@@ -27,9 +28,38 @@ function escapeXml(value: string): string {
  * tóm tắt tiếng Việt, liên kết trỏ về bài viết đầy đủ.
  * @returns Phản hồi XML đúng chuẩn RSS.
  */
-export async function GET(): Promise<Response> {
-  const items = [...seedEvents]
-    .sort((left, right) => right.startYear - left.startYear)
+export async function GET(request: Request): Promise<Response> {
+  const sortedEvents = [...seedEvents].sort(
+    (left, right) => right.startYear - left.startYear,
+  );
+
+  if (isBrowserFeedRequest(request)) {
+    return new Response(
+      renderFeedPreview({
+        title: 'Sử Ký Toàn Cầu — Nguồn cấp sự kiện',
+        description:
+          'Bách khoa lịch sử mở song ngữ Việt – Anh: các sự kiện lịch sử Việt Nam và thế giới kèm nguồn kiểm chứng.',
+        feedPath: '/feed.xml',
+        baseUrl: new URL(request.url).origin,
+        backHref: '/timeline',
+        backLabel: 'Dòng thời gian',
+        items: sortedEvents.map((event) => ({
+          title: event.titleVi,
+          href: absoluteUrl(event.href('vi')),
+          summary: event.summaryVi,
+        })),
+      }),
+      {
+        headers: {
+          'Content-Type': 'text/html; charset=utf-8',
+          'Cache-Control': 'public, s-maxage=3600',
+          Vary: 'Accept, Sec-Fetch-Mode',
+        },
+      },
+    );
+  }
+
+  const items = sortedEvents
     .map((event) => {
       const href = absoluteUrl(event.href('vi'));
 
@@ -62,6 +92,7 @@ ${items}
     headers: {
       'Content-Type': 'application/rss+xml; charset=utf-8',
       'Cache-Control': 'public, s-maxage=3600',
+      Vary: 'Accept, Sec-Fetch-Mode',
     },
   });
 }

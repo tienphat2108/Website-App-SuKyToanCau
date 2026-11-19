@@ -764,6 +764,65 @@
 }
 
 /*
+ * Ô lọc và khung chờ của bản đồ đặt trên khối nền đêm. Biến màu của trang lúc này vẫn
+ * là màu bản sáng, nên ô nhập lấy lớp field thường sẽ thành mảng trắng giữa nền tối;
+ * các quy tắc dưới đây lấy đúng bộ màu đêm của nút phóng to và dòng ghi nguồn.
+ */
+.map-night-field {
+  border-color: rgb(255 255 255 / 0.16);
+  background-color: rgb(20 30 40 / 0.92);
+  color: #e8eef3;
+}
+
+.map-night-field::placeholder {
+  color: rgb(232 238 243 / 0.55);
+}
+
+.map-night-field:focus {
+  border-color: rgb(227 111 98 / 0.7);
+}
+
+/* Danh sách xổ xuống của ô chọn do hệ điều hành vẽ, phải đặt màu riêng từng mục. */
+.map-night-field option {
+  background-color: #141e28;
+  color: #e8eef3;
+}
+
+.map-night .map-loading {
+  background-color: rgb(20 30 40 / 0.92);
+  color: #9fb0bd;
+}
+
+/*
+ * Thanh cuộn của danh sách địa điểm nằm trong khối nền đêm: thanh cuộn chung của
+ * trang lấy màu nền sáng nên phải đổi sang màu đêm, nếu không sẽ thành vệt trắng
+ * chạy dọc danh sách tối.
+ */
+.map-night-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255 255 255 / 0.28) rgb(255 255 255 / 0.06);
+}
+
+.map-night-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.map-night-scroll::-webkit-scrollbar-track {
+  background: rgb(255 255 255 / 0.06);
+  border-radius: 999px;
+}
+
+.map-night-scroll::-webkit-scrollbar-thumb {
+  background: rgb(255 255 255 / 0.28);
+  border: 2px solid rgb(14 23 31);
+  border-radius: 999px;
+}
+
+.map-night-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-gold) / 0.7);
+}
+
+/*
  * Khung chứa điểm do Leaflet tô trắng và kẻ viền mặc định, phải ghi đè rõ hơn một bậc
  * so với lớp leaflet-div-icon của thư viện.
  */

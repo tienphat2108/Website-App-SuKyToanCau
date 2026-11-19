@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { EventCard } from '@/components/events/event-card';
+import { MapFilterBar } from '@/components/map/map-filter-bar';
 import { MapPanel } from '@/components/map/map-panel';
 import { Reveal } from '@/components/motion/reveal';
 import { revealDelay } from '@/components/motion/stagger';
@@ -179,14 +180,64 @@ export function TimelineExplorer({
     minutes: dictionary.event.minuteRead,
   };
 
+  /** Cụm nút đổi chế độ xem, dùng chung cho thẻ bộ lọc và thanh lọc trên bản đồ. */
+  const viewSwitch = (
+    <div
+      className="inline-flex rounded-full border border-line bg-background p-1"
+      role="group"
+      aria-label={dictionary.common.viewMode}
+    >
+      <button
+        type="button"
+        onClick={() => setView('timeline')}
+        aria-pressed={view === 'timeline'}
+        className={
+          view === 'timeline'
+            ? 'press inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-[0.8125rem] font-semibold text-white'
+            : 'press inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[0.8125rem] font-semibold text-muted hover:text-ink'
+        }
+      >
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <path d="M5 6h14M5 12h9M5 18h12" strokeLinecap="round" />
+        </svg>
+        {dictionary.timeline.viewTimeline}
+      </button>
+      <button
+        type="button"
+        onClick={() => setView('map')}
+        aria-pressed={view === 'map'}
+        className={
+          view === 'map'
+            ? 'press inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-[0.8125rem] font-semibold text-white'
+            : 'press inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[0.8125rem] font-semibold text-muted hover:text-ink'
+        }
+      >
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+          <path d="M12 21s6-5.2 6-10a6 6 0 1 0-12 0c0 4.8 6 10 6 10Z" />
+          <circle cx="12" cy="11" r="2.2" />
+        </svg>
+        {dictionary.timeline.viewMap}
+      </button>
+    </div>
+  );
+
+  /**
+   * Xóa giá trị của ba bộ lọc nhưng giữ nguyên chế độ xem hiện tại.
+   * Dùng cho nút xóa lọc ngay trên bản đồ để người đọc không bị đẩy về dòng thời gian.
+   * @returns Không trả về giá trị.
+   */
+  const clearFilterValues = (): void => {
+    setEra('');
+    setCountry('');
+    setSearch('');
+  };
+
   /**
    * Xóa toàn bộ bộ lọc và đưa chế độ xem về dòng thời gian.
    * @returns Không trả về giá trị.
    */
   const resetFilters = (): void => {
-    setEra('');
-    setCountry('');
-    setSearch('');
+    clearFilterValues();
     setView('timeline');
   };
 
@@ -221,173 +272,139 @@ export function TimelineExplorer({
         </div>
       ) : null}
 
-      <div className="relative overflow-hidden rounded-2xl border border-line/80 bg-surface p-5 sm:p-6">
-        <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent" aria-hidden="true" />
+      {view === 'timeline' ? (
+        <div className="relative overflow-hidden rounded-2xl border border-line/80 bg-surface p-5 sm:p-6">
+          <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent" aria-hidden="true" />
 
-        <div className="grid gap-4 lg:grid-cols-[1.4fr_1fr_1fr_auto] lg:items-end">
-          <div>
-            <label htmlFor="timeline-search" className="field-label">
-              {dictionary.timeline.searchLabel}
-            </label>
-            <div className="relative">
-              <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted" aria-hidden="true">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <circle cx="11" cy="11" r="7" />
-                  <path d="M20 20l-3.5-3.5" strokeLinecap="round" />
-                </svg>
-              </span>
-              <input
-                id="timeline-search"
-                type="search"
-                value={search}
-                onChange={(event) => setSearch(event.target.value)}
-                placeholder={dictionary.timeline.searchPlaceholder}
-                className="field pl-11"
-                autoComplete="off"
-                maxLength={120}
-              />
+          <div className="grid gap-4 lg:grid-cols-[1.4fr_1fr_1fr_auto] lg:items-end">
+            <div>
+              <label htmlFor="timeline-search" className="field-label">
+                {dictionary.timeline.searchLabel}
+              </label>
+              <div className="relative">
+                <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted" aria-hidden="true">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <circle cx="11" cy="11" r="7" />
+                    <path d="M20 20l-3.5-3.5" strokeLinecap="round" />
+                  </svg>
+                </span>
+                <input
+                  id="timeline-search"
+                  type="search"
+                  value={search}
+                  onChange={(event) => setSearch(event.target.value)}
+                  placeholder={dictionary.timeline.searchPlaceholder}
+                  className="field pl-11"
+                  autoComplete="off"
+                  maxLength={120}
+                />
+              </div>
             </div>
-          </div>
 
-          <div>
-            <label htmlFor="timeline-era" className="field-label">
-              {dictionary.timeline.eraLabel}
-            </label>
-            <select
-              id="timeline-era"
-              value={era}
-              onChange={(event) => setEra(event.target.value)}
-              className="field select-press"
-            >
-              <option value="">{dictionary.timeline.allEras}</option>
-              {ERAS.map((definition) => (
-                <option key={definition.key} value={definition.key}>
-                  {locale === 'en' ? definition.nameEn : definition.nameVi}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="timeline-country" className="field-label">
-              {dictionary.timeline.countryLabel}
-            </label>
-            <select
-              id="timeline-country"
-              value={country}
-              onChange={(event) => setCountry(event.target.value)}
-              className="field select-press"
-            >
-              <option value="">{dictionary.timeline.allCountries}</option>
-              {countries.map((item) => (
-                <option key={item} value={item}>
-                  {item}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <div
-              className="inline-flex rounded-full border border-line bg-background p-1"
-              role="group"
-              aria-label={dictionary.common.viewMode}
-            >
-              <button
-                type="button"
-                onClick={() => setView('timeline')}
-                aria-pressed={view === 'timeline'}
-                className={
-                  view === 'timeline'
-                    ? 'press inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-[0.8125rem] font-semibold text-white'
-                    : 'press inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[0.8125rem] font-semibold text-muted hover:text-ink'
-                }
+            <div>
+              <label htmlFor="timeline-era" className="field-label">
+                {dictionary.timeline.eraLabel}
+              </label>
+              <select
+                id="timeline-era"
+                value={era}
+                onChange={(event) => setEra(event.target.value)}
+                className="field select-press"
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                  <path d="M5 6h14M5 12h9M5 18h12" strokeLinecap="round" />
-                </svg>
-                {dictionary.timeline.viewTimeline}
-              </button>
-              <button
-                type="button"
-                onClick={() => setView('map')}
-                aria-pressed={view === 'map'}
-                className={
-                  view === 'map'
-                    ? 'press inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-[0.8125rem] font-semibold text-white'
-                    : 'press inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[0.8125rem] font-semibold text-muted hover:text-ink'
-                }
-              >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                  <path d="M12 21s6-5.2 6-10a6 6 0 1 0-12 0c0 4.8 6 10 6 10Z" />
-                  <circle cx="12" cy="11" r="2.2" />
-                </svg>
-                {dictionary.timeline.viewMap}
-              </button>
+                <option value="">{dictionary.timeline.allEras}</option>
+                {ERAS.map((definition) => (
+                  <option key={definition.key} value={definition.key}>
+                    {locale === 'en' ? definition.nameEn : definition.nameVi}
+                  </option>
+                ))}
+              </select>
             </div>
-          </div>
-        </div>
 
-        <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-line/70 pt-5">
-          <span className="mr-1 font-ui text-[0.8125rem] font-medium text-muted">
-            {dictionary.timeline.quickFilters}
-          </span>
-          <button
-            type="button"
-            onClick={() => setEra('')}
-            aria-pressed={!era}
-            className={`chip ${!era ? 'chip-active' : 'hover:border-accent/50'}`}
-          >
-            {dictionary.timeline.allEras}
-            <span className="opacity-70">({events.length})</span>
-          </button>
-          {ERAS.map((definition) => {
-            const active = era === definition.key;
-            const count = eraCounts.get(definition.key) ?? 0;
-
-            return (
-              <button
-                key={definition.key}
-                type="button"
-                onClick={() => setEra(definition.key)}
-                aria-pressed={active}
-                className={`chip ${active ? 'chip-active' : 'hover:border-accent/50'}`}
-                disabled={count === 0}
+            <div>
+              <label htmlFor="timeline-country" className="field-label">
+                {dictionary.timeline.countryLabel}
+              </label>
+              <select
+                id="timeline-country"
+                value={country}
+                onChange={(event) => setCountry(event.target.value)}
+                className="field select-press"
               >
-                {locale === 'en' ? definition.nameEn : definition.nameVi}
-                <span className="opacity-70">({count})</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
+                <option value="">{dictionary.timeline.allCountries}</option>
+                {countries.map((item) => (
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-      <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-b border-line pb-4">
-        <p aria-live="polite" className="flex flex-wrap items-center gap-x-3 gap-y-1 font-ui text-sm text-muted">
-          <span className="font-display text-lg font-semibold text-ink">
-            {formatMessage(dictionary.timeline.results, { count: filtered.length })}
-          </span>
-          {hasFilters ? (
+            <div className="flex items-center gap-2">{viewSwitch}</div>
+          </div>
+
+          <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-line/70 pt-5">
+            <span className="mr-1 font-ui text-[0.8125rem] font-medium text-muted">
+              {dictionary.timeline.quickFilters}
+            </span>
             <button
               type="button"
-              onClick={resetFilters}
-              className="inline-flex items-center gap-1.5 font-ui font-semibold text-accent transition hover:text-accent-strong"
+              onClick={() => setEra('')}
+              aria-pressed={!era}
+              className={`chip ${!era ? 'chip-active' : 'hover:border-accent/50'}`}
             >
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
-              </svg>
-              {dictionary.timeline.reset}
+              {dictionary.timeline.allEras}
+              <span className="opacity-70">({events.length})</span>
             </button>
-          ) : null}
-        </p>
-        <p className="inline-flex items-center gap-1.5 font-ui text-[0.8125rem] text-muted">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-            <circle cx="12" cy="12" r="8.5" />
-            <path d="M12 7.5V12l3 2" strokeLinecap="round" />
-          </svg>
-          {dictionary.timeline.sortNote}
-        </p>
-      </div>
+            {ERAS.map((definition) => {
+              const active = era === definition.key;
+              const count = eraCounts.get(definition.key) ?? 0;
+
+              return (
+                <button
+                  key={definition.key}
+                  type="button"
+                  onClick={() => setEra(definition.key)}
+                  aria-pressed={active}
+                  className={`chip ${active ? 'chip-active' : 'hover:border-accent/50'}`}
+                  disabled={count === 0}
+                >
+                  {locale === 'en' ? definition.nameEn : definition.nameVi}
+                  <span className="opacity-70">({count})</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
+
+      {view === 'timeline' ? (
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-b border-line pb-4">
+          <p aria-live="polite" className="flex flex-wrap items-center gap-x-3 gap-y-1 font-ui text-sm text-muted">
+            <span className="font-display text-lg font-semibold text-ink">
+              {formatMessage(dictionary.timeline.results, { count: filtered.length })}
+            </span>
+            {hasFilters ? (
+              <button
+                type="button"
+                onClick={resetFilters}
+                className="inline-flex items-center gap-1.5 font-ui font-semibold text-accent transition hover:text-accent-strong"
+              >
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+                </svg>
+                {dictionary.timeline.reset}
+              </button>
+            ) : null}
+          </p>
+          <p className="inline-flex items-center gap-1.5 font-ui text-[0.8125rem] text-muted">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+              <circle cx="12" cy="12" r="8.5" />
+              <path d="M12 7.5V12l3 2" strokeLinecap="round" />
+            </svg>
+            {dictionary.timeline.sortNote}
+          </p>
+        </div>
+      ) : null}
 
       {filtered.length === 0 ? (
         <div className="mt-8 rounded-2xl border border-dashed border-line bg-surface/60 px-6 py-16 text-center">
@@ -404,15 +421,36 @@ export function TimelineExplorer({
         </div>
       ) : view === 'map' ? (
         <div className="mt-8">
-          <div className="overflow-hidden rounded-2xl border border-line/80 bg-surface p-2">
-            <MapPanel
-              markers={mapMarkers}
-              labels={mapLabels}
-              className="h-[34rem] !border-0 !shadow-none"
-              sliderLabels={sliderLabels}
-              yearCeiling={mapYearCeiling}
-              onYearCeilingChange={setMapYearCeiling}
+          <div className="overflow-hidden rounded-2xl border border-line/80 bg-surface">
+            {/*
+             * Ở chế độ bản đồ, thẻ lọc phía trên được ẩn để tránh hai bộ lọc trùng nhau;
+             * thanh này giữ toàn bộ bộ lọc, số điểm đang hiển thị và nút đổi chế độ xem
+             * ngay sát bản đồ để người đọc không phải cuộn ngược lên đầu trang.
+             */}
+            <MapFilterBar
+              idPrefix="map"
+              values={{ search, era, country }}
+              countries={countries}
+              count={visibleMapMarkers.length}
+              onChange={(next) => {
+                setSearch(next.search);
+                setEra(next.era);
+                setCountry(next.country);
+              }}
+              onReset={clearFilterValues}
+              trailing={viewSwitch}
             />
+
+            <div className="p-2">
+              <MapPanel
+                markers={mapMarkers}
+                labels={mapLabels}
+                className="h-[34rem] !border-0 !shadow-none"
+                sliderLabels={sliderLabels}
+                yearCeiling={mapYearCeiling}
+                onYearCeilingChange={setMapYearCeiling}
+              />
+            </div>
           </div>
           <p className="mt-3 text-[0.8125rem] text-muted">{dictionary.timeline.mapHint}</p>
 
@@ -425,27 +463,35 @@ export function TimelineExplorer({
             <summary className="cursor-pointer font-ui text-[0.8125rem] font-semibold text-ink">
               {formatMessage(dictionary.timeline.mapListSummary, { count: visibleMapMarkers.length })}
             </summary>
-            <ol className="mt-3 grid gap-2 font-ui text-[0.875rem] text-muted sm:grid-cols-2">
-              {visibleMapMarkers.map((marker, index) => (
-                <li key={marker.slug} className="flex gap-2">
-                  <span aria-hidden="true" className="shrink-0 font-semibold text-ink">
-                    {index + 1}.
-                  </span>
-                  <span>
-                    <Link
-                      href={marker.href}
-                      className="font-semibold text-accent underline decoration-line underline-offset-2 hover:text-accent-strong"
-                    >
-                      {marker.title}
-                    </Link>
-                    <span className="mx-1.5" aria-hidden="true">
-                      ·
+            {/* Cuộn trong khung để danh sách đủ điểm không kéo trang dài thêm hàng nghìn điểm ảnh. */}
+            <div
+              role="region"
+              tabIndex={0}
+              aria-label={formatMessage(dictionary.timeline.mapListSummary, { count: visibleMapMarkers.length })}
+              className="mt-3 max-h-96 overflow-y-auto pr-2"
+            >
+              <ol className="grid gap-2 font-ui text-[0.875rem] text-muted sm:grid-cols-2">
+                {visibleMapMarkers.map((marker, index) => (
+                  <li key={marker.slug} className="flex gap-2">
+                    <span aria-hidden="true" className="shrink-0 font-semibold text-ink">
+                      {index + 1}.
                     </span>
-                    {marker.subtitle}
-                  </span>
-                </li>
-              ))}
-            </ol>
+                    <span>
+                      <Link
+                        href={marker.href}
+                        className="font-semibold text-accent underline decoration-line underline-offset-2 hover:text-accent-strong"
+                      >
+                        {marker.title}
+                      </Link>
+                      <span className="mx-1.5" aria-hidden="true">
+                        ·
+                      </span>
+                      {marker.subtitle}
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
           </details>
         </div>
       ) : (

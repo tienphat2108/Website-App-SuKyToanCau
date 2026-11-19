@@ -107,6 +107,7 @@
     "revisedLabel": "Last revised",
     "sourcesTitle": "Article sources",
     "viewSource": "Read the original article",
+    "feedCta": "Updates RSS feed",
     "emptyNote": "No updates yet. Run the open-source scan to fill this section."
   },
   "common": {
@@ -141,7 +142,8 @@
     "viewMode": "View mode",
     "mapCredit": "Coastlines and land borders: Natural Earth (public domain)",
     "openGoogleMap": "Open Google Maps",
-    "mapCluster": "{count} events in this area. Select to zoom in."
+    "mapCluster": "{count} events in this area. Select to zoom in.",
+    "randomEvent": "Random event"
   },
   "a11y": {
     "breadcrumb": "Breadcrumb navigation",
@@ -160,8 +162,23 @@
     "zoomIn": "Zoom in the map",
     "zoomOut": "Zoom out the map",
     "closePopup": "Close event details",
-    "searchOnTimeline": "Open the search box on the Timeline page",
     "studyLink": "Saved events and study progress page"
+  },
+  "search": {
+    "title": "Search the whole site",
+    "subtitle": "Search events, learning paths, frequently asked questions and the rest of World History Chronicle.",
+    "placeholder": "Try: Bach Dang, Napoleon, Rwanda…",
+    "submit": "Search",
+    "results": "{count} results for “{query}”.",
+    "events": "Events",
+    "collections": "Learning paths",
+    "faq": "Frequently asked questions",
+    "pages": "Pages",
+    "emptyTitle": "No results found",
+    "emptyText": "Try a shorter keyword, skip the diacritics, or search by country, person or place.",
+    "hintTitle": "Search ideas",
+    "hintText": "Try: Bach Dang, Napoleon, Magna Carta, Rwanda, map, study.",
+    "eventCount": "{count} results"
   },
   "preferences": {
     "countryLabel": "Your country",

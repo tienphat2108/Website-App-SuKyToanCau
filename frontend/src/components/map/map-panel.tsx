@@ -16,7 +16,7 @@ const HistoricalMap = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex h-full min-h-[22rem] items-center justify-center bg-raised text-sm text-muted">
+      <div className="map-loading flex h-full min-h-[22rem] items-center justify-center bg-raised text-sm text-muted">
         <span className="animate-pulse">Đang tải bản đồ…</span>
       </div>
     ),
@@ -45,6 +45,7 @@ export interface TimeSliderLabels {
  * @param props.center Tâm bản đồ khi chỉ có một điểm.
  * @param props.zoom Mức thu phóng.
  * @param props.className Lớp bổ sung cho khung ngoài.
+ * @param props.tone `night` khi khung đặt trên nền tối, để thanh trượt và nút lấy màu đêm.
  * @param props.sliderLabels Nhãn thanh trượt; bỏ trống là không vẽ thanh trượt.
  * @param props.yearCeiling Năm chặn trên khi trang ngoài điều khiển thanh trượt.
  * @param props.onYearCeilingChange Báo trang ngoài khi người đọc kéo thanh; có mặt nghĩa là chế độ điều khiển ngoài.
@@ -55,6 +56,7 @@ export function MapPanel({
   center,
   zoom,
   className,
+  tone = 'light',
   sliderLabels,
   yearCeiling,
   onYearCeilingChange,
@@ -64,6 +66,7 @@ export function MapPanel({
   center?: [number, number];
   zoom?: number;
   className?: string;
+  tone?: 'light' | 'night';
   sliderLabels?: TimeSliderLabels;
   yearCeiling?: number | null;
   onYearCeilingChange?: (next: number | null) => void;
@@ -110,15 +113,26 @@ export function MapPanel({
       {/* Thanh trượt nằm ngoài khung để chiều cao cố định của khung bản đồ không bị
           chia sẻ và không làm tràn phần bản đồ phía trong. */}
       {showSlider && maxYear !== undefined ? (
-        <div className="mt-2 flex flex-col gap-3 rounded-2xl border border-line bg-surface px-4 py-3 shadow-card sm:flex-row sm:items-center sm:gap-5 sm:px-5">
+        <div
+          className={cn(
+            'mt-2 flex flex-col gap-3 rounded-2xl border px-4 py-3 sm:flex-row sm:items-center sm:gap-5 sm:px-5',
+            tone === 'night' ? 'border-white/12 bg-white/[0.06]' : 'border-line bg-surface shadow-card',
+          )}
+        >
           <div className="flex items-baseline justify-between gap-3 sm:w-56 sm:shrink-0 sm:flex-col sm:gap-1">
-            <label htmlFor={sliderId} className="font-ui text-sm font-semibold text-ink">
+            <label
+              htmlFor={sliderId}
+              className={cn('font-ui text-sm font-semibold', tone === 'night' ? 'text-white' : 'text-ink')}
+            >
               {sliderLabels.label}
             </label>
             <output
               htmlFor={sliderId}
               aria-live="polite"
-              className="font-ui text-sm font-semibold tabular-nums text-accent"
+              className={cn(
+                'font-ui text-sm font-semibold tabular-nums',
+                tone === 'night' ? 'text-gold' : 'text-accent',
+              )}
             >
               {ceiling === null
                 ? sliderLabels.all
@@ -142,14 +156,22 @@ export function MapPanel({
                 ? sliderLabels.all
                 : formatMessage(sliderLabels.year, { year: formatHistoricalYear(ceiling, locale) })
             }
-            className="h-11 w-full min-w-0 flex-1 cursor-pointer accent-accent"
+            className={cn(
+              'h-11 w-full min-w-0 flex-1 cursor-pointer',
+              tone === 'night' ? 'accent-gold' : 'accent-accent',
+            )}
           />
 
           {ceiling !== null ? (
             <button
               type="button"
               onClick={() => changeCeiling(null)}
-              className="chip chip-active h-11 shrink-0 px-4 font-ui text-sm font-semibold"
+              className={cn(
+                'h-11 shrink-0 px-4 font-ui text-sm font-semibold',
+                tone === 'night'
+                  ? 'press inline-flex items-center rounded-full border border-gold/50 bg-gold/15 text-gold hover:border-gold hover:bg-gold/25'
+                  : 'chip chip-active',
+              )}
             >
               {sliderLabels.reset}
             </button>

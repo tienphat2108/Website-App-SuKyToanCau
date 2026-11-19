@@ -92,6 +92,7 @@
     "revisedLabel": "Sửa gần nhất",
     "sourcesTitle": "Nguồn bài viết",
     "viewSource": "Đọc bài gốc",
+    "feedCta": "Nguồn cấp RSS của khu cập nhật",
     "emptyNote": "Chưa có mục cập nhật nào. Chạy bộ quét nguồn mở để nạp dữ liệu cho khu này."
   },
   "nav": {
@@ -141,7 +142,8 @@
     "viewMode": "Chế độ xem",
     "mapCredit": "Đường bờ biển và biên giới: Natural Earth (phạm vi công cộng)",
     "openGoogleMap": "Mở Google Maps",
-    "mapCluster": "{count} sự kiện trong khu vực này. Bấm để phóng to."
+    "mapCluster": "{count} sự kiện trong khu vực này. Bấm để phóng to.",
+    "randomEvent": "Sự kiện ngẫu nhiên"
   },
   "a11y": {
     "breadcrumb": "Đường dẫn điều hướng",
@@ -160,8 +162,23 @@
     "zoomIn": "Phóng to bản đồ",
     "zoomOut": "Thu nhỏ bản đồ",
     "closePopup": "Đóng thông tin sự kiện",
-    "searchOnTimeline": "Mở ô tìm kiếm ở trang Dòng thời gian",
     "studyLink": "Trang ôn tập và sự kiện đã lưu"
+  },
+  "search": {
+    "title": "Tìm kiếm toàn site",
+    "subtitle": "Tìm trong sự kiện, tuyến bài học, câu hỏi thường gặp và các trang của Sử Ký Toàn Cầu.",
+    "placeholder": "Ví dụ: Bạch Đằng, Napoleon, Rwanda…",
+    "submit": "Tìm",
+    "results": "Tìm thấy {count} kết quả cho “{query}”.",
+    "events": "Sự kiện",
+    "collections": "Tuyến bài học",
+    "faq": "Câu hỏi thường gặp",
+    "pages": "Trang",
+    "emptyTitle": "Không tìm thấy kết quả",
+    "emptyText": "Thử từ khóa ngắn hơn, bỏ dấu hoặc tìm theo tên quốc gia, nhân vật, địa danh.",
+    "hintTitle": "Gợi ý tìm kiếm",
+    "hintText": "Ví dụ: Bạch Đằng, Napoleon, Hiến chương Magna Carta, Rwanda, bản đồ, ôn tập.",
+    "eventCount": "{count} kết quả"
   },
   "preferences": {
     "countryLabel": "Quốc gia của bạn",

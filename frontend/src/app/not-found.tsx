@@ -13,6 +13,7 @@ export default async function NotFound() {
   const { locale, dictionary } = await getI18n();
   const suggestions = seedEvents.slice(0, 3);
   const timelineHref = localizePath(locale, '/timeline');
+  const searchHref = localizePath(locale, '/search');
 
   return (
     <section className="relative overflow-hidden">
@@ -31,7 +32,7 @@ export default async function NotFound() {
           <p className="mx-auto mt-4 max-w-xl text-[1.0625rem] leading-relaxed text-muted">{dictionary.notFound.text}</p>
 
           {/* Biểu mẫu tìm kiếm thật để người đọc đi tiếp ngay trên trang lỗi. */}
-          <form action={timelineHref} method="get" role="search" className="mx-auto mt-8 max-w-lg">
+          <form action={searchHref} method="get" role="search" className="mx-auto mt-8 max-w-lg">
             <div className="search-pill flex items-center gap-1.5 rounded-full border border-line bg-surface p-1.5 pl-4 transition focus-within:border-accent/45">
               <svg
                 width="18"
@@ -54,7 +55,7 @@ export default async function NotFound() {
                 type="search"
                 name="q"
                 maxLength={120}
-                placeholder={dictionary.timeline.searchPlaceholder}
+                placeholder={dictionary.search.placeholder}
                 className="h-11 min-w-0 flex-1 border-0 bg-transparent text-[0.9375rem] text-ink outline-none placeholder:text-muted/80"
               />
               <button type="submit" className="btn-primary !min-h-10 shrink-0 !px-5 !py-2 text-sm">
@@ -66,6 +67,9 @@ export default async function NotFound() {
           <div className="mt-5 flex flex-wrap justify-center gap-3">
             <Link href={timelineHref} className="btn-secondary">
               {dictionary.notFound.searchCta}
+            </Link>
+            <Link href={localizePath(locale, '/random')} prefetch={false} className="btn-ghost">
+              {dictionary.common.randomEvent}
             </Link>
             <Link href={localizePath(locale, '/')} className="btn-ghost underline decoration-line underline-offset-4">
               {dictionary.notFound.homeCta}

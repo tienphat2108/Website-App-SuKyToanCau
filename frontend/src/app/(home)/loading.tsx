@@ -17,26 +17,44 @@ export default function Loading() {
 
       <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
-          <div className="h-3 w-28 shimmer rounded-full bg-raised" />
-          <div className="mt-5 h-12 w-full max-w-xl shimmer rounded-2xl bg-raised" />
-          <div className="mt-3 h-12 w-3/4 max-w-md shimmer rounded-2xl bg-raised" />
-          <div className="mt-6 h-4 w-full max-w-xl shimmer rounded-full bg-raised" />
-          <div className="mt-2 h-4 w-2/3 max-w-lg shimmer rounded-full bg-raised" />
-          <div className="mt-8 h-14 w-full max-w-md shimmer rounded-full bg-raised" />
-          <div className="mt-8 flex gap-3">
-            <div className="h-11 w-36 shimmer rounded-full bg-raised" />
-            <div className="h-11 w-32 shimmer rounded-full bg-raised" />
+          <div className="h-5 w-56 shimmer rounded-full bg-raised lg:hidden" />
+          <div className="mt-4">
+            <div className="h-10 w-full max-w-xl shimmer rounded-xl bg-raised sm:h-[3.4rem] xl:h-[3.8rem]" />
+            <div className="mt-2 h-10 w-3/4 max-w-md shimmer rounded-xl bg-raised sm:h-[3.4rem] xl:h-[3.8rem]" />
+            {/* Tiêu đề xuống ba dòng ở màn hẹp và ở cột trái hai cột (lg tới xl). */}
+            <div className="mt-2 h-10 w-2/3 max-w-sm shimmer rounded-xl bg-raised min-[480px]:hidden sm:h-[3.4rem] xl:h-[3.8rem] lg:block xl:hidden" />
+          </div>
+          <div className="mt-5 max-w-xl space-y-2">
+            <div className="h-[1.35rem] w-full shimmer rounded-full bg-raised sm:h-[1.45rem]" />
+            <div className="h-[1.35rem] w-11/12 shimmer rounded-full bg-raised sm:h-[1.45rem]" />
+            <div className="h-[1.35rem] w-2/3 shimmer rounded-full bg-raised sm:h-[1.45rem]" />
+            {/* Đoạn mở đầu dài thêm ở màn hẹp và ở cột trái hai cột (lg tới xl). */}
+            <div className="h-[1.35rem] w-5/6 shimmer rounded-full bg-raised sm:hidden lg:block xl:hidden" />
+            <div className="h-[1.35rem] w-1/2 shimmer rounded-full bg-raised sm:hidden" />
+          </div>
+          <div className="mt-8 max-w-xl">
+            <div className="h-6 w-48 shimmer rounded-full bg-raised" />
+            <div className="mt-2 h-[3.875rem] w-full shimmer rounded-full bg-raised" />
+          </div>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {[0, 1, 2, 3].map((item) => (
+              <div key={item} className="h-9 w-20 shimmer rounded-full bg-raised" />
+            ))}
+          </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <div className="h-[3.25rem] w-[15.5rem] shimmer rounded-full bg-raised" />
+            <div className="h-[3.25rem] w-[11.5rem] shimmer rounded-full bg-raised" />
           </div>
         </div>
 
         <div className="mx-auto w-full max-w-xl">
-          <div className="rounded-2xl border border-line bg-surface p-2">
-            <div className="aspect-[5/4] shimmer rounded-lg bg-raised" />
+          <div className="rounded-2xl border border-line bg-surface p-1.5">
+            <div className="aspect-[5/4] shimmer rounded-xl bg-raised" />
           </div>
         </div>
       </div>
 
-      <div className="mt-16 grid grid-cols-2 overflow-hidden rounded-2xl border border-line bg-surface/90 sm:grid-cols-4">
+      <div className="mt-14 grid grid-cols-2 overflow-hidden rounded-2xl border border-line bg-surface/90 sm:grid-cols-4">
         {[0, 1, 2, 3].map((item) => (
           <div
             key={item}
@@ -47,7 +65,7 @@ export default function Loading() {
             }
           >
             <div className="h-8 w-16 shimmer rounded-lg bg-raised" />
-            <div className="mt-3 h-3 w-24 shimmer rounded-full bg-raised" />
+            <div className="mt-3 h-3.5 w-24 shimmer rounded-full bg-raised" />
           </div>
         ))}
       </div>

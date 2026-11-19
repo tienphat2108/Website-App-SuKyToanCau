@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Đang ngoại tuyến — Sử Ký Toàn Cầu</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --background: #f8f5ef;
+        --surface: #fffdf9;
+        --ink: #1b2430;
+        --muted: #5f6b7a;
+        --line: #e2d9c9;
+        --accent: #9d2f2f;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background: #11161d;
+          --surface: #171e27;
+          --ink: #f2ede3;
+          --muted: #a7b0bc;
+          --line: #2b3542;
+          --accent: #e0615a;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: var(--background);
+        color: var(--ink);
+        font-family: 'Be Vietnam Pro', 'Segoe UI', system-ui, sans-serif;
+      }
+
+      main {
+        width: 100%;
+        max-width: 34rem;
+        border: 1px solid var(--line);
+        border-radius: 1.25rem;
+        background: var(--surface);
+        padding: 2.25rem 1.75rem;
+        box-shadow: 0 18px 48px rgb(15 23 32 / 0.12);
+      }
+
+      .eyebrow {
+        margin: 0 0 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h1 {
+        margin: 0;
+        font-family: Merriweather, Georgia, serif;
+        font-size: clamp(1.6rem, 5vw, 2.1rem);
+        line-height: 1.15;
+      }
+
+      p {
+        margin: 1rem 0 0;
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .actions {
+        margin-top: 1.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 1.25rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 600;
+        font-size: 0.9375rem;
+        text-decoration: none;
+      }
+
+      a.primary {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      a.secondary {
+        border-color: var(--line);
+        color: var(--ink);
+      }
+
+      .en {
+        margin-top: 1.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--line);
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Sử Ký Toàn Cầu</p>
+      <h1>Bạn đang ngoại tuyến</h1>
+      <p>
+        Trang này chưa được lưu trên thiết bị và hiện không có kết nối mạng. Những
+        trang bạn đã mở trước đó vẫn đọc được; khi có mạng trở lại, mọi nội dung sẽ
+        tải bình thường.
+      </p>
+      <div class="actions">
+        <a class="primary" href="/">Thử lại</a>
+        <a class="secondary" href="/timeline">Dòng thời gian</a>
+      </div>
+      <p class="en">
+        You are offline. Pages you have already visited remain available; reconnect
+        and try again for the full archive.
+      </p>
+    </main>
+  </body>
+</html>

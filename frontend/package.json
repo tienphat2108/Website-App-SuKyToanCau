@@ -14,6 +14,7 @@
     "test:watch": "vitest",
     "audit:secrets": "node scripts/security-audit.mjs",
     "audit:deps": "npm audit --audit-level=high",
+    "audit:perf": "node scripts/audit-performance.mjs",
     "audit": "npm run audit:secrets && npm run audit:deps"
   },
   "dependencies": {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { EraCard } from '@/components/events/era-card';
 import { EventCard } from '@/components/events/event-card';
-import { MapPanel } from '@/components/map/map-panel';
+import { HomeMapSection } from '@/components/map/home-map-section';
 import { BreathingImage } from '@/components/motion/breathing-image';
 import { Reveal } from '@/components/motion/reveal';
 import { revealDelay } from '@/components/motion/stagger';
@@ -76,34 +76,22 @@ export default async function HomePage() {
     eraCounts.set(event.era, (eraCounts.get(event.era) ?? 0) + 1);
   }
 
-  const mapMarkers = events.map((event) => ({
+  /*
+   * Điểm bản đồ trang chủ lấy từ thẻ đã bản địa hóa, kèm thời kỳ, quốc gia và chuỗi
+   * tìm kiếm để khối bản đồ lọc ngay tại trình duyệt mà không gọi lại máy chủ.
+   */
+  const mapPoints = cards.map((event) => ({
     slug: event.slug,
-    title: event.title(locale),
-    subtitle: `${event.dateLabel(locale)} · ${event.eraName(locale)}`,
-    href: event.href(locale),
+    title: event.title,
+    subtitle: `${event.dateLabel} · ${event.eraName}`,
+    href: event.href,
     latitude: event.latitude,
     longitude: event.longitude,
     year: event.startYear,
+    era: event.era,
+    country: event.country,
+    searchText: event.searchText,
   }));
-
-  const mapLabels = {
-    ariaLabel: dictionary.a11y.map,
-    readMore: dictionary.common.readMore,
-    attribution: dictionary.common.mapCredit,
-    openGoogle: dictionary.common.openGoogleMap,
-    cluster: dictionary.common.mapCluster,
-    zoomIn: dictionary.a11y.zoomIn,
-    zoomOut: dictionary.a11y.zoomOut,
-    closePopup: dictionary.a11y.closePopup,
-    externalLink: dictionary.a11y.externalLink,
-  };
-
-  const sliderLabels = {
-    label: dictionary.timeline.timeSliderLabel,
-    year: dictionary.timeline.timeSliderYear,
-    all: dictionary.timeline.timeSliderAll,
-    reset: dictionary.timeline.timeSliderReset,
-  };
 
   const eventLabels = {
     readMore: dictionary.common.readMore,
@@ -114,6 +102,7 @@ export default async function HomePage() {
   const timelineHref = localizePath(locale, '/timeline');
   const contributeHref = localizePath(locale, '/contribute');
   const faqHref = localizePath(locale, '/faq');
+  const searchHref = localizePath(locale, '/search');
 
   const statsItems = [
     { value: stats.totalEvents, label: dictionary.home.stats.events },
@@ -123,7 +112,6 @@ export default async function HomePage() {
   ];
 
   const eraNames = ERAS.map((era) => (locale === 'en' ? era.nameEn : era.nameVi));
-  const markerLabel = formatMessage(dictionary.home.map.markerLabel, { count: mapMarkers.length });
 
   // Dữ liệu có cấu trúc liệt kê các bài viết để công cụ tìm kiếm hiểu cấu trúc trang chủ.
   const collectionJsonLd = {
@@ -155,7 +143,10 @@ export default async function HomePage() {
           <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
             <div className="animate-fade-up">
               <p className="text-[0.8125rem] font-medium text-muted lg:hidden">
-                {dictionary.home.hero.note}
+                {formatMessage(dictionary.home.hero.note, {
+                  suKien: stats.totalEvents,
+                  quocGia: stats.totalCountries,
+                })}
               </p>
 
               <h1 className="mt-4 font-display text-[2.5rem] font-bold leading-[1.06] tracking-tight text-ink sm:text-[3.25rem] xl:text-[3.6rem]">
@@ -167,9 +158,9 @@ export default async function HomePage() {
                 {dictionary.home.hero.description}
               </p>
 
-              {/* Biểu mẫu tìm kiếm thật, chuyển thẳng từ khóa sang trang dòng thời gian. */}
+              {/* Biểu mẫu tìm kiếm thật, tìm trên toàn site kể cả khi JavaScript chưa tải xong. */}
               <form
-                action={timelineHref}
+                action={searchHref}
                 method="get"
                 role="search"
                 className="mt-8 max-w-xl"
@@ -232,6 +223,20 @@ export default async function HomePage() {
                 </Link>
                 <Link href={contributeHref} className="btn-secondary">
                   {dictionary.home.hero.secondaryCta}
+                </Link>
+                <Link
+                  href={localizePath(locale, '/random')}
+                  prefetch={false}
+                  className="btn-ghost"
+                >
+                  {dictionary.common.randomEvent}
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="17" height="17" rx="4" />
+                    <circle cx="8.5" cy="8.5" r="1.1" fill="currentColor" stroke="none" />
+                    <circle cx="15.5" cy="15.5" r="1.1" fill="currentColor" stroke="none" />
+                    <circle cx="15.5" cy="8.5" r="1.1" fill="currentColor" stroke="none" />
+                    <circle cx="8.5" cy="15.5" r="1.1" fill="currentColor" stroke="none" />
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -428,44 +433,7 @@ export default async function HomePage() {
       </section>
 
       <section className="container-page section-y">
-        <div className="relative overflow-hidden rounded-2xl bg-night p-5 sm:p-8 lg:p-10">
-          <div className="surface-grid absolute inset-0 opacity-[0.06]" aria-hidden="true" />
-          <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-gold/15 blur-3xl" aria-hidden="true" />
-          <div className="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-accent/20 blur-3xl" aria-hidden="true" />
-
-          <div className="relative grid items-center gap-8 lg:grid-cols-[0.82fr_1.18fr]">
-            <Reveal>
-              <h2 className="font-display text-[2rem] font-bold leading-[1.12] text-white sm:text-[2.5rem]">
-                {dictionary.home.map.title}
-              </h2>
-              <p className="mt-4 max-w-md text-[0.9375rem] leading-relaxed text-white/70 sm:text-base">
-                {dictionary.home.map.subtitle}
-              </p>
-
-              <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3.5 py-1.5 text-[0.8125rem] font-medium text-white/80">
-                <span className="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true" />
-                {markerLabel}
-              </div>
-
-              <div className="mt-7 flex flex-wrap items-center gap-3">
-                <Link href={`${timelineHref}?view=map`} className="btn-gold">
-                  {dictionary.home.map.cta}
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                    <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </Link>
-                <span className="text-[0.8125rem] text-white/60">{dictionary.home.map.hint}</span>
-              </div>
-            </Reveal>
-
-            <MapPanel
-              markers={mapMarkers}
-              labels={mapLabels}
-              className="map-night h-[24rem] !border-white/10 shadow-night lg:h-[27rem]"
-              sliderLabels={sliderLabels}
-            />
-          </div>
-        </div>
+        <HomeMapSection points={mapPoints} />
       </section>
 
       <section className="border-y border-line bg-surface/50 section-y">

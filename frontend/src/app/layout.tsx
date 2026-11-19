@@ -4,6 +4,7 @@ import { I18nProvider } from '@/components/providers/i18n-provider';
 import { MotionProvider } from '@/components/providers/motion-provider';
 import { ThemeScript } from '@/components/providers/theme-script';
 import { ConsentManager } from '@/components/providers/consent-manager';
+import { ServiceWorkerRegister } from '@/components/providers/service-worker-register';
 import { DevToolsGuard } from '@/components/security/devtools-guard';
 import { Footer } from '@/components/layout/footer';
 import { Navbar } from '@/components/layout/navbar';
@@ -91,9 +92,12 @@ export async function generateMetadata(): Promise<Metadata> {
     formatDetection: { email: false, address: false, telephone: false },
     manifest: '/manifest.webmanifest',
     icons: {
-      icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
-      shortcut: '/icon.svg',
-      apple: '/icon.svg',
+      icon: [
+        { url: '/images/icon-192.png', sizes: '192x192', type: 'image/png' },
+        { url: '/images/icon-512.png', sizes: '512x512', type: 'image/png' },
+      ],
+      shortcut: '/images/icon-192.png',
+      apple: '/images/icon-192.png',
     },
     alternates: {
       canonical,
@@ -168,7 +172,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `${absoluteUrl(locale === 'en' ? '/en/timeline' : '/timeline')}?q={search_term_string}`,
+        urlTemplate: `${absoluteUrl(locale === 'en' ? '/en/search' : '/search')}?q={search_term_string}`,
       },
       'query-input': 'required name=search_term_string',
     },
@@ -202,6 +206,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <Footer />
             <StickyCta />
             <ConsentManager />
+            <ServiceWorkerRegister />
             <DevToolsGuard />
             <JsonLd data={websiteJsonLd} />
           </I18nProvider>

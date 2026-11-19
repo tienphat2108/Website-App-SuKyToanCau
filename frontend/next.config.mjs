@@ -8,6 +8,14 @@ const isProduction = process.env.NODE_ENV === 'production';
 const isNetlify = process.env.NETLIFY === 'true';
 
 /**
+ * Khi bật đo lường Plausible (không cookie) bằng biến môi trường, chỉ mở đúng
+ * miền script và điểm gửi số liệu của dịch vụ; không nới rộng cho nơi khác.
+ */
+const hasPlausible = Boolean(process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN);
+const plausibleScript = hasPlausible ? ' https://plausible.io' : '';
+const plausibleConnect = hasPlausible ? ' https://plausible.io' : '';
+
+/**
  * Nội dung Chính sách bảo mật nội dung.
  * Ghi chú: Next.js chèn một số đoạn mã nội tuyến khi khởi động nên cần cho phép 'unsafe-inline'.
  * Riêng chế độ phát triển cần thêm 'unsafe-eval' vì React Refresh dùng eval để biên dịch lại
@@ -17,14 +25,15 @@ const isNetlify = process.env.NETLIFY === 'true';
  */
 const contentSecurityPolicy = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline'${isProduction ? '' : " 'unsafe-eval'"} https://www.googletagmanager.com`,
+  `script-src 'self' 'unsafe-inline'${isProduction ? '' : " 'unsafe-eval'"} https://www.googletagmanager.com${plausibleScript}`,
   "style-src 'self' 'unsafe-inline'",
   // Bản đồ vẽ hoàn toàn bằng dữ liệu đóng gói trong dự án nên không còn phải xin phép
   // tải ảnh từ máy chủ bản đồ bên thứ ba; bỏ quyền này đồng nghĩa trình duyệt không
   // còn gửi địa chỉ IP của người đọc tới dịch vụ ngoài khi xem bản đồ.
   "img-src 'self' data: blob: https://www.google-analytics.com",
   "font-src 'self' data:",
-  "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com",
+  "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com" + plausibleConnect,
+  "worker-src 'self'",
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",
