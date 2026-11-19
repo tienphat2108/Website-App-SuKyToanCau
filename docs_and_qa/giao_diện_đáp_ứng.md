@@ -98,10 +98,11 @@ Mọi thành phần đều nhận dữ liệu qua thuộc tính, không tự g�
 | Điện thoại lớn | từ 640 đến 767 | Một cột, thẻ rộng hơn |
 | Máy tính bảng | từ 768 đến 1023 | Hai cột cho thẻ sự kiện, bản đồ cao 26 rem |
 | Máy tính | từ 1024 trở lên | Ba cột, phần mở đầu hai cột, bộ lọc ngang |
+| Máy tính rộng | từ 1400 trở lên | Thanh điều hướng ngang hiện đủ mục; từ 1024 đến 1399 vẫn dùng nút menu thu gọn vì hàng điều hướng cần khoảng 1380 điểm ảnh mới xếp vừa |
 
 Nguyên tắc kiểm tra:
 
-- Không có cuộn ngang ở bất kỳ kích thước nào.
+- Không có cuộn ngang ở bất kỳ kích thước nào, kể cả các mốc 1280, 1366 và 1399 nơi thanh điều hướng vừa đổi kiểu.
 - Chữ không bị cắt khi phóng to 200 phần trăm.
 - Vùng chạm tối thiểu 44 nhân 44 điểm ảnh.
 - Bản đồ không chiếm toàn bộ chiều cao màn hình trên điện thoại.
@@ -120,7 +121,12 @@ Nguyên tắc kiểm tra:
 ## 10. Trạng thái rỗng, đang tải và lỗi
 
 - Đang tải: khung chờ có `role="status"` và dòng chữ ẩn cho trình đọc màn hình.
+- Khung chờ trang chủ bám đúng bố cục thật ở các mốc 320, 375, 480, 640, 962, 1024, 1280 và 1440 điểm ảnh: cùng số dòng tiêu đề, cùng số dòng đoạn mở đầu, cùng chiều cao nút và ảnh, nên khi nội dung thật tới không có cú nhảy bố cục nào trong khung nhìn đầu tiên.
+- Khung chờ chỉ áp dụng cho tuyến trang chủ; các tuyến khác trả thẳng mã 404 khi không tìm thấy, không bị lỗi mềm.
+- Dòng ghi chú nhỏ phía trên tiêu đề trang chủ hiện số thật ngay từ HTML máy chủ (193 sự kiện · 58 quốc gia và khu vực · 2 ngôn ngữ), không sót chỗ giữ chỗ dạng `{suKien}` hay `{quocGia}` ở mọi cỡ màn hình dưới 1024 điểm ảnh.
 - Danh sách rỗng sau khi lọc: hiện câu giải thích và nút xóa bộ lọc, không để trống trang.
+- Khối bản đồ trang chủ lọc ngay tại trình duyệt bằng cùng thanh lọc với bản đồ dòng thời gian; khi không còn sự kiện nào, khung bản đồ thay bằng lời báo và nút xóa lọc trên nền tối, chiều cao khung giữ nguyên để trang không nhảy.
+- Danh sách địa điểm dạng chữ dưới mỗi bản đồ cuộn trong khung riêng (tối đa 20 rem ở trang chủ, 24 rem ở dòng thời gian) nên mở danh sách đủ 193 điểm không kéo trang dài thêm; khung cuộn nhận tiêu điểm bàn phím và có nhãn vùng; thanh cuộn trong khối nền tối lấy màu đêm của bản đồ.
 - Lỗi máy chủ: trang lỗi có nút thử lại và liên kết về trang chủ, không hiện chi tiết kỹ thuật.
 - Không tìm thấy: trả mã 404 thật và gợi ý ba trang liên quan.
 - Biểu mẫu gửi thành công: chuyển tới trang cảm ơn, trang này không được lập chỉ mục.
@@ -171,7 +177,7 @@ Bật thiết lập “giảm chuyển động” của hệ điều hành, giao
 - Thu khi nhấn, nâng khi rê, phóng ảnh và trượt đều tắt.
 - Đổi màu, viền, bóng và pha mờ vẫn chạy, với thời lượng cố định 150 mili giây, đủ để người đọc biết thao tác đã được nhận.
 - Vòng sáng báo đã đổi ưu tiên về gần như tức thì nhưng vẫn kết thúc đúng quy trình, nên nút “Bỏ ưu tiên” hiện ra sạch sẽ và nằm lại cho tới khi người đọc bỏ ưu tiên.
-- Bản đồ không bị ảnh hưởng: vẫn đủ 187 sự kiện (tổng số ghi trên các vòng cụm cộng số điểm lẻ bằng 187), kéo và thu phóng được, hai tên “Hoàng Sa” và “Trường Sa” vẫn hiển thị bằng tiếng Việt.
+- Bản đồ không bị ảnh hưởng: vẫn đủ 193 sự kiện (tổng số ghi trên các vòng cụm cộng số điểm lẻ bằng 193), kéo và thu phóng được, hai tên “Hoàng Sa” và “Trường Sa” vẫn hiển thị bằng tiếng Việt.
 
 ## 13. Danh sách kiểm tra giao diện
 
@@ -188,6 +194,13 @@ Bật thiết lập “giảm chuyển động” của hệ điều hành, giao
 11. Giữ chặt rồi thả một nút, một thẻ: phần tử thu nhẹ khi giữ và về trạng thái cũ ngay khi thả, không giữ lại trạng thái dở.
 12. Tắt chuột, chỉ dùng tay: chạm thẻ xong nhấc tay thì thẻ không còn bị nâng hay sáng viền; ảnh trong thẻ không bị phóng sẵn.
 13. Đổi quốc gia ở ô chọn: vòng sáng báo hiệu chạy một lần rồi tắt hẳn, ô chọn không bị giữ màu hay viền khác đi.
+14. Lọc ngay trên bản đồ trang chủ ở 320, 375, 962 và 1440 điểm ảnh: dòng đếm, huy hiệu số địa điểm và danh sách chữ cùng đổi; không tràn ngang; ô lọc và thanh trượt vẫn đọc được trên nền tối.
+15. Mở danh sách địa điểm của bản đồ: danh sách cuộn trong khung, trang không dài thêm; Tab vào khung rồi dùng phím mũi tên cuộn được.
+16. Gõ một từ khóa vào ô tìm ở thanh điều hướng: trang tìm kiếm mở đúng ngôn ngữ, kết quả gom theo nhóm và bấm được bằng bàn phím ở 320, 375 và 1440 điểm ảnh.
+17. Mở website ở bản phát hành rồi tắt mạng: trang đã đọc hiện bản lưu, trang chưa đọc hiện trang ngoại tuyến song ngữ với nút thử lại; bật mạng lại thì nút hoạt động.
+18. Bấm “Sự kiện ngẫu nhiên” ở trang chủ và trang 404: mỗi lần mở một bài khác, đúng ngôn ngữ, nút quay lại về đúng trang trước.
+19. Kiểm tra ô cài đặt ứng dụng của trình duyệt: website đủ điều kiện cài, mở chế độ `standalone`, biểu tượng và màu nền đúng khai báo manifest.
+20. Bấm “Nguồn cấp RSS” ở chân trang: mở trang đọc được có địa chỉ để sao chép và danh sách mục, không hiện XML thô; trình đọc tin vẫn nhận đúng RSS khi đăng ký địa chỉ đó.
 
 ## 14. Giới hạn đã biết
 
@@ -195,3 +208,6 @@ Bật thiết lập “giảm chuyển động” của hệ điều hành, giao
 - Khi nhìn cả thế giới, những sự kiện nằm sát nhau được gom thành một vòng ghi số lượng thay vì vẽ chồng lên nhau; muốn đọc từng sự kiện thì phóng tới mức cụm tách ra. Bấm vào vòng cụm luôn đưa tới mức đó, không cần bấm nhiều lần.
 - Phông hiển thị dựa vào phông có sẵn của hệ điều hành, nên Windows và macOS có nét chữ hơi khác nhau.
 - Trong môi trường kiểm thử tự động không có cửa sổ trình duyệt hiển thị, trình duyệt tạm dừng khung hình chờ của Next.js nên ảnh chụp màn hình có thể chỉ thấy khung chờ. Đây là giới hạn của môi trường, không phải lỗi của website.
+- Đọc ngoại tuyến chỉ có tác dụng sau lần mở đầu tiên ở bản phát hành và trong giới hạn bộ nhớ đệm của trình duyệt; trang chưa từng mở sẽ nhận trang ngoại tuyến thay vì nội dung đầy đủ.
+- Tìm kiếm toàn site vẽ tối đa 30 sự kiện mỗi lần và không gợi ý khi đang gõ; muốn lọc sâu theo thời kỳ, quốc gia hay khoảng năm thì dùng bộ lọc của dòng thời gian và bản đồ.
+- Đo lường Plausible chỉ chạy khi máy chủ đặt `NEXT_PUBLIC_PLAUSIBLE_DOMAIN`; mặc định website không gửi số liệu tới dịch vụ bên thứ ba nào.
