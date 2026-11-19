@@ -75,7 +75,7 @@ describe('HistoricalEvent', () => {
 
 describe('dữ liệu mẫu', () => {
   it('có kho dữ liệu mở rộng với khóa duy nhất', () => {
-    expect(seedEvents.length).toBe(187);
+    expect(seedEvents.length).toBe(193);
     expect(seedEventsBySlug.size).toBe(seedEvents.length);
     expect(new Set(seedEvents.map((event) => event.slug)).size).toBe(seedEvents.length);
   });
@@ -85,6 +85,15 @@ describe('dữ liệu mẫu', () => {
       for (const slug of event.relatedSlugs) {
         expect(seedEventsBySlug.has(slug), `${event.slug} -> ${slug}`).toBe(true);
       }
+    }
+  });
+
+  it('không có liên kết liên quan trùng nhau trong cùng một bài', () => {
+    for (const event of seedEvents) {
+      expect(
+        new Set(event.relatedSlugs).size,
+        `${event.slug} có liên kết liên quan trùng`,
+      ).toBe(event.relatedSlugs.length);
     }
   });
 

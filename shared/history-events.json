@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 9,
   "events": [
     {
       "slug": "cach-mang-nong-nghiep-10000-tcn",
@@ -115,8 +115,7 @@
       "featured": true,
       "related": [
         "bo-luat-hammurabi-1754-tcn",
-        "cach-mang-nong-nghiep-10000-tcn",
-        "bo-luat-hammurabi-1754-tcn"
+        "cach-mang-nong-nghiep-10000-tcn"
       ],
       "sources": [
         {
@@ -12503,6 +12502,387 @@
         "The earthquake struck at 12:50 pm local time with its epicentre near the city of Sagaing, on the fault of the same name, one of the most active in Southeast Asia. Its magnitude was measured at 7.7, followed minutes later by a 6.4 aftershock. The shaking spread for hundreds of kilometres: in Bangkok, more than 1,000 km away, a high-rise building under construction collapsed, killing dozens of workers.",
         "Damage was concentrated in the Mandalay region: according to Myanmar's military government, more than 3,000 people died and thousands were injured, with many neighbourhoods, bridges, roads and hospitals badly damaged. Many precious heritage sites were destroyed or harmed, including the Mandalay Palace, the Mahamuni Buddha image and numerous ancient pagodas. Tens of thousands lost their homes and had to live in makeshift camps through the hot season.",
         "The disaster exposed Myanmar's plight: the civil war between the military and armed groups has divided the country and obstructed relief convoys. The military government issued a rare appeal for international aid; many countries, including Vietnam, quickly sent search-and-rescue teams. The United Nations and humanitarian organisations warned of a double crisis: the earthquake on top of conflict, leaving millions in urgent need of assistance."
+      ]
+    },
+    {
+      "slug": "tran-adwa-1896",
+      "era": "can-dai",
+      "country": "Ethiopia",
+      "countryEn": "Ethiopia",
+      "startYear": 1896,
+      "endYear": null,
+      "dateLabelVi": "Ngày 1 tháng 3 năm 1896",
+      "dateLabelEn": "1 March 1896",
+      "titleVi": "Trận Adwa",
+      "titleEn": "The Battle of Adwa",
+      "summaryVi": "Ngày 1 tháng 3 năm 1896, gần thị trấn Adwa miền bắc Ethiopia, quân đội của Hoàng đế Menelik II và Hoàng hậu Taytu đánh tan lực lượng xâm lược Ý. Chiến thắng buộc Ý công nhận nền độc lập của Ethiopia và trở thành biểu tượng chống thực dân của châu Phi.",
+      "summaryEn": "On 1 March 1896, near the northern Ethiopian town of Adwa, the army of Emperor Menelik II and Empress Taytu destroyed an invading Italian force. The victory forced Italy to recognise Ethiopian independence and became an emblem of African anti-colonial resistance.",
+      "contentVi": [
+        "Cuối thế kỷ 19, các cường quốc châu Âu chia nhau châu Phi tại Hội nghị Berlin (1884–1885). Ý chiếm vùng duyên hải Biển Đỏ rồi lập thuộc địa Eritrea, sau đó ký Hiệp ước Wuchale năm 1889 với Hoàng đế Ethiopia Menelik II. Hai bên hiểu khác nhau về điều 17: bản tiếng Ý ngụ ý Ethiopia chịu sự bảo hộ của Ý, còn bản tiếng Amhara chỉ nói Ethiopia có thể dùng Ý làm đầu mối ngoại giao. Khi Menelik phản đối và ngừng công nhận điều khoản, Ý quyết định dùng vũ lực.",
+        "Tháng 1 năm 1896, tướng Oreste Baratieri đưa quân từ Eritrea vào Tigray. Sau các trận Amba Alagi và cuộc vây hãm Mekelle, quân Ý thiếu tiếp tế và mất tinh thần. Đêm 29 tháng 2, Baratieri cho ba lữ đoàn tiến về phía Adwa nhằm buộc quân Ethiopia giao chiến trên địa hình ông chọn. Nhưng các cột quân lạc nhau trong đêm tối và đụng phải lực lượng Ethiopia đông hơn nhiều. Sáng 1 tháng 3, khoảng 100.000 chiến binh Ethiopia, được trang bị súng trường và pháo nhập khẩu, dưới sự chỉ huy của Menelik II, Hoàng hậu Taytu và các tướng như Ras Makonnen, mở cuộc tấn công.",
+        "Quân Ý, gồm khoảng 17.700 người trong đó phần lớn là lính askari người Eritrea, bị chia cắt và không có công sự vững chắc. Đến chiều, các lữ đoàn tan vỡ; cuộc rút lui biến thành thảm bại. Khoảng 6.000–7.000 quân Ý và askari thiệt mạng, bị thương hoặc mất tích, hàng nghìn người bị bắt; phía Ethiopia chịu thiệt hại ước tính 4.000–5.000 người. Ngày 26 tháng 10 năm 1896, Hiệp ước Addis Ababa được ký, Ý công nhận Ethiopia độc lập và bãi bỏ Hiệp ước Wuchale.",
+        "Adwa là chiến thắng quyết định của một quốc gia châu Phi trước đội quân thực dân châu Âu trong thời kỳ tranh giành châu Phi. Cùng với Liberia, Ethiopia giữ được nền độc lập khi phần lớn châu lục bị chia cắt. Chiến thắng được ghi vào lịch sử Ethiopia và trở thành nguồn cảm hứng cho các phong trào pan-African cũng như tư tưởng giải phóng dân tộc trên khắp châu Phi và Caribbean. Hằng năm, Ethiopia kỷ niệm Ngày Chiến thắng Adwa như một ngày lễ lớn."
+      ],
+      "contentEn": [
+        "In the late nineteenth century the European powers divided Africa at the Berlin Conference of 1884–1885. Italy seized the Red Sea coast, created the colony of Eritrea and in 1889 signed the Treaty of Wuchale with Emperor Menelik II of Ethiopia. The two sides read Article 17 differently: the Italian text implied that Ethiopia accepted Italian protection, while the Amharic text only allowed Ethiopia to use Italy as a channel for foreign affairs. When Menelik rejected the claim and refused to honour that reading, Italy chose force.",
+        "In January 1896 General Oreste Baratieri marched from Eritrea into Tigray. After the battles at Amba Alagi and the siege of Mekelle his army was short of supplies and low in morale. On the night of 29 February Baratieri sent three brigades towards Adwa to force the Ethiopians to fight on ground of his choosing. The columns lost contact in the dark and ran into a far larger Ethiopian force. On the morning of 1 March some 100,000 Ethiopian soldiers, equipped with imported rifles and artillery, attacked under Menelik II, Empress Taytu and commanders such as Ras Makonnen.",
+        "The Italian force of about 17,700, most of them Eritrean askari, was split and lacked proper entrenchments. By afternoon the brigades had broken and the retreat became a rout. Some 6,000–7,000 Italian and askari soldiers were killed, wounded or missing, and thousands were captured; Ethiopian losses are estimated at 4,000–5,000. On 26 October 1896 the Treaty of Addis Ababa was signed: Italy recognised Ethiopian independence and the Treaty of Wuchale was annulled.",
+        "Adwa was a decisive victory by an African state over a European colonial army during the Scramble for Africa. Together with Liberia, Ethiopia kept its independence while most of the continent was partitioned. The battle entered Ethiopian history and inspired Pan-African movements and anti-colonial thought across Africa and the Caribbean. Ethiopia still commemorates Adwa Victory Day as a major national holiday."
+      ],
+      "locationVi": "Adwa, Tigray, Ethiopia",
+      "locationEn": "Adwa, Tigray, Ethiopia",
+      "latitude": 14.1667,
+      "longitude": 38.9,
+      "image": "/images/events/tran-adwa-1896.jpg",
+      "imageAltVi": "Tranh Ethiopia thế kỷ 19 tại Bảo tàng Anh mô tả trận Adwa năm 1896",
+      "imageAltEn": "A nineteenth-century Ethiopian painting in the British Museum depicting the Battle of Adwa in 1896",
+      "tagsVi": [
+        "Adwa",
+        "Ethiopia",
+        "Chống thực dân"
+      ],
+      "tagsEn": [
+        "Adwa",
+        "Ethiopia",
+        "Anti-colonialism"
+      ],
+      "featured": true,
+      "related": [
+        "kenya-doc-lap-1963",
+        "ghana-doc-lap-1957",
+        "vuong-quoc-aksum-300"
+      ],
+      "sources": [
+        {
+          "title": "Battle of Adwa",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Adwa",
+          "language": "en"
+        },
+        {
+          "title": "Battle of Adwa",
+          "publisher": "Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/event/Battle-of-Adwa",
+          "language": "en"
+        }
+      ]
+    },
+    {
+      "slug": "tran-isandlwana-1879",
+      "era": "can-dai",
+      "country": "Nam Phi",
+      "countryEn": "South Africa",
+      "startYear": 1879,
+      "endYear": null,
+      "dateLabelVi": "Ngày 22 tháng 1 năm 1879",
+      "dateLabelEn": "22 January 1879",
+      "titleVi": "Trận Isandlwana",
+      "titleEn": "The Battle of Isandlwana",
+      "summaryVi": "Ngày 22 tháng 1 năm 1879, khoảng 20.000 chiến binh Zulu bất ngờ tấn công trại quân Anh dưới chân núi Isandlwana và tiêu diệt hơn 1.300 người. Đây là thất bại nặng nề nhất của quân Anh trong các cuộc chiến tranh thuộc địa.",
+      "summaryEn": "On 22 January 1879 some 20,000 Zulu warriors surprised the British camp below Isandlwana and destroyed more than 1,300 soldiers. It was the worst British defeat of the colonial wars.",
+      "contentVi": [
+        "Sau khi Anh sáp nhập Transvaal năm 1877, căng thẳng với Vương quốc Zulu dưới thời vua Cetshwayo tăng lên. Tháng 12 năm 1878, Cao ủy Anh Henry Bartle Frere gửi tối hậu thư buộc Zulu giải tán quân đội và chấp nhận quyền kiểm soát của Anh; Cetshwayo từ chối. Tháng 1 năm 1879, tướng Frederick Augustus Thesiger, Nam tước Chelmsford thứ hai, đưa quân vượt sông Buffalo tiến vào Zululand theo ba hướng.",
+        "Ngày 20 tháng 1, cột trung tâm của Chelmsford đóng trại dưới chân núi Isandlwana. Tin rằng quân Zulu chủ yếu ở phía đông, Chelmsford chia quân, dẫn một nửa lực lượng đi trinh sát, để lại khoảng 1.700 người cùng trại và xe tiếp tế. Sáng 22 tháng 1, khoảng 20.000 chiến binh Zulu do Ntshingwayo kaMahole và Mavumengwana chỉ huy, vận động kín đáo gần như suốt đêm, bất ngờ xuất hiện. Quân Anh bố trí tuyến mỏng và không dựng chiến lũy.",
+        "Trận đánh diễn ra ác liệt. Súng trường Martini-Henry gây thương vong lớn, nhưng đội hình Anh bị chọc thủng và trại bị tràn. Hơn 1.300 lính Anh, lính thuộc địa và người bản địa trợ chiến thiệt mạng, chỉ vài chục người thoát. Phía Zulu mất khoảng 1.000–2.500 người. Cùng đêm đó, một lực lượng Zulu khác tấn công trạm Rorke’s Drift nhưng bị khoảng 150 lính Anh chống trả thành công.",
+        "Về chiến lược, Isandlwana không đổi được cục diện. Anh tăng viện, đến tháng 7 năm 1879 đánh bại Zulu tại Ulundi; Cetshwayo bị bắt, vương quốc bị chia rồi sáp nhập năm 1897. Tuy vậy, trận đánh đi vào ký ức châu Phi như bằng chứng về khả năng kháng cự của các xã hội bản địa trước hỏa lực vượt trội, và trở thành chủ đề của nhiều tác phẩm lịch sử, tranh vẽ và phim."
+      ],
+      "contentEn": [
+        "After Britain annexed the Transvaal in 1877, tension with the Zulu Kingdom under King Cetshwayo grew. In December 1878 the British High Commissioner Henry Bartle Frere sent an ultimatum demanding that the Zulus disband their army and accept British control; Cetshwayo refused. In January 1879 General Frederick Augustus Thesiger, Lord Chelmsford, led three columns across the Buffalo River into Zululand.",
+        "On 20 January Chelmsford’s central column camped below Isandlwana. Believing the main Zulu army was to the east, he split his force and took half of it on a reconnaissance, leaving about 1,700 men with the camp and its supply wagons. On the morning of 22 January some 20,000 Zulu warriors under Ntshingwayo kaMahole and Mavumengwana, who had moved almost invisibly overnight, appeared in front of the camp. The British deployed in thin lines without entrenchments.",
+        "The fighting was savage. Martini-Henry rifles inflicted heavy casualties, but the British line was broken and the camp overrun. More than 1,300 British, colonial and locally raised troops died; only a few dozen escaped. Zulu losses are estimated at 1,000–2,500. That night another Zulu force attacked the station at Rorke’s Drift, where about 150 British soldiers held out.",
+        "Strategically Isandlwana did not change the outcome. Britain sent reinforcements, defeated the Zulus at Ulundi in July 1879, captured Cetshwayo and eventually annexed Zululand in 1897. Yet the battle entered African memory as evidence that indigenous societies could resist superior firepower, and it has inspired histories, paintings and films ever since."
+      ],
+      "locationVi": "Isandlwana, KwaZulu-Natal, Nam Phi",
+      "locationEn": "Isandlwana, KwaZulu-Natal, South Africa",
+      "latitude": -28.3589,
+      "longitude": 30.6517,
+      "image": "/images/events/tran-isandlwana-1879.jpg",
+      "imageAltVi": "Tranh của Charles Edwin Fripp vẽ trận Isandlwana ngày 22 tháng 1 năm 1879",
+      "imageAltEn": "Charles Edwin Fripp’s painting of the Battle of Isandlwana, 22 January 1879",
+      "tagsVi": [
+        "Isandlwana",
+        "Zulu",
+        "Chiến tranh thuộc địa"
+      ],
+      "tagsEn": [
+        "Isandlwana",
+        "Zulu",
+        "Colonial warfare"
+      ],
+      "featured": false,
+      "related": [
+        "nam-phi-chan-hung-apartheid-1994",
+        "kenya-doc-lap-1963"
+      ],
+      "sources": [
+        {
+          "title": "Battle of Isandlwana",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Isandlwana",
+          "language": "en"
+        },
+        {
+          "title": "Zulu War",
+          "publisher": "National Army Museum",
+          "url": "https://www.nam.ac.uk/explore/zulu-war",
+          "language": "en"
+        }
+      ]
+    },
+    {
+      "slug": "bolivar-gran-colombia-1819",
+      "era": "can-dai",
+      "country": "Colombia",
+      "countryEn": "Colombia",
+      "startYear": 1819,
+      "endYear": null,
+      "dateLabelVi": "Ngày 7 tháng 8 năm 1819",
+      "dateLabelEn": "7 August 1819",
+      "titleVi": "Trận Boyacá",
+      "titleEn": "The Battle of Boyacá",
+      "summaryVi": "Ngày 7 tháng 8 năm 1819, đội quân giải phóng của Simón Bolívar đánh tan lực lượng hoàng gia Tây Ban Nha tại cầu sông Boyacá, mở đường tiến vào Bogotá và giành độc lập cho New Granada. Thắng lợi đặt nền móng cho nước Cộng hòa Gran Colombia.",
+      "summaryEn": "On 7 August 1819 Simón Bolívar’s liberation army shattered the Spanish royalist force at the Boyacá bridge, opening the road to Bogotá and securing the independence of New Granada. The victory paved the way for the Republic of Gran Colombia.",
+      "contentVi": [
+        "Sau khi giành lại Venezuela, Simón Bolívar chuẩn bị giải phóng Phó vương quốc New Granada, nay là Colombia. Năm 1819, ông quyết định đi đường vòng qua đồng bằng sông Orinoco và vượt dãy Andes tại đèo Páramo de Pisba, nơi lạnh giá và hiểm trở mà quân hoàng gia Tây Ban Nha không ngờ tới. Chiến dịch mất hơn hai tháng, nhiều binh sĩ chết vì đói rét, nhưng quân giải phóng vẫn mở được đường vào cao nguyên.",
+        "Ngày 25 tháng 7 năm 1819, tại Pantano de Vargas, kỵ binh dưới quyền José Antonio Páez và bộ binh của Bolívar đẩy lùi quân hoàng gia trong trận chiến kéo dài cả ngày. Tướng Tây Ban Nha José María Barreiro buộc phải rút về Tunja rồi về phía cầu sông Teatinos, nay gọi là Puente de Boyacá. Bolívar chia quân thành hai mũi, phong tỏa con đường hoàng gia và chặn đội quân của Barreiro khi họ đang hành quân.",
+        "Sáng 7 tháng 8 năm 1819, trận đánh diễn ra trong khoảng hai giờ. Mũi quân của Francisco de Paula Santander chặn đầu, trong khi lực lượng của José Antonio Anzoátegui bọc hậu. Quân hoàng gia bị chia cắt và tan rã; Barreiro cùng nhiều sĩ quan bị bắt. Ba ngày sau, ngày 10 tháng 8, Bolívar tiến vào Santa Fe de Bogotá. New Granada giành độc lập, và thắng lợi này mở đường cho việc thành lập Gran Colombia tại Đại hội Angostura tháng 12 năm 1819.",
+        "Boyacá là một trong những chiến dịch quân sự táo bạo nhất của chiến tranh giành độc lập Mỹ Latinh: một đội quân nhỏ vượt dãy Andes trong điều kiện khắc nghiệt, đánh vào nơi ít được phòng thủ và tiêu diệt lực lượng chủ chốt của đối phương chỉ trong vài giờ. Chiến thắng gắn liền với tên tuổi Bolívar, Santander và Anzoátegui, đồng thời trở thành sự kiện trung tâm trong ngày quốc khánh Colombia."
+      ],
+      "contentEn": [
+        "After recovering Venezuela, Simón Bolívar prepared to liberate the Viceroyalty of New Granada, today Colombia. In 1819 he chose a roundabout route across the Orinoco plains and over the Andes at the Páramo de Pisba, a cold and rugged pass the Spanish royalists did not expect him to use. The campaign took more than two months and many soldiers died of hunger and cold, but the patriot army reached the highlands.",
+        "On 25 July 1819, at Pantano de Vargas, cavalry under José Antonio Páez and Bolívar’s infantry drove back the royalists in a battle that lasted all day. The Spanish commander José María Barreiro withdrew towards Tunja and then towards the bridge over the Teatinos river, now known as Puente de Boyacá. Bolívar divided his force into two wings, blocked the royal road and intercepted Barreiro’s marching column.",
+        "On the morning of 7 August 1819 the battle lasted about two hours. Francisco de Paula Santander’s troops blocked the head of the column while José Antonio Anzoátegui’s force attacked the rear. The royalist army was cut apart and collapsed; Barreiro and many officers were captured. Three days later, on 10 August, Bolívar entered Santa Fe de Bogotá. New Granada was independent, and the victory opened the way for the founding of Gran Colombia at the Congress of Angostura in December 1819.",
+        "Boyacá was one of the boldest campaigns of the Latin American wars of independence: a small army crossed the Andes in terrible conditions, struck where the defences were thin and destroyed the core of the enemy force in a few hours. The victory is tied to Bolívar, Santander and Anzoátegui, and remains the central event of Colombia’s national day."
+      ],
+      "locationVi": "Puente de Boyacá, Boyacá, Colombia",
+      "locationEn": "Puente de Boyacá, Boyacá, Colombia",
+      "latitude": 5.4497,
+      "longitude": -73.4317,
+      "image": "/images/events/bolivar-gran-colombia-1819.jpg",
+      "imageAltVi": "Tranh của Martín Tovar y Tovar vẽ trận Boyacá năm 1819",
+      "imageAltEn": "Martín Tovar y Tovar’s painting of the Battle of Boyacá in 1819",
+      "tagsVi": [
+        "Boyacá",
+        "Bolívar",
+        "Gran Colombia"
+      ],
+      "tagsEn": [
+        "Boyacá",
+        "Bolívar",
+        "Gran Colombia"
+      ],
+      "featured": false,
+      "related": [
+        "argentina-doc-lap-1816",
+        "brazil-doc-lap-1822",
+        "cach-mang-haiti-1791"
+      ],
+      "sources": [
+        {
+          "title": "Battle of Boyacá",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Boyac%C3%A1",
+          "language": "en"
+        },
+        {
+          "title": "Boyacá, Battle of",
+          "publisher": "Encyclopedia.com",
+          "url": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/boyaca-battle",
+          "language": "en"
+        }
+      ]
+    },
+    {
+      "slug": "cach-mang-mexico-1910",
+      "era": "can-dai",
+      "country": "Mexico",
+      "countryEn": "Mexico",
+      "startYear": 1910,
+      "endYear": 1920,
+      "dateLabelVi": "Ngày 20 tháng 11 năm 1910",
+      "dateLabelEn": "20 November 1910",
+      "titleVi": "Cách mạng Mexico",
+      "titleEn": "The Mexican Revolution",
+      "summaryVi": "Ngày 20 tháng 11 năm 1910, các cuộc nổi dậy chống chế độ độc tài của Porfirio Díaz bùng phát, mở đầu cuộc cách mạng xã hội lớn đầu tiên của thế kỷ 20 ở Mỹ Latinh. Chiến tranh kéo dài cả thập niên, làm thay đổi đất đai, lao động và chính trị Mexico.",
+      "summaryEn": "On 20 November 1910 uprisings against the dictatorship of Porfirio Díaz began, launching the first great social revolution of twentieth-century Latin America. The war lasted a decade and transformed land, labour and politics in Mexico.",
+      "contentVi": [
+        "Porfirio Díaz cầm quyền gần 35 năm, thời kỳ gọi là Porfiriato, với tăng trưởng đường sắt, khai khoáng và xuất khẩu nhưng tập trung ruộng đất và quyền lực vào giới chủ đất, nhà đầu tư nước ngoài và tầng lớp thượng lưu. Năm 1910, sau khi Díaz tuyên bố không tái tranh cử rồi đảo ngược bằng một cuộc bầu cử bị gian lận, Francisco I. Madero khởi xướng Kế hoạch San Luis, kêu gọi nổi dậy từ ngày 20 tháng 11 năm 1910.",
+        "Khởi nghĩa lan nhanh ở miền bắc với Pascual Orozco, Pancho Villa và lực lượng nông dân; ở miền nam, Emiliano Zapata tổ chức nông dân Morelos đấu tranh vì đất đai. Tháng 5 năm 1911, Díaz từ chức và rời Mexico. Madero trở thành tổng thống nhưng không thực hiện cải cách ruộng đất, khiến Zapata ban hành Kế hoạch Ayala và tiếp tục kháng chiến. Năm 1913, tướng Victoriano Huerta đảo chính, sát hại Madero, mở ra giai đoạn nội chiến khốc liệt.",
+        "Liên minh chống Huerta gồm các lực lượng Hiến pháp của Venustiano Carranza, quân của Villa và Zapata. Sau khi Huerta thất bại năm 1914, hội nghị Aguascalientes không hàn gắn được chia rẽ; Carranza, Villa và Zapata tiếp tục giao chiến. Cuộc chiến kéo theo sự can thiệp của Hoa Kỳ tại Veracruz năm 1914 và chiến dịch truy đuổi Villa năm 1916. Hiến pháp năm 1917, được soạn trong lúc chiến sự chưa chấm dứt, ghi nhận các quyền xã hội về đất đai và lao động.",
+        "Cách mạng Mexico là cuộc cách mạng xã hội lớn đầu tiên của thế kỷ 20 ở Mỹ Latinh. Ước tính có khoảng một đến hai triệu người thiệt mạng vì giao tranh, đói kém và dịch bệnh. Cải cách ruộng đất, quyền lao động và nguyên tắc quốc gia kiểm soát tài nguyên được đưa vào Hiến pháp 1917 và ảnh hưởng tới nhiều nước trong khu vực. Hình ảnh Villa và Zapata ngồi cạnh nhau tại Cung điện Quốc gia năm 1914 trở thành biểu tượng của cuộc cách mạng."
+      ],
+      "contentEn": [
+        "Porfirio Díaz ruled for almost 35 years in the period known as the Porfiriato, which brought railways, mining and exports but concentrated land and power among landowners, foreign investors and the elite. In 1910, after Díaz declared he would not run again and then reversed himself in a fraudulent election, Francisco I. Madero issued the Plan of San Luis and called for an uprising from 20 November 1910.",
+        "The revolt spread quickly in the north under Pascual Orozco, Pancho Villa and peasant forces; in the south Emiliano Zapata mobilised the peasants of Morelos in a struggle for land. In May 1911 Díaz resigned and left Mexico. Madero became president but did not carry out land reform, so Zapata issued the Plan of Ayala and kept fighting. In 1913 General Victoriano Huerta seized power and had Madero killed, opening a phase of brutal civil war.",
+        "The coalition against Huerta combined Venustiano Carranza’s Constitutionalist forces with the armies of Villa and Zapata. After Huerta’s defeat in 1914 the Aguascalientes convention failed to reconcile the victors, and Carranza, Villa and Zapata fought on. The war drew in a United States occupation of Veracruz in 1914 and a punitive expedition against Villa in 1916. The Constitution of 1917, drafted while fighting continued, wrote social rights over land and labour into law.",
+        "The Mexican Revolution was the first great social revolution of twentieth-century Latin America. Estimates put the death toll from fighting, hunger and disease at one to two million people. Land reform, labour rights and national control of resources entered the 1917 Constitution and influenced other countries in the region. The photograph of Villa and Zapata seated together in the National Palace in 1914 became an icon of the revolution."
+      ],
+      "locationVi": "Thành phố México, Mexico",
+      "locationEn": "Mexico City, Mexico",
+      "latitude": 19.4326,
+      "longitude": -99.1332,
+      "image": "/images/events/cach-mang-mexico-1910.jpg",
+      "imageAltVi": "Pancho Villa và Emiliano Zapata tại Cung điện Quốc gia, Thành phố México, tháng 12 năm 1914",
+      "imageAltEn": "Pancho Villa and Emiliano Zapata at the National Palace, Mexico City, December 1914",
+      "tagsVi": [
+        "Porfiriato",
+        "Villa",
+        "Zapata"
+      ],
+      "tagsEn": [
+        "Porfiriato",
+        "Villa",
+        "Zapata"
+      ],
+      "featured": false,
+      "related": [
+        "argentina-doc-lap-1816",
+        "cuba-khung-hoang-ten-lua-1962"
+      ],
+      "sources": [
+        {
+          "title": "Mexican Revolution",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mexican_Revolution",
+          "language": "en"
+        },
+        {
+          "title": "Cách mạng México",
+          "publisher": "Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/C%C3%A1ch_m%E1%BA%A1ng_M%C3%A9xico",
+          "language": "vi"
+        }
+      ]
+    },
+    {
+      "slug": "hiep-dinh-camp-david-1978",
+      "era": "hien-dai",
+      "country": "Ai Cập",
+      "countryEn": "Egypt",
+      "startYear": 1978,
+      "endYear": null,
+      "dateLabelVi": "Ngày 17 tháng 9 năm 1978",
+      "dateLabelEn": "17 September 1978",
+      "titleVi": "Hiệp định Camp David",
+      "titleEn": "The Camp David Accords",
+      "summaryVi": "Ngày 17 tháng 9 năm 1978, sau 13 ngày đàm phán bí mật tại Camp David, Ai Cập và Israel ký hai khung thỏa thuận hòa bình với Hoa Kỳ làm trung gian. Hiệp định dẫn tới hiệp ước hòa bình Ai Cập – Israel năm 1979, lần đầu một nước Ả Rập công nhận Israel.",
+      "summaryEn": "On 17 September 1978, after thirteen days of secret talks at Camp David, Egypt and Israel signed two frameworks for peace mediated by the United States. They led to the 1979 Egypt–Israel peace treaty, the first recognition of Israel by an Arab state.",
+      "contentVi": [
+        "Sau các cuộc chiến 1948, 1956, 1967 và 1973, Israel và Ai Cập vẫn ở thế đối đầu, trong khi bán đảo Sinai nhiều lần đổi tay. Tháng 11 năm 1977, Tổng thống Ai Cập Anwar Sadat bất ngờ đến Jerusalem trình bày hòa giải trước quốc hội Israel. Thủ tướng Menachem Begin đáp lại, và Tổng thống Hoa Kỳ Jimmy Carter mời hai bên tới trại nghỉ dưỡng Camp David, Maryland, để đàm phán.",
+        "Cuộc đàm phán kéo dài 13 ngày, từ 5 đến 17 tháng 9 năm 1978, nhiều lần đứng trước nguy cơ đổ vỡ. Carter làm trung gian, gặp riêng từng phái đoàn và chuẩn bị cả dự thảo thay thế. Kết quả là hai khung thỏa thuận: khung hòa bình giữa Ai Cập và Israel, và khung giải quyết toàn diện vấn đề Trung Đông gồm Bờ Tây và Gaza. Ngày 17 tháng 9 năm 1978, Begin và Sadat ký tại Nhà Trắng, có Carter chứng kiến.",
+        "Hiệp ước Hòa bình Ai Cập – Israel được ký ngày 26 tháng 3 năm 1979. Israel rút khỏi bán đảo Sinai theo lộ trình, Ai Cập bình thường hóa quan hệ và mở đại sứ quán tại Israel. Đổi lại, Ai Cập bị nhiều nước Ả Rập coi là phá vỡ mặt trận chung; Liên đoàn Ả Rập đình chỉ tư cách thành viên của nước này từ 1979 đến 1989. Sadat và Begin nhận Giải Nobel Hòa bình năm 1978; Sadat bị ám sát năm 1981.",
+        "Camp David là lần đầu tiên một nước Ả Rập công nhận Israel và là hiệp ước hòa bình đầu tiên giữa Israel với một nước láng giềng. Mô hình đàm phán trực tiếp có trung gian Hoa Kỳ trở thành khuôn mẫu cho các nỗ lực hòa bình sau này, dù vấn đề Palestine vẫn chưa được giải quyết. Thỏa thuận cũng đặt nền móng cho quan hệ chiến lược Ai Cập – Hoa Kỳ và thay đổi cán cân chính trị Trung Đông trong nhiều thập kỷ."
+      ],
+      "contentEn": [
+        "After the wars of 1948, 1956, 1967 and 1973 Israel and Egypt remained at odds, and the Sinai peninsula changed hands more than once. In November 1977 Egyptian President Anwar Sadat travelled unexpectedly to Jerusalem to present a peace initiative to the Israeli parliament. Prime Minister Menachem Begin responded, and US President Jimmy Carter invited both sides to the Camp David retreat in Maryland for talks.",
+        "The negotiations lasted thirteen days, from 5 to 17 September 1978, and nearly collapsed several times. Carter mediated, met each delegation separately and prepared alternative drafts. The result was two frameworks: one for peace between Egypt and Israel, and one for a comprehensive settlement in the Middle East including the West Bank and Gaza. On 17 September 1978 Begin and Sadat signed at the White House with Carter as witness.",
+        "The Egypt–Israel peace treaty was signed on 26 March 1979. Israel withdrew from the Sinai on a staged timetable, and Egypt normalised relations and opened an embassy in Israel. In return many Arab states accused Egypt of breaking the common front; the Arab League suspended its membership from 1979 to 1989. Sadat and Begin received the Nobel Peace Prize in 1978; Sadat was assassinated in 1981.",
+        "Camp David was the first recognition of Israel by an Arab state and the first peace treaty between Israel and a neighbour. Its model of direct talks with American mediation became a template for later peace efforts, although the Palestinian question remained unresolved. The accords also laid the foundation for a strategic Egypt–US relationship and changed the political balance of the Middle East for decades."
+      ],
+      "locationVi": "Camp David, Maryland, Hoa Kỳ",
+      "locationEn": "Camp David, Maryland, United States",
+      "latitude": 39.6483,
+      "longitude": -77.4661,
+      "image": "/images/events/hiep-dinh-camp-david-1978.jpg",
+      "imageAltVi": "Anwar Sadat, Jimmy Carter và Menachem Begin ký Hiệp định Camp David năm 1978",
+      "imageAltEn": "Anwar Sadat, Jimmy Carter and Menachem Begin signing the Camp David Accords in 1978",
+      "tagsVi": [
+        "Camp David",
+        "Ai Cập",
+        "Israel"
+      ],
+      "tagsEn": [
+        "Camp David",
+        "Egypt",
+        "Israel"
+      ],
+      "featured": false,
+      "related": [
+        "cach-mang-hoi-giao-iran-1979",
+        "kenh-suez-1869"
+      ],
+      "sources": [
+        {
+          "title": "Camp David Accords",
+          "publisher": "Office of the Historian, U.S. Department of State",
+          "url": "https://history.state.gov/milestones/1977-1980/camp-david",
+          "language": "en"
+        },
+        {
+          "title": "Camp David Accords",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Camp_David_Accords",
+          "language": "en"
+        },
+        {
+          "title": "Camp David Accords",
+          "publisher": "Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/event/Camp-David-Accords",
+          "language": "en"
+        }
+      ]
+    },
+    {
+      "slug": "mong-co-chiem-baghdad-1258",
+      "era": "trung-dai",
+      "country": "Iraq",
+      "countryEn": "Iraq",
+      "startYear": 1258,
+      "endYear": null,
+      "dateLabelVi": "Ngày 10 tháng 2 năm 1258",
+      "dateLabelEn": "10 February 1258",
+      "titleVi": "Mông Cổ chiếm Baghdad",
+      "titleEn": "The Mongol Conquest of Baghdad",
+      "summaryVi": "Tháng 2 năm 1258, quân Mông Cổ của Hulagu chiếm Baghdad, chấm dứt hơn 500 năm cai trị của dòng caliph Abbasid. Thành phố bị cướp phá, các thư viện bị tàn phá, và Baghdad mất vai trò trung tâm chính trị của thế giới Hồi giáo.",
+      "summaryEn": "In February 1258 Hulagu’s Mongol army captured Baghdad, ending more than 500 years of Abbasid caliphate. The city was sacked, its libraries devastated, and Baghdad lost its place as the political centre of the Islamic world.",
+      "contentVi": [
+        "Đầu thế kỷ 13, Baghdad là thủ đô của Đế quốc Abbasid và một trong những trung tâm học thuật, thương mại lớn nhất thế giới Hồi giáo. Năm 1258, Đại hãn Mông Cổ Möngke ra lệnh cho em trai Hulagu tiến về phía tây sau khi vùng Lưỡi liềm Màu mỡ bị chinh phục. Hulagu đòi Caliph al-Musta’sim quy phục; caliph từ chối, dù lực lượng phòng thủ của thành phố yếu hơn nhiều so với quân Mông Cổ và đồng minh.",
+        "Đầu năm 1258, quân Mông Cổ cùng lực lượng Armenia, Georgia và các đạo quân Hồi giáo quy phục bao vây Baghdad. Công thành diễn ra từ ngày 29 tháng 1; tường thành và các tháp canh bị phá bằng máy bắn đá. Ngày 10 tháng 2, thành thất thủ. Hulagu cho phép cướp phá trong nhiều ngày. Caliph al-Musta’sim bị giết, chấm dứt dòng caliph Abbasid kéo dài hơn 500 năm.",
+        "Các nguồn sử chép số người thiệt mạng rất khác nhau, từ hàng chục nghìn đến hàng trăm nghìn; con số chính xác không thể xác minh. Thư viện, đại học và các công trình học thuật bị đốt hoặc ném xuống sông Tigris, theo nhiều tường thuật đến mức mực sách làm đen nước sông. Baghdad mất vai trò thủ đô chính trị và suy tàn trong nhiều thế kỷ. Hulagu lập Nhà nước Ilkhanate, cai trị vùng Iran và Lưỡng Hà dưới quyền Đại hãn.",
+        "Sự sụp đổ của Baghdad gây chấn động thế giới Hồi giáo và được xem là dấu mốc kết thúc thời kỳ hoàng kim của nền văn minh Abbasid. Hai năm sau, năm 1260, quân Mamluk Ai Cập chặn bước quân Mông Cổ tại Ain Jalut, giới hạn đà tiến của họ ở Tây Á. Biến cố này cũng để lại bài học lâu dài về chia rẽ nội bộ và cách biệt về sức mạnh quân sự trước các đế quốc du mục."
+      ],
+      "contentEn": [
+        "In the early thirteenth century Baghdad was the capital of the Abbasid Empire and one of the greatest centres of learning and trade in the Islamic world. In 1258 the Mongol Great Khan Möngke ordered his brother Hulagu westward after the conquest of the Fertile Crescent. Hulagu demanded the submission of Caliph al-Musta’sim; the caliph refused, although the city’s defences were far weaker than the Mongol army and its allies.",
+        "Early in 1258 the Mongols, together with Armenian, Georgian and allied Muslim forces, besieged Baghdad. The bombardment began on 29 January; walls and towers were broken by catapults. The city fell on 10 February. Hulagu allowed days of looting. Caliph al-Musta’sim was killed, ending an Abbasid caliphate that had lasted more than 500 years.",
+        "The sources give wildly different death tolls, from tens of thousands to hundreds of thousands; the exact figure cannot be verified. Libraries, colleges and scholarly buildings were burned or thrown into the Tigris, according to many accounts so that the ink blackened the water. Baghdad lost its role as a political capital and declined for centuries. Hulagu founded the Ilkhanate, ruling Iran and Mesopotamia under the Great Khan.",
+        "The fall of Baghdad shocked the Islamic world and is often treated as the end of the golden age of Abbasid civilisation. Two years later, in 1260, the Mamluk army of Egypt stopped the Mongols at Ain Jalut and limited their advance in western Asia. The disaster also left a lasting lesson about internal division and the gap in military power before nomadic empires."
+      ],
+      "locationVi": "Baghdad, Iraq",
+      "locationEn": "Baghdad, Iraq",
+      "latitude": 33.3152,
+      "longitude": 44.3661,
+      "image": "/images/events/mong-co-chiem-baghdad-1258.jpg",
+      "imageAltVi": "Tranh thế kỷ 14 trong Diez Albums mô tả quân Mông Cổ chiếm Baghdad",
+      "imageAltEn": "A fourteenth-century painting from the Diez Albums depicting the Mongol conquest of Baghdad",
+      "tagsVi": [
+        "Baghdad",
+        "Mông Cổ",
+        "Abbasid"
+      ],
+      "tagsEn": [
+        "Baghdad",
+        "Mongols",
+        "Abbasid"
+      ],
+      "featured": false,
+      "related": [
+        "constantinople-1453",
+        "thanh-cat-tu-han-1206",
+        "hijra-medina-622"
+      ],
+      "sources": [
+        {
+          "title": "Siege of Baghdad",
+          "publisher": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Baghdad",
+          "language": "en"
+        },
+        {
+          "title": "Hulagu Khan",
+          "publisher": "Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/biography/Hulagu-Khan",
+          "language": "en"
+        }
       ]
     }
   ]

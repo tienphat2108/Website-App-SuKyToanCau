@@ -29,6 +29,7 @@ export const COUNTRY_OPTIONS: CountryOption[] = [
   { key: 'Campuchia', vi: 'Campuchia', en: 'Cambodia' },
   { key: 'Canada', vi: 'Canada', en: 'Canada' },
   { key: 'Chile', vi: 'Chile', en: 'Chile' },
+  { key: 'Colombia', vi: 'Colombia', en: 'Colombia' },
   { key: 'Cuba', vi: 'Cuba', en: 'Cuba' },
   { key: 'Đức', vi: 'Đức', en: 'Germany' },
   { key: 'Ethiopia', vi: 'Ethiopia', en: 'Ethiopia' },
